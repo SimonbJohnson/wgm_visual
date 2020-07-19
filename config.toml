@@ -4,14 +4,14 @@ title = "WGM Visual"
 
 [menu]
   [[menu.main]]
-    name = "Home"
+    name = "menu1"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Tool"
-    url = "/tool/"
+    name = "menu2"
+    url = "/menu2/"
     weight = 2
   [[menu.main]]
-    name = "about"
-    url = "/about/"
+    name = "menu3"
+    url = "/menu3/"
     weight = 3

@@ -1,0 +1,29 @@
+:root {
+	--baseColor: #309bf8;
+}
+
+#main {
+	padding: 1rem;
+}
+
+.navbar {
+	padding: .5rem 1rem;
+	background: var(--baseColor);
+}
+
+.navbar a {
+	color:white;
+}
+
+.fullwidth {
+	width:100%;
+}
+
+.headline {
+	font-size:2em;
+}
+
+.storysection {
+	padding-top:200px;
+	padding-bottom:200px;
+}
