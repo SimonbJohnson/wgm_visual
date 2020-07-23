@@ -15,15 +15,11 @@
 	color:white;
 }
 
-.fullwidth {
-	width:100%;
+.tagline {
+	font-style:italic;
+	font-size:1.5em;
 }
 
-.headline {
-	font-size:2em;
-}
-
-.storysection {
-	padding-top:200px;
-	padding-bottom:200px;
+p {
+	font-size:1.2em;
 }

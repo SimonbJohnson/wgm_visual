@@ -1,4 +1,4 @@
-let data2 = [
+let data = [
  {
    "country_id": 1,
    "country_name": "United States",
