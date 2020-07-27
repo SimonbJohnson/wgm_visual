@@ -9,19 +9,56 @@ generateDiffusionIcons(data);
 function generateDiffusionIcons(data){
 	let width = $('#viz1').width();
 	let height = width/16*9;
+	generateSmallMultiples('#viz1',data,width,height,16,9);
 
-	generateSmallMultiples(data,width,height)
+	let width2 = $('#viz2').width();
+	let height2 = $('#viz2').width();
+	let southAfrica = data.filter(function(d){
+		if(d['country_name']=='South Africa'){
+			return true;
+		} else {
+			return false;
+		}
+	});
+	generateSmallMultiples('#viz2',southAfrica,width2,height2,1,1);
+
+  let width3 = $('#viz3').width();
+  let height3 = width/16*9;
+  generateSmallMultiples('#viz3',data,width,height,16,9);	
+
+  let width4 = $('#viz2').width();
+  let height4 = $('#viz2').width();
+  let vietnam = data.filter(function(d){
+    if(d['country_name']=='Vietnam'){
+      return true;
+    } else {
+      return false;
+    }
+  });
+  generateSmallMultiples('#viz4',vietnam,width4,height4,1,1);
 }
 
-function generateSmallMultiples(data,width,height){
+function generateSmallMultiples(id,data,width,height,columns,lines){
 
-	let scale = width/16;
+	/*let count = data.length;
+
+	let columns = Math.ceil(16*Math.sqrt(count)/12)+1;
+	let lines = Math.max(Math.floor(9*Math.sqrt(count)/12),1);
+	console.log(id);
+	console.log(columns);
+
+	if((columns-1)*lines<=count){
+		columns=columns-1;
+	}*/
+
+	let scale = width/columns;
+
 
 	data = data.sort(function(a,b){
 		return a.distrust_scientists - b.distrust_scientists;
 	});
 
-    let svg = d3.select('#viz1')
+    let svg = d3.select(id)
             .append("svg")
             .attr("width", width)
             .attr("height", height);
@@ -37,128 +74,158 @@ function generateSmallMultiples(data,width,height){
 	filter.append('feColorMatrix')
 		.attr('in','blur')
 		.attr('mode','matrix')
-		.attr('values','1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -6')
+		.attr('values','1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7')
 		.attr('result','gooey');
 	filter.append('feComposite')
 		.attr('in','SourceGraphic')
 		.attr('in2','gooey')
 		.attr('operator','atop');
 
-	var g = svg.append("g").style("filter", "url(#gooey)");
 
-    colors = ['#E53935','#673AB7','#4CAF50','#FFEB3B','#FF9800'];
+    colors = ['#D1AB39','#193C78','#CC3333','#29A78A','#F28000'];
     variables = ['distrust_neighbours','distrust_government', 'distrust_journalists','distrust_doctors','distrust_ngos'];
+    var g = svg.append("g").style("filter", "url(#gooey)");
+  
+
+
 
     for(j=0;j<5;j++){
 
         let angle = j*72/ 180 * Math.PI;
 
-        g.selectAll(".circlegrey"+j)
+        svg.selectAll(".circlegrey"+j)
           .data(data)
         .enter().append("circle")
           .attr("class", "backcircle")
           .attr("cx", function(d,i) {
             let value = d[variables[j]];
-            return Math.floor(i / 9) * scale + scale*0.5 + Math.sin(angle)*(10+scale*0.4*value/100)
+            return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100)
           })
           .attr("cy", function(d,i) {
             let value = d[variables[j]]; 
-            return (i % 9)*scale + scale*0.5 - Math.cos(angle)*(10+scale*0.4*value/100) 
+            return (i % lines)*scale*0.9 + scale*0.5 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
           })
           .attr("r", scale*0.12)
-          .attr("fill","#777777")
-          .attr("opacity",1);
+          .attr("fill","#FFFFFF00")
+          .attr("opacity",function(d){
+          	let value = d[variables[j]];
+          	if(value == 'None'){
+          		return 0
+          	} else {
+          		return 1;
+          	}
+          });
     }
 
     for(j=0;j<5;j++){
 
         let angle = j*72/ 180 * Math.PI;
 
-        g.selectAll(".circlecolor"+j)
+      /*for(k=0;k<data.length;k++){
+        	let value = data[k][variables[j]];
+	    	let cx = Math.floor(k / lines) * scale + scale*0.5 + Math.sin(angle)*(scale/7+scale*0.4*value/100);
+	    	let cy = (k % lines)*scale*0.9 + scale*0.5 - Math.cos(angle)*(scale/7+scale*0.4*value/100); 
+	    	circleToDots(svg,cx,cy,value,scale,colors[j]);
+    	}*/
+
+      svg.selectAll(".linesgrey"+j)
+          .data(data)
+        .enter().append("line")
+          .attr("class", "line")
+          .attr("x1", function(d,i) {
+            return Math.floor(i / lines) * scale + scale*0.5
+          })
+          .attr("y1", function(d,i) {
+            return (i % lines)*scale*0.9 + scale*0.5
+          })
+            .attr("x2", function(d,i) {
+              let value = d[variables[j]];
+              return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100)
+            })
+            .attr("y2", function(d,i) {
+              let value = d[variables[j]]; 
+              return (i % lines)*scale*0.9 + scale*0.5 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
+            })
+          .attr("stroke","#3F1A13")
+          .attr("opacity",function(d){
+              let value = d[variables[j]];
+              if(value == 'None'){
+                return 0
+              } else {
+                return 1;
+              }
+            })
+            .attr("stroke-width",function(d){
+              let value = d[variables[j]];
+              //return value*scale/1500;
+              return 1.5;
+            })      
+
+        svg.selectAll(".circlecolor"+j)
           .data(data)
         .enter().append("circle")
-          .attr("class", "backcircle")
+          .attr("class", "circle")
           .attr("cx", function(d,i) {
             let value = d[variables[j]];
-            return Math.floor(i / 9) * scale + scale*0.5 + Math.sin(angle)*(10+scale*0.4*value/100)
+            return Math.floor(i / 9) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100)
           })
           .attr("cy", function(d,i) {
             let value = d[variables[j]]; 
-            return (i % 9)*scale + scale*0.5 - Math.cos(angle)*(10+scale*0.4*value/100) 
+            return (i % 9)*scale*0.9 + scale*0.5 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
           })
-          .attr("r", scale*0.12)
+          .attr("r", function(d,i){
+          	let value = d[variables[j]];
+          	return scale*0.12*Math.sqrt(value)/15
+          })
           .attr("fill",colors[j])
           .attr("opacity",1);
     }
 
-
-/*
-    for(j=0;j<5;j++){
-      //if(j!=1){
-        let angle = j*72/ 180 * Math.PI;
-
-        svg.selectAll(".rectcol"+j)
-          .data(data)
-        .enter().append("rect")
-          .attr("class", "bar")
-          .attr("x", function(d,i) { 
-            let value = d[variables[j]];
-            return (i % 10) * 150 + 50 + Math.sin(angle)*(5+80*value/100)
-          })
-          .attr("width", 20)
-          .attr("y", function(d,i) { 
-            let value = d[variables[j]];
-            return Math.floor(i/10)*150 + 50 - Math.cos(angle)*(5+80*value/100)+(20-20*value/100);
-          })
-          .attr("height", function(d){
-            let value = d[variables[j]];
-            return 20*value/100;
-          })
-          .attr("fill",colors[j])
-          .attr("opacity",1);
-        //}
-      }
-
-    svg.selectAll(".recttrust")
+    svg.selectAll(".circletrust")
         .data(data)
-      .enter().append("rect")
-        .attr("class", "bar")
-        .attr("x", function(d,i) {
-          return (i % 10) * 150 + 50
+      .enter().append("circle")
+        .attr("class", "circle")
+        .attr("cx", function(d,i) {
+          return Math.floor(i / lines) * scale + scale*0.5
         })
-        .attr("width", 20)
-        .attr("y", function(d,i) {
-          return Math.floor(i/10)*150 + 50 
+        .attr("cy", function(d,i) {
+          return (i % lines)*scale*0.9 + scale*0.5
         })
-        .attr("height", 20)
-        .attr("fill","#dddddd");
+        .attr("r", scale*0.06)
+        .attr("fill","#F2EADF00");
 
-    svg.selectAll(".recttrustfill")
+    svg.selectAll(".circletrust")
         .data(data)
-      .enter().append("rect")
-        .attr("class", "bar")
-        .attr("x", function(d,i) {
-          let value = d['distrust_scientists'];
-          return (i % 10) * 150 + 50;
+      .enter().append("circle")
+        .attr("class", "circle")
+        .attr("cx", function(d,i) {
+          return Math.floor(i / 9) * scale + scale*0.5
         })
-        .attr("width", 20)
-        .attr("y", function(d,i) {
-          let value = d['distrust_scientists'];
-          return Math.floor(i/10)*150 + 50  +(20-20*value/100);
+        .attr("cy", function(d,i) {
+          return (i % 9)*scale*0.9 + scale*0.5
         })
-        .attr("height", function(d,i){
-          let value = d['distrust_scientists'];
-          return 20 * value/100;
+        .attr("r", function(d){
+        	let value = Math.sqrt(d['distrust_scientists']);
+          	return scale*0.12*value/15
         })
-        .attr("fill","#2196F3");
+        .attr("fill","#009EE2");
+
+    /*for(j=0;j<data.length;j++){
+    	let cx = Math.floor(j / lines) * scale + scale*0.5;
+    	let cy = (j % lines)*scale*0.9 + scale*0.5;
+    	let value = data[j]['distrust_scientists'];
+    	circleToDots(svg,cx,cy,value,scale,'#2196F3');
+    }*/
+    
     
     svg.selectAll("text")
       .data(data)
     .enter().append("text")
-      .attr("x",function(d,i) { return (i % 10) * 150+50 })
-      .attr("y",function(d,i) { return Math.floor(i/10)*150+125; })
+    	.attr('class','country_label')
+      .attr("x",function(d,i) { return Math.floor(i / lines) * scale + scale*0.5 })
+      .attr("y",function(d,i) { return (i % lines)*scale*0.9 + scale*0.9; })
       .style("text-anchor", "middle")
       .text(function(d){
         return d['country_name'];
-      });*/
+      });
 }

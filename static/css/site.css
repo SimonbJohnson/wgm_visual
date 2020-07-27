@@ -23,3 +23,15 @@
 p {
 	font-size:1.2em;
 }
+
+.country_label {
+	font-size:10px;
+}
+
+#viz {
+	background-color:#FFF9F0;
+}
+
+.viz {
+	background-color:#FFF9F0;
+}

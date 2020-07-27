@@ -17,7 +17,7 @@
       {{ $css := "css/orientation.css" | absURL }}
       <link rel="stylesheet" href="{{ $css }}">
     {{end}}
-    {{ if eq .Title "Orientation"}}
+    {{ if eq .Title "Diffusion"}}
       {{ $css := "css/diffusion.css" | absURL }}
       <link rel="stylesheet" href="{{ $css }}">
     {{end}}
@@ -66,7 +66,7 @@
 
 
     {{ if eq .Title "Orientation draft"}}
-      {{ $data := "data/orientation.js" | absURL }}
+      {{ $data := "data/orientation2.js" | absURL }}
       <script src="{{ $data }}"></script>
       {{ $javascript := "js/orientation_draft.js" | absURL }}
       <script src="{{ $javascript }}"></script>

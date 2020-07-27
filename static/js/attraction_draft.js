@@ -4,69 +4,111 @@ console.log(data);
 
 let visual = 1;
 
-/*let newData = data.sort(function(a,b){
+let newData = data.sort(function(a,b){
   return a['HDI'] - b['HDI'];
-});*/
+});
 
-data.forEach(function(d){
+/*data.forEach(function(d){
   d.position = d['industry']*1+d['services']*2
 });
 
 let newData = data.sort(function(a,b){
   return a.position - b.position;
-});
-
-//byIncomeGroup(data,1);
-//byIncomeGroup(data,2);
-//byIncomeGroup(data,3);
-//byIncomeGroup(data,4);
+});*/
 
 generateVisual(newData);
 
 function generateVisual(data) {
-    console.log('here');
+
+    let width = 1200;
+    let scale = width/16;
+
     let svg = d3.select('#viz')
             .append("svg")
-            .attr("width", 1400)
-            .attr("height", 5000);
+            .attr("width", 1200)
+            .attr("height", width/16*9);
 
     svg.selectAll(".circle1")
       .data(data)
     .enter().append("circle")
       .attr("class", "circle")
-      .attr("cx", function(d,i) { return (i % 10) * 140 + 40 })
-      .attr("cy", function(d,i) { return Math.floor(i/10)*140+60; })
-      .attr("r", function(d){ return d['q13 - A lot, Some']/4})
-      .attr("fill","steelblue");
+      .attr("cx", function(d,i) { return Math.floor(i/9)*scale +scale*0.2; })
+      .attr("cy", function(d,i) { return (i % 9) * scale + scale*0.5 })
+      .attr("r", function(d){ return Math.sqrt(d['q13 - A lot, Some'])/75*scale})
+      .attr("fill","#1D70B7");
 
 
     svg.selectAll(".circle2")
       .data(data)
     .enter().append("circle")
       .attr("class", "circle")
-      .attr("cx", function(d,i) { return (i % 10) * 140 + 70 })
-      .attr("cy", function(d,i) { return Math.floor(i/10)*140+60; })
-      .attr("r", function(d){ return d['Increase']/4})
-      .attr("fill","blue");
+      .attr("cx", function(d,i) { return Math.floor(i/9)*scale +scale*0.5; })
+      .attr("cy", function(d,i) { return (i % 9) * scale + scale*0.5 })
+      .attr("r", function(d){ return Math.sqrt(d['Increase'])/75*scale})
+      .attr("fill","#00A0AD");
 
     /*svg.selectAll(".circle2")
       .data(data)
     .enter().append("circle")
       .attr("class", "circle")
-      .attr("cx", function(d,i) { return (i % 10) * 140 + 70 })
-      .attr("cy", function(d,i) { return Math.floor(i/10)*140+60; })
-      .attr("r", function(d){ return d['Q19 - Decrease']/4})
+      .attr("cx", function(d,i) { return Math.floor(i/9)*scale +scale*0.5; })
+      .attr("cy", function(d,i) { return (i % 9) * scale + scale*0.5 })
+      .attr("r", function(d){ return Math.sqrt(d['Q19 - Decrease'])/75*scale})
       .attr("fill","red");*/
 
     svg.selectAll(".circle3")
       .data(data)
     .enter().append("circle")
       .attr("class", "circle")
-      .attr("cx", function(d,i) { return (i % 10) * 140 + 100 })
-      .attr("cy", function(d,i) { return Math.floor(i/10)*140+60; })
-      .attr("r", function(d){ return d['Yes']/4})
-      .attr("fill","steelblue");
+      .attr("cx", function(d,i) { return Math.floor(i/9)*scale +scale*0.8; })
+      .attr("cy", function(d,i) { return (i % 9) * scale + scale*0.5 })
+      .attr("r", function(d){ return Math.sqrt(d['Yes'])/75*scale})
+      .attr("fill","#E69534");
 
+    svg.selectAll(".linesgrey1")
+          .data(data)
+        .enter().append("line")
+          .attr("class", "line")
+          .attr("x1",function(d,i) { return Math.floor(i / 9) * scale + scale*0.2 })
+          .attr("y1",function(d,i) { return (i % 9)*scale + scale*0.5 + d['q13 - A lot, Some']/500*scale})
+          .attr("x2",function(d,i) { return Math.floor(i / 9) * scale + scale*0.5 })
+          .attr("y2",function(d,i) { return (i % 9)*scale + scale*0.5 + d['Increase']/500*scale; })
+          .attr("stroke","#3F1A13")
+          .attr("stroke-width",1.5);
+
+    svg.selectAll(".linesgrey2")
+          .data(data)
+        .enter().append("line")
+          .attr("class", "line")
+          .attr("x1",function(d,i) { return Math.floor(i / 9) * scale + scale*0.2 })
+          .attr("y1",function(d,i) { return (i % 9)*scale + scale*0.5 - d['q13 - A lot, Some']/500*scale})
+          .attr("x2",function(d,i) { return Math.floor(i / 9) * scale + scale*0.5 })
+          .attr("y2",function(d,i) { return (i % 9)*scale + scale*0.5 - d['Increase']/500*scale; })
+          .attr("stroke","#3F1A13")
+          .attr("stroke-width",1.5);
+
+    svg.selectAll(".linesgrey3")
+          .data(data)
+        .enter().append("line")
+          .attr("class", "line")
+          .attr("x1",function(d,i) { return Math.floor(i / 9) * scale + scale*0.8 })
+          .attr("y1",function(d,i) { return (i % 9)*scale + scale*0.5 + d['Yes']/500*scale})
+          .attr("x2",function(d,i) { return Math.floor(i / 9) * scale + scale*0.5 })
+          .attr("y2",function(d,i) { return (i % 9)*scale + scale*0.5 + d['Increase']/500*scale; })
+          .attr("stroke","#3F1A13")
+          .attr("stroke-width",1.5);
+
+    svg.selectAll(".linesgrey4")
+          .data(data)
+        .enter().append("line")
+          .attr("class", "line")
+          .attr("x1",function(d,i) { return Math.floor(i / 9) * scale + scale*0.8 })
+          .attr("y1",function(d,i) { return (i % 9)*scale + scale*0.5 - d['Yes']/500*scale})
+          .attr("x2",function(d,i) { return Math.floor(i / 9) * scale + scale*0.5 })
+          .attr("y2",function(d,i) { return (i % 9)*scale + scale*0.5 - d['Increase']/500*scale; })
+          .attr("stroke","#3F1A13")
+          .attr("stroke-width",1.5);
+/*
 
 
     svg.selectAll(".rectA")
@@ -100,52 +142,15 @@ function generateVisual(data) {
       .attr("width", function(d){ return 15})
       .attr("height", function(d){ return d['services']})
       .attr("fill","steelblue");
-
+*/
     svg.selectAll("text")
       .data(data)
     .enter().append("text")
-      .attr("x",function(d,i) { return (i % 10) * 140 +20})
-      .attr("y",function(d,i) { return Math.floor(i/10)*140+105; })
+      .attr('class','country_label')
+      .attr("x",function(d,i) { return Math.floor(i / 9) * scale + scale*0.5 })
+      .attr("y",function(d,i) { return (i % 9)*scale + scale; })
+      .style("text-anchor", "middle")
       .text(function(d){
         return d['country_name'];
       });
-}
-
-function byIndustryGroup(data,group){
-    let newData = data.filter(function(d){
-        if(d[group]>=d['industry'] && d[group]>=d['services'] && d[group]>=d['agriculture']){
-            return true;
-        } else {
-            return false;
-        }
-    });
-
-    if(visual==1){
-      generateVisual(newData);
-    }
-    if(visual==2){
-      generateVisual2(newData);
-    }
-}
-
-function generateVisual2(){
-
-}
-
-
-function byIncomeGroup(data,ig){
-    let newData = data.filter(function(d){
-        if(d['WBI']==ig){
-            return true;
-        } else {
-            return false;
-        }
-    });
-    if(visual==1){
-      $('#viz').append('<p>Income Group '+ig+'</p>')
-      generateVisual(newData);
-    }
-    if(visual==2){
-      generateVisual2(newData);
-    }
 }

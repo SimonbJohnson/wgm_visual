@@ -83,3 +83,36 @@ function scatterplot(id,data,xKey,yKey,xTitle,yTitle,colorKey,w,h,xmin,xmax,ymin
 
     return svg;   
 }
+
+function circleToDots(svg,cx,cy,value,scale,color,includeGrey=false){
+    let radius = scale/100;
+    let padding = 0;
+    /*const circleData = d3.packSiblings(d3.range(value).map(() => ({r: radius + padding})));*/
+    const angle = Math.PI * (3 - Math.sqrt(5));
+    let circleData = []
+    for (let i = 1; i <= value; ++i) {
+        const r = (radius + padding) * 1.2 * Math.sqrt(i);
+        const a = i * angle;
+        const x = r * Math.cos(a);
+        const y = r * Math.sin(a);
+        circleData.push({'x':x,'y':y,'r':radius});
+    }
+
+
+    let circles = svg.selectAll("circledots")
+        .data(circleData)
+        .enter()
+        .append("circle")
+        .attr("cx", function(d) {
+            return d.x+cx;
+        })
+        .attr("cy", function(d) {
+            return d.y+cy;
+        })
+        .attr("r", function(d) {
+            return d.r-padding;
+        })
+        .attr("fill",color);
+}
+
+
