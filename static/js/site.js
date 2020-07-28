@@ -1,7 +1,7 @@
 function scatterplot(id,data,xKey,yKey,xTitle,yTitle,colorKey,w,h,xmin,xmax,ymin,ymax){
     
     console.log('Creating scatterplot in element '+id);
-    colors = ['#cccccc','#E25538','#9CAF57','#FEC73C','#7895D4'];
+    colors = ['#cccccc','#FF0000','#00B3CC','#FFC500','#3F1A13'];
 
     let padding = 50;
 
@@ -132,4 +132,3 @@ function sortByAlpha(data,key){
     });
     return newData
 }
-
