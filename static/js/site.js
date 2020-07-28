@@ -115,4 +115,21 @@ function circleToDots(svg,cx,cy,value,scale,color,includeGrey=false){
         .attr("fill",color);
 }
 
+function byIncomeGroup(data,ig){
+    let newData = data.filter(function(d){
+        if(d['WBI']==ig){
+            return true;
+        } else {
+            return false;
+        }
+    })
+    return newData;
+}
+
+function sortByAlpha(data,key){
+    let newData = data.sort(function(a,b){
+        return (a[key] < b[key]) ? -1 : (a[key] > b[key]) ? 1 : 0;
+    });
+    return newData
+}
 
