@@ -229,3 +229,13 @@ function generateSmallMultiples(id,data,width,height,columns,lines){
         return d['country_name'];
       });
 }
+
+function getHex(value){
+  let upper = [63, 26, 19];
+  let lower = [185, 178, 164];
+  value = Math.max(value - 50,0);
+  let r = Math.floor(upper[0]*value/50 + lower[0]*(1-value/50));
+  let g = Math.floor(upper[1]*value/50 + lower[1]*(1-value/50));
+  let b = Math.floor(upper[2]*value/50 + lower[2]*(1-value/50));
+  return "rgb("+r+","+g+","+b+")";
+}

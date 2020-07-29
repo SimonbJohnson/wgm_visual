@@ -1,4 +1,4 @@
-let data = [
+let orientationData = [
   {
     "ID": 1,
     "country name": "United States",

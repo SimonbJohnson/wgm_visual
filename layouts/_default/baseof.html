@@ -21,7 +21,10 @@
       {{ $css := "css/diffusion.css" | absURL }}
       <link rel="stylesheet" href="{{ $css }}">
     {{end}}
-
+    {{ if eq .Title "Compare"}}
+      {{ $css := "css/compare.css" | absURL }}
+      <link rel="stylesheet" href="{{ $css }}">
+    {{end}}
 
 
     {{ if eq .Title "Orientation draft"}}
@@ -74,7 +77,6 @@
   </style>
   </head>  
   <body>
-    {{ partial "menu.html" . }}
     <div class="container-fluid">
       <main id="main">
        {{ block "main" . }}{{ end }}
@@ -83,6 +85,8 @@
     {{ if eq .Title "Orientation"}}
       {{ $data := "data/orientation2.js" | absURL }}
       <script src="{{ $data }}"></script>
+      {{ $javascript := "js/icons/orientation_icons.js" | absURL }}
+      <script src="{{ $javascript }}"></script> 
       {{ $javascript := "js/orientation.js" | absURL }}
       <script src="{{ $javascript }}"></script>
     {{end}} 
@@ -91,6 +95,18 @@
       {{ $data := "data/diffusion2.js" | absURL }}
       <script src="{{ $data }}"></script>
       {{ $javascript := "js/diffusion.js" | absURL }}
+      <script src="{{ $javascript }}"></script>
+    {{end}}
+
+    {{ if eq .Title "Compare"}}
+      {{ $data := "data/orientation2.js" | absURL }}
+      <script src="{{ $data }}"></script>
+      {{ $data := "data/countries.js" | absURL }}
+      <script src="{{ $data }}"></script>
+
+      {{ $javascript := "js/icons/orientation_icons.js" | absURL }}
+      <script src="{{ $javascript }}"></script>    
+      {{ $javascript := "js/compare.js" | absURL }}
       <script src="{{ $javascript }}"></script>
     {{end}} 
 
@@ -121,6 +137,6 @@
       <script src="{{ $data }}"></script>
       {{ $javascript := "js/attraction_draft.js" | absURL }}
       <script src="{{ $javascript }}"></script>
-    {{end}}          
+    {{end}}
   </body>
 </html>

@@ -136,8 +136,21 @@ h2 {
 }
 
 .takeawaytext {
-	font-size:1.4em;
+	font-size:1.4rem;
 	font-weight:600;
 	text-align:center;
+}
+
+.fronttitle {
+	text-align:center;
+	font-size:2.0rem;
+	font-weight:600;
+	margin-top:20px;
+}
+
+.frontintro {
+	text-align:center;
+	margin-top:20px;
+	font-size:1.2rem;
 }
 

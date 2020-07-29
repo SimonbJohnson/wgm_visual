@@ -1,56 +1,4 @@
-console.log(orientationData);
-
-let newData = sortByAlpha(byIncomeGroup(orientationData,1),'country name');
-generateOrientationBefore('#orientationviz1L',newData,5,9,1,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,2),'country name');
-generateOrientationBefore('#orientationviz1LM',newData,5,9,1,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,3),'country name');
-generateOrientationBefore('#orientationviz1UM',newData,5,9,1,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,4),'country name');
-generateOrientationBefore('#orientationviz1H',newData,5,9,1,false,true);
-
-/*let newData = data.sort(function(a,b){
-  let value1 = a['B-Q30-religion-Q12 high']+a['C-D1-rest'];
-  let value2 = b['B-Q30-religion-Q12 high']+b['C-D1-rest']
-  return value1-value2
-});*/
-
-//generateOrientationBefore('#orientationviz1L',newData,16,9,1);
-
-newData = sortByAlpha(byIncomeGroup(orientationData,1),'country name');
-generateOrientationBefore('#orientationviz2L',newData,5,9,2,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,2),'country name');
-generateOrientationBefore('#orientationviz2LM',newData,5,9,2,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,3),'country name');
-generateOrientationBefore('#orientationviz2UM',newData,5,9,2,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,4),'country name');
-generateOrientationBefore('#orientationviz2H',newData,5,9,2,false,true);
-
-newData = sortByAlpha(byIncomeGroup(orientationData,1),'country name');
-generateOrientationBefore('#orientationviz3L',newData,5,9,3,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,2),'country name');
-generateOrientationBefore('#orientationviz3LM',newData,5,9,3,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,3),'country name');
-generateOrientationBefore('#orientationviz3UM',newData,5,9,3,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,4),'country name');
-generateOrientationBefore('#orientationviz3H',newData,5,9,3,false,true);
-
-newData = sortByAlpha(byIncomeGroup(orientationData,1),'country name');
-generateOrientationAfter('#orientationviz4L',newData,5,9,3,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,2),'country name');
-generateOrientationAfter('#orientationviz4LM',newData,5,9,3,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,3),'country name');
-generateOrientationAfter('#orientationviz4UM',newData,5,9,3,false,true);
-newData = sortByAlpha(byIncomeGroup(orientationData,4),'country name');
-generateOrientationAfter('#orientationviz4H',newData,5,9,3,false,true);
-
-generateOrientationAfter('#orientationviz6',religionData,3,2,1,true,true);
-
-let wPlot = $('#orientationviz5').width();
-let hPlot = $('#orientationviz5').width();
-scatterplot('#orientationviz5',orientationData,'Q22','Q30-Religion','xtitle','ytitle','WBI',wPlot,hPlot,0,50,0,50);
-/*
-function generateOrientationBefore(id,data,columns,rows,state){
+function generateOrientationBefore(id,data,columns,rows,state,details,animate){
 
     let width = $(id).width();
     let scale = width/5;
@@ -58,7 +6,7 @@ function generateOrientationBefore(id,data,columns,rows,state){
     let svg = d3.select(id)
             .append("svg")
             .attr("width", scale*columns)
-            .attr("height", scale*9);s
+            .attr("height", scale*9);
 
     svg.selectAll(".circle1")
       .data(data)
@@ -83,7 +31,7 @@ function generateOrientationBefore(id,data,columns,rows,state){
       .attr("fill",'#009EE2');
 
     if(state==1){
-        repeat();
+        /*repeat();
 
         function repeat() {
           circles
@@ -94,7 +42,7 @@ function generateOrientationBefore(id,data,columns,rows,state){
             .duration(2000)
             .attr("fill",'#33c2ff')
             .on("end", repeat);
-        };          
+        };*/          
     }
 
     svg.selectAll(".circle1")
@@ -230,12 +178,12 @@ function generateOrientationBefore(id,data,columns,rows,state){
             })
             .attr("fill","#F9B233");
 
-        //arcs2.transition()
-         //   .duration(750)
-         //   .attrTween("d", function(d){
-         //       let percent = d['B-Q30-religion-Q12 high'] / (d['B-Q30-religion-Q12 high']+d['C-D1-rest']);
-         //       return arcTween2(percent * PI*2);
-         //   });       
+        /*arcs2.transition()
+            .duration(750)
+            .attrTween("d", function(d){
+                let percent = d['B-Q30-religion-Q12 high'] / (d['B-Q30-religion-Q12 high']+d['C-D1-rest']);
+                return arcTween2(percent * PI*2);
+            });*/       
     }
 
     function arcTween2(newAngle) {
@@ -250,7 +198,7 @@ function generateOrientationBefore(id,data,columns,rows,state){
     }
 }
 
-function generateOrientationAfter(id,data,columns,rows,state,details){
+function generateOrientationAfter(id,data,columns,rows,state,details,animate){
 
     let width = $(id).width();
     let scale = width/columns;
@@ -260,14 +208,22 @@ function generateOrientationAfter(id,data,columns,rows,state,details){
             .attr("width", scale*columns)
             .attr("height", scale*rows);
 
+    console.log(data);
+
     let plungeLines1 = svg.selectAll(".linesgrey1")
           .data(data)
         .enter().append("line")
           .attr("class", "line")
-          .attr("x1",function(d,i) { return Math.floor(i / rows) * scale + scale*0.2 })
-          .attr("y1",function(d,i) { return (i % rows)*scale + scale*0.5; })
+          .attr("x1",function(d,i) { console.log(i);return Math.floor(i / rows) * scale + scale*0.2 })
+          .attr("y1",function(d,i) { return (i % rows)*scale + scale*0.3; })
           .attr("x2",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4 })
-          .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.5; })
+          .attr("y2",function(d,i) { 
+            if(animate){
+              return (i % rows)*scale + scale*0.3;
+            } else {
+              return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale;
+            }
+          })
           //.attr("y2",function(d,i) { return (i % 9)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; })
           .attr("stroke","#3F1A13")
           .attr("stroke-width",1.5);
@@ -277,9 +233,15 @@ function generateOrientationAfter(id,data,columns,rows,state,details){
         .enter().append("line")
           .attr("class", "line")
           .attr("x1",function(d,i) { return Math.floor(i / rows) * scale + scale*0.6 })
-          .attr("y1",function(d,i) { return (i % rows)*scale + scale*0.5; })
+          .attr("y1",function(d,i) { return (i % rows)*scale + scale*0.3; })
           .attr("x2",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4 })
-          .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.5; })
+          .attr("y2",function(d,i) { 
+            if(animate){
+              return (i % rows)*scale + scale*0.3;
+            } else {
+              return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale;
+            }
+          })
           //.attr("y2",function(d,i) { return (i % 9)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; })
           .attr("stroke","#3F1A13")
           .attr("stroke-width",1.5);
@@ -289,7 +251,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details){
     .enter().append("circle")
       .attr("class", "circle")
       .attr("cx",function(d,i) { return Math.floor(i / rows) * scale + scale*0.2 })
-      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.5; })
+      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.3; })
       .attr("r", function(d){ return scale/75*Math.sqrt(d['A-D1-Yes-Q12-low']*100) })
       .attr("fill",'#C66257');
 
@@ -298,7 +260,13 @@ function generateOrientationAfter(id,data,columns,rows,state,details){
     .enter().append("circle")
       .attr("class", "circle")
       .attr("cx",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4 })
-      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.5; })
+      .attr("cy",function(d,i) {
+        if(animate){
+              return (i % rows)*scale + scale*0.3;
+            } else {
+              return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale;
+            }
+      })
       //.attr("cy",function(d,i) { return (i % 9)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; })
       .attr("r", function(d){ return scale/75*Math.sqrt(d['B-Q30-religion-Q12 high']*100) })
       .attr("fill",'#E95A0C');
@@ -308,7 +276,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details){
     .enter().append("circle")
       .attr("class", "circle")
       .attr("cx",function(d,i) { return Math.floor(i / rows) * scale + scale*0.6 })
-      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.5; })
+      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.3; })
       .attr("r", function(d){ return scale/75*Math.sqrt(d['C-D1-rest']*100) })
       .attr("fill",'#009EE2');
 
@@ -317,7 +285,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details){
     .enter().append("circle")
       .attr("class", "circle")
       .attr("cx",function(d,i) { return Math.floor(i / rows) * scale + scale*0.8 })
-      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.5; })
+      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.3; })
       .attr("r", function(d){ return scale/75*Math.sqrt(d['D-D1-No-Q12-High']*100) })
       .attr("fill",'#193C78');
 
@@ -332,7 +300,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details){
         }
       })
       .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
-      .attr("y",function(d,i) { return (i % rows)*scale + scale; })
+      .attr("y",function(d,i) { return (i % rows)*scale + scale*0.8; })
       .style("text-anchor", "middle")
       .text(function(d){
         return d['country name'];
@@ -348,22 +316,22 @@ function generateOrientationAfter(id,data,columns,rows,state,details){
                     .transition()
                     .ease(d3.easeCubic)
                     .duration(500)
-                    .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; });
+                    .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale; });
 
                 plungeLines1
                     .transition()
                     .ease(d3.easeCubic)
                     .duration(500)
-                    .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; });
+                    .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale; });
 
                 plungeLines2
                     .transition()
                     .ease(d3.easeCubic)
                     .duration(500)
-                    .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; });
+                    .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale; });
                 initPlunge=true;
             }          
         }
     });
 }
-*/
+

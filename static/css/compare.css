@@ -1,0 +1,15 @@
+#comparetableheaders {
+	margin-top:40px;
+}
+
+.comparecell {
+	border-bottom-color: var(--mainDark);
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	text-align:center;
+}
+
+.comparecell p {
+	font-size:0.8em;
+	font-weight:bold;
+}
