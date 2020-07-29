@@ -32,7 +32,7 @@ p {
 	border-width:1px;
 	border-color:var(--highlightColor);
 	border-style:solid;
-	padding:1.5rem;
+	padding:1.4rem;
 	text-align:center;
 }
 
@@ -45,7 +45,7 @@ h1 {
 
 h2 {
 	font-size:1rem;
-	font-family:Georgia, Times, "Times New Roman", serif;
+	font-family:Wellcome;
 	text-align:center;
 }
 
@@ -62,7 +62,7 @@ h2 {
 
 .maintext {
 	font-size:1.4rem;
-	font-family:Georgia, Times, "Times New Roman", serif;
+	font-family:Wellcome;
 	text-align:center;
 }
 
@@ -140,3 +140,4 @@ h2 {
 	font-weight:600;
 	text-align:center;
 }
+
