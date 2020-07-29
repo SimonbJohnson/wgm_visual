@@ -215,43 +215,43 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
         .enter().append("line")
           .attr("class", "line")
           .attr("x1",function(d,i) { console.log(i);return Math.floor(i / rows) * scale + scale*0.2 })
-          .attr("y1",function(d,i) { return (i % rows)*scale + scale*0.3; })
+          .attr("y1",function(d,i) { return (i % rows)*scale + scale*0.4; })
           .attr("x2",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4 })
           .attr("y2",function(d,i) { 
             if(animate){
-              return (i % rows)*scale + scale*0.3;
+              return (i % rows)*scale + scale*0.4;
             } else {
-              return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale;
+              return (i % rows)*scale + scale*0.4 + d['B-Q30-religion-Q12 high']*scale;
             }
           })
           //.attr("y2",function(d,i) { return (i % 9)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; })
           .attr("stroke","#3F1A13")
-          .attr("stroke-width",1.5);
+          .attr("stroke-width",2*scale/100);
 
     let plungeLines2 = svg.selectAll(".linesgrey2")
           .data(data)
         .enter().append("line")
           .attr("class", "line")
           .attr("x1",function(d,i) { return Math.floor(i / rows) * scale + scale*0.6 })
-          .attr("y1",function(d,i) { return (i % rows)*scale + scale*0.3; })
+          .attr("y1",function(d,i) { return (i % rows)*scale + scale*0.4; })
           .attr("x2",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4 })
           .attr("y2",function(d,i) { 
             if(animate){
-              return (i % rows)*scale + scale*0.3;
+              return (i % rows)*scale + scale*0.4;
             } else {
-              return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale;
+              return (i % rows)*scale + scale*0.4 + d['B-Q30-religion-Q12 high']*scale;
             }
           })
           //.attr("y2",function(d,i) { return (i % 9)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; })
           .attr("stroke","#3F1A13")
-          .attr("stroke-width",1.5);
+          .attr("stroke-width",2*scale/100);
 
     svg.selectAll(".circle1")
       .data(data)
     .enter().append("circle")
       .attr("class", "circle")
       .attr("cx",function(d,i) { return Math.floor(i / rows) * scale + scale*0.2 })
-      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.3; })
+      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.4; })
       .attr("r", function(d){ return scale/75*Math.sqrt(d['A-D1-Yes-Q12-low']*100) })
       .attr("fill",'#C66257');
 
@@ -262,9 +262,9 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
       .attr("cx",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4 })
       .attr("cy",function(d,i) {
         if(animate){
-              return (i % rows)*scale + scale*0.3;
+              return (i % rows)*scale + scale*0.4;
             } else {
-              return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale;
+              return (i % rows)*scale + scale*0.4 + d['B-Q30-religion-Q12 high']*scale;
             }
       })
       //.attr("cy",function(d,i) { return (i % 9)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; })
@@ -276,7 +276,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
     .enter().append("circle")
       .attr("class", "circle")
       .attr("cx",function(d,i) { return Math.floor(i / rows) * scale + scale*0.6 })
-      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.3; })
+      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.4; })
       .attr("r", function(d){ return scale/75*Math.sqrt(d['C-D1-rest']*100) })
       .attr("fill",'#009EE2');
 
@@ -285,7 +285,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
     .enter().append("circle")
       .attr("class", "circle")
       .attr("cx",function(d,i) { return Math.floor(i / rows) * scale + scale*0.8 })
-      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.3; })
+      .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.4; })
       .attr("r", function(d){ return scale/75*Math.sqrt(d['D-D1-No-Q12-High']*100) })
       .attr("fill",'#193C78');
 
@@ -299,8 +299,8 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
             return 'countrylabel'
         }
       })
-      .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
-      .attr("y",function(d,i) { return (i % rows)*scale + scale*0.8; })
+      .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4 })
+      .attr("y",function(d,i) { return (i % rows)*scale + scale*0.9; })
       .style("text-anchor", "middle")
       .text(function(d){
         return d['country name'];
@@ -316,19 +316,19 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
                     .transition()
                     .ease(d3.easeCubic)
                     .duration(500)
-                    .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale; });
+                    .attr("cy",function(d,i) { return (i % rows)*scale + scale*0.4 + d['B-Q30-religion-Q12 high']*scale; });
 
                 plungeLines1
                     .transition()
                     .ease(d3.easeCubic)
                     .duration(500)
-                    .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale; });
+                    .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.4 + d['B-Q30-religion-Q12 high']*scale; });
 
                 plungeLines2
                     .transition()
                     .ease(d3.easeCubic)
                     .duration(500)
-                    .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.3 + d['B-Q30-religion-Q12 high']*scale; });
+                    .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.4 + d['B-Q30-religion-Q12 high']*scale; });
                 initPlunge=true;
             }          
         }

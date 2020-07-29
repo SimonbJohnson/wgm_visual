@@ -101,11 +101,23 @@
     {{ if eq .Title "Compare"}}
       {{ $data := "data/orientation2.js" | absURL }}
       <script src="{{ $data }}"></script>
+      {{ $data := "data/diffusion.js" | absURL }}
+      <script src="{{ $data }}"></script>
+      {{ $data := "data/distance.js" | absURL }}
+      <script src="{{ $data }}"></script>
+      {{ $data := "data/attraction.js" | absURL }}
+      <script src="{{ $data }}"></script>
       {{ $data := "data/countries.js" | absURL }}
       <script src="{{ $data }}"></script>
 
       {{ $javascript := "js/icons/orientation_icons.js" | absURL }}
-      <script src="{{ $javascript }}"></script>    
+      <script src="{{ $javascript }}"></script>
+      {{ $javascript := "js/icons/diffusion_icons.js" | absURL }}
+      <script src="{{ $javascript }}"></script>
+      {{ $javascript := "js/icons/distance_icons.js" | absURL }}
+      <script src="{{ $javascript }}"></script>
+      {{ $javascript := "js/icons/attraction_icons.js" | absURL }}
+      <script src="{{ $javascript }}"></script>             
       {{ $javascript := "js/compare.js" | absURL }}
       <script src="{{ $javascript }}"></script>
     {{end}} 

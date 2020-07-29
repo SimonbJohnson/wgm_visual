@@ -1,4 +1,4 @@
-let data = [
+let diffusionData = [
  {
    "country_id": 1,
    "country_name": "United States",

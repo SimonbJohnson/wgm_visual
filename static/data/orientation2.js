@@ -1,6 +1,6 @@
 let orientationData = [
   {
-    "ID": 1,
+    "country_id": 1,
     "country name": "United States",
     "D1-Yes": 0.7696950902,
     "ID2": 1,
@@ -26,7 +26,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02617258585
   },
   {
-    "ID": 2,
+    "country_id": 2,
     "country name": "Egypt",
     "D1-Yes": 1,
     "ID2": 2,
@@ -52,7 +52,7 @@ let orientationData = [
     "subADisagreeReligion": 0.00721586227
   },
   {
-    "ID": 3,
+    "country_id": 3,
     "country name": "Morocco",
     "D1-Yes": 1,
     "ID2": 3,
@@ -78,7 +78,7 @@ let orientationData = [
     "subADisagreeReligion": 0.009460537297
   },
   {
-    "ID": 4,
+    "country_id": 4,
     "country name": "Lebanon",
     "D1-Yes": 0.9898531952,
     "ID2": 4,
@@ -104,7 +104,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03836749641
   },
   {
-    "ID": 5,
+    "country_id": 5,
     "country name": "Saudi Arabia",
     "D1-Yes": 0.9100558631,
     "ID2": 5,
@@ -130,7 +130,7 @@ let orientationData = [
     "subADisagreeReligion": ""
   },
   {
-    "ID": 6,
+    "country_id": 6,
     "country name": "Jordan",
     "D1-Yes": 1,
     "ID2": 6,
@@ -156,7 +156,7 @@ let orientationData = [
     "subADisagreeReligion": 0.06520296989
   },
   {
-    "ID": 8,
+    "country_id": 8,
     "country name": "Turkey",
     "D1-Yes": 0.9346907253,
     "ID2": 8,
@@ -182,7 +182,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02297081084
   },
   {
-    "ID": 9,
+    "country_id": 9,
     "country name": "Pakistan",
     "D1-Yes": 0.9992122157,
     "ID2": 9,
@@ -208,7 +208,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02447595414
   },
   {
-    "ID": 10,
+    "country_id": 10,
     "country name": "Indonesia",
     "D1-Yes": 0.9972781448,
     "ID2": 10,
@@ -234,7 +234,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03243941899
   },
   {
-    "ID": 11,
+    "country_id": 11,
     "country name": "Bangladesh",
     "D1-Yes": 1,
     "ID2": 11,
@@ -260,7 +260,7 @@ let orientationData = [
     "subADisagreeReligion": 0.007604958854
   },
   {
-    "ID": 12,
+    "country_id": 12,
     "country name": "United Kingdom",
     "D1-Yes": 0.6883537416,
     "ID2": 12,
@@ -286,7 +286,7 @@ let orientationData = [
     "subADisagreeReligion": 0.009841183908
   },
   {
-    "ID": 13,
+    "country_id": 13,
     "country name": "France",
     "D1-Yes": 0.6902690812,
     "ID2": 13,
@@ -312,7 +312,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02200655246
   },
   {
-    "ID": 14,
+    "country_id": 14,
     "country name": "Germany",
     "D1-Yes": 0.6724734213,
     "ID2": 14,
@@ -338,7 +338,7 @@ let orientationData = [
     "subADisagreeReligion": 0.007033320426
   },
   {
-    "ID": 15,
+    "country_id": 15,
     "country name": "Netherlands",
     "D1-Yes": 0.5356705703,
     "ID2": 15,
@@ -364,7 +364,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03733080637
   },
   {
-    "ID": 16,
+    "country_id": 16,
     "country name": "Belgium",
     "D1-Yes": 0.5921355103,
     "ID2": 16,
@@ -390,7 +390,7 @@ let orientationData = [
     "subADisagreeReligion": 0.005605414549
   },
   {
-    "ID": 17,
+    "country_id": 17,
     "country name": "Spain",
     "D1-Yes": 0.7438107419,
     "ID2": 17,
@@ -416,7 +416,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01130719356
   },
   {
-    "ID": 18,
+    "country_id": 18,
     "country name": "Italy",
     "D1-Yes": 0.8550239139,
     "ID2": 18,
@@ -442,7 +442,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01844009794
   },
   {
-    "ID": 19,
+    "country_id": 19,
     "country name": "Poland",
     "D1-Yes": 0.9599189022,
     "ID2": 19,
@@ -468,7 +468,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01134442749
   },
   {
-    "ID": 20,
+    "country_id": 20,
     "country name": "Hungary",
     "D1-Yes": 0.7234384339,
     "ID2": 20,
@@ -494,7 +494,7 @@ let orientationData = [
     "subADisagreeReligion": 0.002910686618
   },
   {
-    "ID": 21,
+    "country_id": 21,
     "country name": "Czech Republic",
     "D1-Yes": 0.3052035726,
     "ID2": 21,
@@ -520,7 +520,7 @@ let orientationData = [
     "subADisagreeReligion": 0.000749940359
   },
   {
-    "ID": 22,
+    "country_id": 22,
     "country name": "Romania",
     "D1-Yes": 0.9881475788,
     "ID2": 22,
@@ -546,7 +546,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03745091997
   },
   {
-    "ID": 23,
+    "country_id": 23,
     "country name": "Sweden",
     "D1-Yes": 0.5621520401,
     "ID2": 23,
@@ -572,7 +572,7 @@ let orientationData = [
     "subADisagreeReligion": 0.000810993868
   },
   {
-    "ID": 24,
+    "country_id": 24,
     "country name": "Greece",
     "D1-Yes": 0.966444701,
     "ID2": 24,
@@ -598,7 +598,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03782405721
   },
   {
-    "ID": 25,
+    "country_id": 25,
     "country name": "Denmark",
     "D1-Yes": 0.7111938225,
     "ID2": 25,
@@ -624,7 +624,7 @@ let orientationData = [
     "subADisagreeReligion": 0.006778687557
   },
   {
-    "ID": 26,
+    "country_id": 26,
     "country name": "Iran",
     "D1-Yes": 0.9960730244,
     "ID2": 26,
@@ -650,7 +650,7 @@ let orientationData = [
     "subADisagreeReligion": ""
   },
   {
-    "ID": 28,
+    "country_id": 28,
     "country name": "Singapore",
     "D1-Yes": 0.9503212004,
     "ID2": 28,
@@ -676,7 +676,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02858061085
   },
   {
-    "ID": 29,
+    "country_id": 29,
     "country name": "Japan",
     "D1-Yes": 0.312582461,
     "ID2": 29,
@@ -702,7 +702,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0002775560229
   },
   {
-    "ID": 31,
+    "country_id": 31,
     "country name": "India",
     "D1-Yes": 1,
     "ID2": 31,
@@ -728,7 +728,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01200840852
   },
   {
-    "ID": 32,
+    "country_id": 32,
     "country name": "Venezuela",
     "D1-Yes": 0.8885068884,
     "ID2": 32,
@@ -754,7 +754,7 @@ let orientationData = [
     "subADisagreeReligion": 0.04984694055
   },
   {
-    "ID": 33,
+    "country_id": 33,
     "country name": "Brazil",
     "D1-Yes": 0.9094444265,
     "ID2": 33,
@@ -780,7 +780,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0727775708
   },
   {
-    "ID": 34,
+    "country_id": 34,
     "country name": "Mexico",
     "D1-Yes": 0.8987241081,
     "ID2": 34,
@@ -806,7 +806,7 @@ let orientationData = [
     "subADisagreeReligion": 0.06660376654
   },
   {
-    "ID": 35,
+    "country_id": 35,
     "country name": "Nigeria",
     "D1-Yes": 0.9981772662,
     "ID2": 35,
@@ -832,7 +832,7 @@ let orientationData = [
     "subADisagreeReligion": 0.05794964386
   },
   {
-    "ID": 36,
+    "country_id": 36,
     "country name": "Kenya",
     "D1-Yes": 0.9919341018,
     "ID2": 36,
@@ -858,7 +858,7 @@ let orientationData = [
     "subADisagreeReligion": 0.1017371021
   },
   {
-    "ID": 37,
+    "country_id": 37,
     "country name": "Tanzania",
     "D1-Yes": 0.9906522153,
     "ID2": 37,
@@ -884,7 +884,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01246391978
   },
   {
-    "ID": 38,
+    "country_id": 38,
     "country name": "Israel",
     "D1-Yes": 0.9692650867,
     "ID2": 38,
@@ -910,7 +910,7 @@ let orientationData = [
     "subADisagreeReligion": 0.04895309469
   },
   {
-    "ID": 39,
+    "country_id": 39,
     "country name": "Palestinian Territories",
     "D1-Yes": 1,
     "ID2": 39,
@@ -936,7 +936,7 @@ let orientationData = [
     "subADisagreeReligion": 0.04534243417
   },
   {
-    "ID": 40,
+    "country_id": 40,
     "country name": "Ghana",
     "D1-Yes": 0.9853388137,
     "ID2": 40,
@@ -962,7 +962,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03355994111
   },
   {
-    "ID": 41,
+    "country_id": 41,
     "country name": "Uganda",
     "D1-Yes": 0.9980410281,
     "ID2": 41,
@@ -988,7 +988,7 @@ let orientationData = [
     "subADisagreeReligion": 0.06879016708
   },
   {
-    "ID": 42,
+    "country_id": 42,
     "country name": "Benin",
     "D1-Yes": 0.9341304895,
     "ID2": 42,
@@ -1014,7 +1014,7 @@ let orientationData = [
     "subADisagreeReligion": 0.04595390921
   },
   {
-    "ID": 43,
+    "country_id": 43,
     "country name": "Madagascar",
     "D1-Yes": 0.8538304884,
     "ID2": 43,
@@ -1040,7 +1040,7 @@ let orientationData = [
     "subADisagreeReligion": 0.05899107346
   },
   {
-    "ID": 44,
+    "country_id": 44,
     "country name": "Malawi",
     "D1-Yes": 0.9852577389,
     "ID2": 44,
@@ -1066,7 +1066,7 @@ let orientationData = [
     "subADisagreeReligion": 0.08102930511
   },
   {
-    "ID": 45,
+    "country_id": 45,
     "country name": "South Africa",
     "D1-Yes": 0.9483022098,
     "ID2": 45,
@@ -1092,7 +1092,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0557765353
   },
   {
-    "ID": 46,
+    "country_id": 46,
     "country name": "Canada",
     "D1-Yes": 0.6581931807,
     "ID2": 46,
@@ -1118,7 +1118,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0105909068
   },
   {
-    "ID": 47,
+    "country_id": 47,
     "country name": "Australia",
     "D1-Yes": 0.5678425487,
     "ID2": 47,
@@ -1144,7 +1144,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01304635432
   },
   {
-    "ID": 48,
+    "country_id": 48,
     "country name": "Philippines",
     "D1-Yes": 0.9988587477,
     "ID2": 48,
@@ -1170,7 +1170,7 @@ let orientationData = [
     "subADisagreeReligion": 0.08162607199
   },
   {
-    "ID": 49,
+    "country_id": 49,
     "country name": "Sri Lanka",
     "D1-Yes": 1,
     "ID2": 49,
@@ -1196,7 +1196,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01390133207
   },
   {
-    "ID": 50,
+    "country_id": 50,
     "country name": "Vietnam",
     "D1-Yes": 0.4568382174,
     "ID2": 50,
@@ -1222,7 +1222,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0009561692204
   },
   {
-    "ID": 51,
+    "country_id": 51,
     "country name": "Thailand",
     "D1-Yes": 1,
     "ID2": 51,
@@ -1248,7 +1248,7 @@ let orientationData = [
     "subADisagreeReligion": 0.005437539968
   },
   {
-    "ID": 52,
+    "country_id": 52,
     "country name": "Cambodia",
     "D1-Yes": 0.9653337171,
     "ID2": 52,
@@ -1274,7 +1274,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01395855201
   },
   {
-    "ID": 53,
+    "country_id": 53,
     "country name": "Laos",
     "D1-Yes": 0.9886882622,
     "ID2": 53,
@@ -1300,7 +1300,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02341877195
   },
   {
-    "ID": 54,
+    "country_id": 54,
     "country name": "Myanmar",
     "D1-Yes": 1,
     "ID2": 54,
@@ -1326,7 +1326,7 @@ let orientationData = [
     "subADisagreeReligion": 0.001773323242
   },
   {
-    "ID": 55,
+    "country_id": 55,
     "country name": "New Zealand",
     "D1-Yes": 0.5394382134,
     "ID2": 55,
@@ -1352,7 +1352,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01116397009
   },
   {
-    "ID": 57,
+    "country_id": 57,
     "country name": "Botswana",
     "D1-Yes": 0.9047508244,
     "ID2": 57,
@@ -1378,7 +1378,7 @@ let orientationData = [
     "subADisagreeReligion": 0.04536803585
   },
   {
-    "ID": 60,
+    "country_id": 60,
     "country name": "Ethiopia",
     "D1-Yes": 1,
     "ID2": 60,
@@ -1404,7 +1404,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01803689878
   },
   {
-    "ID": 61,
+    "country_id": 61,
     "country name": "Mali",
     "D1-Yes": 0.976738431,
     "ID2": 61,
@@ -1430,7 +1430,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01330363678
   },
   {
-    "ID": 62,
+    "country_id": 62,
     "country name": "Mauritania",
     "D1-Yes": 0.9991528521,
     "ID2": 62,
@@ -1456,7 +1456,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02104516072
   },
   {
-    "ID": 63,
+    "country_id": 63,
     "country name": "Mozambique",
     "D1-Yes": 0.9174018958,
     "ID2": 63,
@@ -1482,7 +1482,7 @@ let orientationData = [
     "subADisagreeReligion": 0.05024294593
   },
   {
-    "ID": 64,
+    "country_id": 64,
     "country name": "Niger",
     "D1-Yes": 0.9191125965,
     "ID2": 64,
@@ -1508,7 +1508,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01893903017
   },
   {
-    "ID": 65,
+    "country_id": 65,
     "country name": "Rwanda",
     "D1-Yes": 0.9898045186,
     "ID2": 65,
@@ -1534,7 +1534,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03858114781
   },
   {
-    "ID": 66,
+    "country_id": 66,
     "country name": "Senegal",
     "D1-Yes": 0.9953200432,
     "ID2": 66,
@@ -1560,7 +1560,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02845994579
   },
   {
-    "ID": 67,
+    "country_id": 67,
     "country name": "Zambia",
     "D1-Yes": 0.9856176504,
     "ID2": 67,
@@ -1586,7 +1586,7 @@ let orientationData = [
     "subADisagreeReligion": 0.1227712662
   },
   {
-    "ID": 68,
+    "country_id": 68,
     "country name": "South Korea",
     "D1-Yes": 0.4767865482,
     "ID2": 68,
@@ -1612,7 +1612,7 @@ let orientationData = [
     "subADisagreeReligion": 0.005946362385
   },
   {
-    "ID": 69,
+    "country_id": 69,
     "country name": "Taiwan",
     "D1-Yes": 0.6615829072,
     "ID2": 69,
@@ -1638,7 +1638,7 @@ let orientationData = [
     "subADisagreeReligion": 0.002706717121
   },
   {
-    "ID": 70,
+    "country_id": 70,
     "country name": "Afghanistan",
     "D1-Yes": 1,
     "ID2": 70,
@@ -1664,7 +1664,7 @@ let orientationData = [
     "subADisagreeReligion": 0.00239530026
   },
   {
-    "ID": 71,
+    "country_id": 71,
     "country name": "Belarus",
     "D1-Yes": 0.9251762028,
     "ID2": 71,
@@ -1690,7 +1690,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01283736607
   },
   {
-    "ID": 72,
+    "country_id": 72,
     "country name": "Georgia",
     "D1-Yes": 0.9859432243,
     "ID2": 72,
@@ -1716,7 +1716,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03532036673
   },
   {
-    "ID": 73,
+    "country_id": 73,
     "country name": "Kazakhstan",
     "D1-Yes": 0.9412480764,
     "ID2": 73,
@@ -1742,7 +1742,7 @@ let orientationData = [
     "subADisagreeReligion": 0.001881596486
   },
   {
-    "ID": 74,
+    "country_id": 74,
     "country name": "Kyrgyzstan",
     "D1-Yes": 0.998990067,
     "ID2": 74,
@@ -1768,7 +1768,7 @@ let orientationData = [
     "subADisagreeReligion": 0.004704861442
   },
   {
-    "ID": 75,
+    "country_id": 75,
     "country name": "Moldova",
     "D1-Yes": 0.9889085751,
     "ID2": 75,
@@ -1794,7 +1794,7 @@ let orientationData = [
     "subADisagreeReligion": 0.05340055178
   },
   {
-    "ID": 76,
+    "country_id": 76,
     "country name": "Russia",
     "D1-Yes": 0.8799053674,
     "ID2": 76,
@@ -1820,7 +1820,7 @@ let orientationData = [
     "subADisagreeReligion": 0.009070048325
   },
   {
-    "ID": 77,
+    "country_id": 77,
     "country name": "Ukraine",
     "D1-Yes": 0.908146005,
     "ID2": 77,
@@ -1846,7 +1846,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01174332325
   },
   {
-    "ID": 78,
+    "country_id": 78,
     "country name": "Burkina Faso",
     "D1-Yes": 0.9866236736,
     "ID2": 78,
@@ -1872,7 +1872,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0387442075
   },
   {
-    "ID": 79,
+    "country_id": 79,
     "country name": "Cameroon",
     "D1-Yes": 0.9349470478,
     "ID2": 79,
@@ -1898,7 +1898,7 @@ let orientationData = [
     "subADisagreeReligion": 0.06635690142
   },
   {
-    "ID": 80,
+    "country_id": 80,
     "country name": "Sierra Leone",
     "D1-Yes": 0.9979887092,
     "ID2": 80,
@@ -1924,7 +1924,7 @@ let orientationData = [
     "subADisagreeReligion": 0.06623017572
   },
   {
-    "ID": 81,
+    "country_id": 81,
     "country name": "Zimbabwe",
     "D1-Yes": 0.9741352543,
     "ID2": 81,
@@ -1950,7 +1950,7 @@ let orientationData = [
     "subADisagreeReligion": 0.04325791465
   },
   {
-    "ID": 82,
+    "country_id": 82,
     "country name": "Costa Rica",
     "D1-Yes": 0.9012659697,
     "ID2": 82,
@@ -1976,7 +1976,7 @@ let orientationData = [
     "subADisagreeReligion": 0.06910254549
   },
   {
-    "ID": 83,
+    "country_id": 83,
     "country name": "Albania",
     "D1-Yes": 0.9638432189,
     "ID2": 83,
@@ -2002,7 +2002,7 @@ let orientationData = [
     "subADisagreeReligion": 0.05926172036
   },
   {
-    "ID": 84,
+    "country_id": 84,
     "country name": "Algeria",
     "D1-Yes": 1,
     "ID2": 84,
@@ -2028,7 +2028,7 @@ let orientationData = [
     "subADisagreeReligion": 0.08932349641
   },
   {
-    "ID": 87,
+    "country_id": 87,
     "country name": "Argentina",
     "D1-Yes": 0.8598234916,
     "ID2": 87,
@@ -2054,7 +2054,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03283628216
   },
   {
-    "ID": 88,
+    "country_id": 88,
     "country name": "Armenia",
     "D1-Yes": 0.9840310129,
     "ID2": 88,
@@ -2080,7 +2080,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01219743106
   },
   {
-    "ID": 89,
+    "country_id": 89,
     "country name": "Austria",
     "D1-Yes": 0.7621079005,
     "ID2": 89,
@@ -2106,7 +2106,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01938135254
   },
   {
-    "ID": 90,
+    "country_id": 90,
     "country name": "Azerbaijan",
     "D1-Yes": 0.9968223464,
     "ID2": 90,
@@ -2132,7 +2132,7 @@ let orientationData = [
     "subADisagreeReligion": 0.00085525742
   },
   {
-    "ID": 96,
+    "country_id": 96,
     "country name": "Bolivia",
     "D1-Yes": 0.9188874683,
     "ID2": 96,
@@ -2158,7 +2158,7 @@ let orientationData = [
     "subADisagreeReligion": 0.1006744526
   },
   {
-    "ID": 97,
+    "country_id": 97,
     "country name": "Bosnia and Herzegovina",
     "D1-Yes": 0.9922047206,
     "ID2": 97,
@@ -2184,7 +2184,7 @@ let orientationData = [
     "subADisagreeReligion": 0.06763630089
   },
   {
-    "ID": 99,
+    "country_id": 99,
     "country name": "Bulgaria",
     "D1-Yes": 0.9764971125,
     "ID2": 99,
@@ -2210,7 +2210,7 @@ let orientationData = [
     "subADisagreeReligion": 0.003795605563
   },
   {
-    "ID": 100,
+    "country_id": 100,
     "country name": "Burundi",
     "D1-Yes": 0.9876953268,
     "ID2": 100,
@@ -2236,7 +2236,7 @@ let orientationData = [
     "subADisagreeReligion": 0.05813894791
   },
   {
-    "ID": 103,
+    "country_id": 103,
     "country name": "Chad",
     "D1-Yes": 0.939184018,
     "ID2": 103,
@@ -2262,7 +2262,7 @@ let orientationData = [
     "subADisagreeReligion": 0.08608330743
   },
   {
-    "ID": 104,
+    "country_id": 104,
     "country name": "Chile",
     "D1-Yes": 0.8261752907,
     "ID2": 104,
@@ -2288,7 +2288,7 @@ let orientationData = [
     "subADisagreeReligion": 0.06258365109
   },
   {
-    "ID": 105,
+    "country_id": 105,
     "country name": "Colombia",
     "D1-Yes": 0.9282844248,
     "ID2": 105,
@@ -2314,7 +2314,7 @@ let orientationData = [
     "subADisagreeReligion": 0.07766934057
   },
   {
-    "ID": 106,
+    "country_id": 106,
     "country name": "Comoros",
     "D1-Yes": 0.993704389,
     "ID2": 106,
@@ -2340,7 +2340,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02752350897
   },
   {
-    "ID": 108,
+    "country_id": 108,
     "country name": "Republic of Congo",
     "D1-Yes": 0.8673764805,
     "ID2": 108,
@@ -2366,7 +2366,7 @@ let orientationData = [
     "subADisagreeReligion": 0.07893194714
   },
   {
-    "ID": 109,
+    "country_id": 109,
     "country name": "Croatia",
     "D1-Yes": 0.9174348086,
     "ID2": 109,
@@ -2392,7 +2392,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01471467627
   },
   {
-    "ID": 111,
+    "country_id": 111,
     "country name": "Cyprus",
     "D1-Yes": 0.9556511902,
     "ID2": 111,
@@ -2418,7 +2418,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02352512778
   },
   {
-    "ID": 114,
+    "country_id": 114,
     "country name": "Dominican Republic",
     "D1-Yes": 0.8275301669,
     "ID2": 114,
@@ -2444,7 +2444,7 @@ let orientationData = [
     "subADisagreeReligion": 0.04629438322
   },
   {
-    "ID": 115,
+    "country_id": 115,
     "country name": "Ecuador",
     "D1-Yes": 0.9585321925,
     "ID2": 115,
@@ -2470,7 +2470,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0859405002
   },
   {
-    "ID": 116,
+    "country_id": 116,
     "country name": "El Salvador",
     "D1-Yes": 0.8424160515,
     "ID2": 116,
@@ -2496,7 +2496,7 @@ let orientationData = [
     "subADisagreeReligion": 0.064987263
   },
   {
-    "ID": 119,
+    "country_id": 119,
     "country name": "Estonia",
     "D1-Yes": 0.5031516915,
     "ID2": 119,
@@ -2522,7 +2522,7 @@ let orientationData = [
     "subADisagreeReligion": 0.002175133819
   },
   {
-    "ID": 121,
+    "country_id": 121,
     "country name": "Finland",
     "D1-Yes": 0.7838630922,
     "ID2": 121,
@@ -2548,7 +2548,7 @@ let orientationData = [
     "subADisagreeReligion": 0.009029060088
   },
   {
-    "ID": 122,
+    "country_id": 122,
     "country name": "Gabon",
     "D1-Yes": 0.9239909051,
     "ID2": 122,
@@ -2574,7 +2574,7 @@ let orientationData = [
     "subADisagreeReligion": 0.1189430609
   },
   {
-    "ID": 124,
+    "country_id": 124,
     "country name": "Guatemala",
     "D1-Yes": 0.885134581,
     "ID2": 124,
@@ -2600,7 +2600,7 @@ let orientationData = [
     "subADisagreeReligion": 0.1041223583
   },
   {
-    "ID": 125,
+    "country_id": 125,
     "country name": "Guinea",
     "D1-Yes": 0.9605998447,
     "ID2": 125,
@@ -2626,7 +2626,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03914067399
   },
   {
-    "ID": 128,
+    "country_id": 128,
     "country name": "Haiti",
     "D1-Yes": 0.9632508919,
     "ID2": 128,
@@ -2652,7 +2652,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03819574775
   },
   {
-    "ID": 129,
+    "country_id": 129,
     "country name": "Honduras",
     "D1-Yes": 0.8593581421,
     "ID2": 129,
@@ -2678,7 +2678,7 @@ let orientationData = [
     "subADisagreeReligion": 0.08226615772
   },
   {
-    "ID": 130,
+    "country_id": 130,
     "country name": "Iceland",
     "D1-Yes": 0.733381047,
     "ID2": 130,
@@ -2704,7 +2704,7 @@ let orientationData = [
     "subADisagreeReligion": 0.001821609676
   },
   {
-    "ID": 131,
+    "country_id": 131,
     "country name": "Iraq",
     "D1-Yes": 0.9997652089,
     "ID2": 131,
@@ -2730,7 +2730,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0512742224
   },
   {
-    "ID": 132,
+    "country_id": 132,
     "country name": "Ireland",
     "D1-Yes": 0.8362195889,
     "ID2": 132,
@@ -2756,7 +2756,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02335165143
   },
   {
-    "ID": 134,
+    "country_id": 134,
     "country name": "Ivory Coast",
     "D1-Yes": 0.9132594001,
     "ID2": 134,
@@ -2782,7 +2782,7 @@ let orientationData = [
     "subADisagreeReligion": 0.066234701
   },
   {
-    "ID": 137,
+    "country_id": 137,
     "country name": "Kuwait",
     "D1-Yes": 0.7998019451,
     "ID2": 137,
@@ -2808,7 +2808,7 @@ let orientationData = [
     "subADisagreeReligion": 0.004923077496
   },
   {
-    "ID": 138,
+    "country_id": 138,
     "country name": "Latvia",
     "D1-Yes": 0.6560375944,
     "ID2": 138,
@@ -2834,7 +2834,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02819369094
   },
   {
-    "ID": 140,
+    "country_id": 140,
     "country name": "Liberia",
     "D1-Yes": 0.9754581218,
     "ID2": 140,
@@ -2860,7 +2860,7 @@ let orientationData = [
     "subADisagreeReligion": 0.04984066752
   },
   {
-    "ID": 141,
+    "country_id": 141,
     "country name": "Libya",
     "D1-Yes": 1,
     "ID2": 141,
@@ -2886,7 +2886,7 @@ let orientationData = [
     "subADisagreeReligion": 0.009310959263
   },
   {
-    "ID": 143,
+    "country_id": 143,
     "country name": "Lithuania",
     "D1-Yes": 0.8974992727,
     "ID2": 143,
@@ -2912,7 +2912,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0133934828
   },
   {
-    "ID": 144,
+    "country_id": 144,
     "country name": "Luxembourg",
     "D1-Yes": 0.7737628087,
     "ID2": 144,
@@ -2938,7 +2938,7 @@ let orientationData = [
     "subADisagreeReligion": 0.04252636498
   },
   {
-    "ID": 145,
+    "country_id": 145,
     "country name": "Macedonia",
     "D1-Yes": 0.9947582073,
     "ID2": 145,
@@ -2964,7 +2964,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03454407445
   },
   {
-    "ID": 146,
+    "country_id": 146,
     "country name": "Malaysia",
     "D1-Yes": 0.9985672302,
     "ID2": 146,
@@ -2990,7 +2990,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03546477282
   },
   {
-    "ID": 148,
+    "country_id": 148,
     "country name": "Malta",
     "D1-Yes": 0.9372826602,
     "ID2": 148,
@@ -3016,7 +3016,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02836422828
   },
   {
-    "ID": 150,
+    "country_id": 150,
     "country name": "Mauritius",
     "D1-Yes": 0.9836166518,
     "ID2": 150,
@@ -3042,7 +3042,7 @@ let orientationData = [
     "subADisagreeReligion": ""
   },
   {
-    "ID": 153,
+    "country_id": 153,
     "country name": "Mongolia",
     "D1-Yes": 0.6929317997,
     "ID2": 153,
@@ -3068,7 +3068,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01287528771
   },
   {
-    "ID": 154,
+    "country_id": 154,
     "country name": "Montenegro",
     "D1-Yes": 0.9616017065,
     "ID2": 154,
@@ -3094,7 +3094,7 @@ let orientationData = [
     "subADisagreeReligion": 0.04314852079
   },
   {
-    "ID": 155,
+    "country_id": 155,
     "country name": "Namibia",
     "D1-Yes": 0.9699656037,
     "ID2": 155,
@@ -3120,7 +3120,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0639684853
   },
   {
-    "ID": 157,
+    "country_id": 157,
     "country name": "Nepal",
     "D1-Yes": 0.9781512071,
     "ID2": 157,
@@ -3146,7 +3146,7 @@ let orientationData = [
     "subADisagreeReligion": 0.004343662931
   },
   {
-    "ID": 158,
+    "country_id": 158,
     "country name": "Nicaragua",
     "D1-Yes": 0.9071405136,
     "ID2": 158,
@@ -3172,7 +3172,7 @@ let orientationData = [
     "subADisagreeReligion": 0.08957599606
   },
   {
-    "ID": 160,
+    "country_id": 160,
     "country name": "Norway",
     "D1-Yes": 0.7501246425,
     "ID2": 160,
@@ -3198,7 +3198,7 @@ let orientationData = [
     "subADisagreeReligion": 0.009176725366
   },
   {
-    "ID": 163,
+    "country_id": 163,
     "country name": "Panama",
     "D1-Yes": 0.8780594589,
     "ID2": 163,
@@ -3224,7 +3224,7 @@ let orientationData = [
     "subADisagreeReligion": 0.08185034795
   },
   {
-    "ID": 164,
+    "country_id": 164,
     "country name": "Paraguay",
     "D1-Yes": 0.9607782883,
     "ID2": 164,
@@ -3250,7 +3250,7 @@ let orientationData = [
     "subADisagreeReligion": 0.06178286186
   },
   {
-    "ID": 165,
+    "country_id": 165,
     "country name": "Peru",
     "D1-Yes": 0.945304047,
     "ID2": 165,
@@ -3276,7 +3276,7 @@ let orientationData = [
     "subADisagreeReligion": 0.124404315
   },
   {
-    "ID": 166,
+    "country_id": 166,
     "country name": "Portugal",
     "D1-Yes": 0.8321223399,
     "ID2": 166,
@@ -3302,7 +3302,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01463018145
   },
   {
-    "ID": 173,
+    "country_id": 173,
     "country name": "Serbia",
     "D1-Yes": 0.9656969628,
     "ID2": 173,
@@ -3328,7 +3328,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0291041539
   },
   {
-    "ID": 175,
+    "country_id": 175,
     "country name": "Slovakia",
     "D1-Yes": 0.8721093224,
     "ID2": 175,
@@ -3354,7 +3354,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01876034115
   },
   {
-    "ID": 176,
+    "country_id": 176,
     "country name": "Slovenia",
     "D1-Yes": 0.7287870303,
     "ID2": 176,
@@ -3380,7 +3380,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01339891434
   },
   {
-    "ID": 183,
+    "country_id": 183,
     "country name": "Eswatini",
     "D1-Yes": 0.9716523871,
     "ID2": 183,
@@ -3406,7 +3406,7 @@ let orientationData = [
     "subADisagreeReligion": 0.05166936676
   },
   {
-    "ID": 184,
+    "country_id": 184,
     "country name": "Switzerland",
     "D1-Yes": 0.8128489317,
     "ID2": 184,
@@ -3432,7 +3432,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02443516512
   },
   {
-    "ID": 185,
+    "country_id": 185,
     "country name": "Tajikistan",
     "D1-Yes": 0.9960937063,
     "ID2": 185,
@@ -3458,7 +3458,7 @@ let orientationData = [
     "subADisagreeReligion": 0.000416717207
   },
   {
-    "ID": 186,
+    "country_id": 186,
     "country name": "The Gambia",
     "D1-Yes": 1,
     "ID2": 186,
@@ -3484,7 +3484,7 @@ let orientationData = [
     "subADisagreeReligion": 0.03422000948
   },
   {
-    "ID": 187,
+    "country_id": 187,
     "country name": "Togo",
     "D1-Yes": 0.9262236701,
     "ID2": 187,
@@ -3510,7 +3510,7 @@ let orientationData = [
     "subADisagreeReligion": 0.08126982098
   },
   {
-    "ID": 190,
+    "country_id": 190,
     "country name": "Tunisia",
     "D1-Yes": 0.9952208523,
     "ID2": 190,
@@ -3536,7 +3536,7 @@ let orientationData = [
     "subADisagreeReligion": 0.04903961746
   },
   {
-    "ID": 191,
+    "country_id": 191,
     "country name": "Turkmenistan",
     "D1-Yes": 0.9978968121,
     "ID2": 191,
@@ -3562,7 +3562,7 @@ let orientationData = [
     "subADisagreeReligion": ""
   },
   {
-    "ID": 193,
+    "country_id": 193,
     "country name": "United Arab Emirates",
     "D1-Yes": 0.4718495204,
     "ID2": 193,
@@ -3588,7 +3588,7 @@ let orientationData = [
     "subADisagreeReligion": 0.0310539732
   },
   {
-    "ID": 194,
+    "country_id": 194,
     "country name": "Uruguay",
     "D1-Yes": 0.662424215,
     "ID2": 194,
@@ -3614,7 +3614,7 @@ let orientationData = [
     "subADisagreeReligion": 0.02172117802
   },
   {
-    "ID": 195,
+    "country_id": 195,
     "country name": "Uzbekistan",
     "D1-Yes": 0.9871815434,
     "ID2": 195,
@@ -3640,7 +3640,7 @@ let orientationData = [
     "subADisagreeReligion": ""
   },
   {
-    "ID": 197,
+    "country_id": 197,
     "country name": "Yemen",
     "D1-Yes": 1,
     "ID2": 197,
@@ -3666,7 +3666,7 @@ let orientationData = [
     "subADisagreeReligion": 0.01826845715
   },
   {
-    "ID": 198,
+    "country_id": 198,
     "country name": "Kosovo",
     "D1-Yes": 0.9980794276,
     "ID2": 198,
@@ -3692,7 +3692,7 @@ let orientationData = [
     "subADisagreeReligion": 0.05502312751
   },
   {
-    "ID": 202,
+    "country_id": 202,
     "country name": "Northern Cyprus",
     "D1-Yes": 0.8793400597,
     "ID2": 202,
@@ -3721,7 +3721,7 @@ let orientationData = [
 
 let religionData = [
   {
-    "ID": 1,
+    "country_id": 1,
     "country name": "Christian",
     "D1-Yes": 1,
     "ID2": "",
@@ -3734,7 +3734,7 @@ let religionData = [
     "Z-Outside": ""
   },
   {
-    "ID": 2,
+    "country_id": 2,
     "country name": "Islam",
     "D1-Yes": 1,
     "ID2": "",
@@ -3747,7 +3747,7 @@ let religionData = [
     "Z-Outside": ""
   },
   {
-    "ID": 3,
+    "country_id": 3,
     "country name": "Hinduism",
     "D1-Yes": 1,
     "ID2": "",
@@ -3760,7 +3760,7 @@ let religionData = [
     "Z-Outside": ""
   },
   {
-    "ID": 4,
+    "country_id": 4,
     "country name": "Buddhism",
     "D1-Yes": 1,
     "ID2": "",
@@ -3773,7 +3773,7 @@ let religionData = [
     "Z-Outside": ""
   },
   {
-    "ID": 5,
+    "country_id": 5,
     "country name": "Judaism",
     "D1-Yes": 1,
     "ID2": "",
@@ -3786,7 +3786,7 @@ let religionData = [
     "Z-Outside": ""
   },
   {
-    "ID": 7,
+    "country_id": 7,
     "country name": "Other",
     "D1-Yes": 1,
     "ID2": "",

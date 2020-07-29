@@ -1,43 +1,3 @@
-console.log(data);
-
-let graphWidth = $('#scatterplot1').width();
-let graphHeight = $('#scatterplot1').width();
-
-let scatterplot1 = scatterplot('#scatterplot1',data,'distrust_society_nogov','distrust_scientists','Trust in Society',"Percent answering 'A lot' or 'Some' to trusting scientist in their country",'WBI',graphWidth,graphHeight,0,60,0,60);
-generateDiffusionIcons(data);
-
-function generateDiffusionIcons(data){
-	let width = $('#viz1').width();
-	let height = width/16*9;
-	generateDiffusion('#viz1',data,width,height,16,9);
-
-	let width2 = $('#viz2').width();
-	let height2 = $('#viz2').width();
-	let southAfrica = data.filter(function(d){
-		if(d['country_name']=='South Africa'){
-			return true;
-		} else {
-			return false;
-		}
-	});
-	generateDiffusion('#viz2',southAfrica,width2,height2,1,1);
-
-  let width3 = $('#viz3').width();
-  let height3 = width/16*9;
-  generateDiffusion('#viz3',data,width,height,16,9);	
-
-  let width4 = $('#viz2').width();
-  let height4 = $('#viz2').width();
-  let vietnam = data.filter(function(d){
-    if(d['country_name']=='Vietnam'){
-      return true;
-    } else {
-      return false;
-    }
-  });
-  generateDiffusion('#viz4',vietnam,width4,height4,1,1);
-}
-
 function generateDiffusion(id,data,width,height,columns,lines){
 
 	/*let count = data.length;
@@ -103,7 +63,7 @@ function generateDiffusion(id,data,width,height,columns,lines){
           })
           .attr("cy", function(d,i) {
             let value = d[variables[j]]; 
-            return (i % lines)*scale*0.9 + scale*0.5 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
+            return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
           })
           .attr("r", scale*0.12)
           .attr("fill","#FFFFFF00")
@@ -136,7 +96,7 @@ function generateDiffusion(id,data,width,height,columns,lines){
             return Math.floor(i / lines) * scale + scale*0.5
           })
           .attr("y1", function(d,i) {
-            return (i % lines)*scale*0.9 + scale*0.5
+            return (i % lines)*scale + scale*0.4
           })
             .attr("x2", function(d,i) {
               let value = d[variables[j]];
@@ -144,7 +104,7 @@ function generateDiffusion(id,data,width,height,columns,lines){
             })
             .attr("y2", function(d,i) {
               let value = d[variables[j]]; 
-              return (i % lines)*scale*0.9 + scale*0.5 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
+              return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
             })
           .attr("stroke","#3F1A13")
           .attr("opacity",function(d){
@@ -156,9 +116,10 @@ function generateDiffusion(id,data,width,height,columns,lines){
               }
             })
             .attr("stroke-width",function(d){
-              let value = d[variables[j]];
-              //return value*scale/1500;
-              return 1.5;
+              //let value = d[variables[j]];
+              let value = d['distrust_scientists'];
+              return value*scale/1500;
+              //return 2*scale/100
             })      
 
         svg.selectAll(".circlecolor"+j)
@@ -171,7 +132,7 @@ function generateDiffusion(id,data,width,height,columns,lines){
           })
           .attr("cy", function(d,i) {
             let value = d[variables[j]]; 
-            return (i % 9)*scale*0.9 + scale*0.5 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
+            return (i % 9)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
           })
           .attr("r", function(d,i){
           	let value = d[variables[j]];
@@ -189,7 +150,7 @@ function generateDiffusion(id,data,width,height,columns,lines){
           return Math.floor(i / lines) * scale + scale*0.5
         })
         .attr("cy", function(d,i) {
-          return (i % lines)*scale*0.9 + scale*0.5
+          return (i % lines)*scale + scale*0.4
         })
         .attr("r", scale*0.06)
         .attr("fill","#F2EADF00");
@@ -202,7 +163,7 @@ function generateDiffusion(id,data,width,height,columns,lines){
           return Math.floor(i / 9) * scale + scale*0.5
         })
         .attr("cy", function(d,i) {
-          return (i % 9)*scale*0.9 + scale*0.5
+          return (i % 9)*scale + scale*0.4
         })
         .attr("r", function(d){
         	let value = Math.sqrt(d['distrust_scientists']);
@@ -223,14 +184,14 @@ function generateDiffusion(id,data,width,height,columns,lines){
     .enter().append("text")
     	.attr('class','country_label')
       .attr("x",function(d,i) { return Math.floor(i / lines) * scale + scale*0.5 })
-      .attr("y",function(d,i) { return (i % lines)*scale*0.9 + scale*0.9; })
+      .attr("y",function(d,i) { return (i % lines)*scale + scale*0.9; })
       .style("text-anchor", "middle")
       .text(function(d){
         return d['country_name'];
       });
 }
 
-function getHex(value){
+/*function getHex(value){
   let upper = [63, 26, 19];
   let lower = [185, 178, 164];
   value = Math.max(value - 50,0);
@@ -238,4 +199,4 @@ function getHex(value){
   let g = Math.floor(upper[1]*value/50 + lower[1]*(1-value/50));
   let b = Math.floor(upper[2]*value/50 + lower[2]*(1-value/50));
   return "rgb("+r+","+g+","+b+")";
-}
+}*/

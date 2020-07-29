@@ -11,8 +11,7 @@ body {
 }
 
 p {
-	font-size:1rem;
-	line-height
+	font-size:1.1rem;
 }
 
 #main {
@@ -62,17 +61,24 @@ h2 {
 
 .maintext {
 	font-size:1.4rem;
-	font-family:Wellcome;
+	font-family:arial;
+	font-weight:600;
 	text-align:center;
 }
 
 .subtext {
-	font-size:1rem;
+	font-size:1.2rem;
 	font-weight:600;
 }
 
+.takeawaytext {
+	font-size:1.4rem;
+	font-weight:600;
+	text-align:center;
+}
+
 .storysection {
-	margin-top:80px;
+	margin-top:60px;
 }
 
 .storysectionlarge {
@@ -135,12 +141,6 @@ h2 {
 	padding:20px;
 }
 
-.takeawaytext {
-	font-size:1.4rem;
-	font-weight:600;
-	text-align:center;
-}
-
 .fronttitle {
 	text-align:center;
 	font-size:2.0rem;
@@ -152,5 +152,21 @@ h2 {
 	text-align:center;
 	margin-top:20px;
 	font-size:1.2rem;
+}
+
+.orientation {
+	background-color:#F6B7B2;
+}
+
+.diffusion {
+	background-color:#E5DAD4
+}
+
+.distance {
+	background-color:#B7DADE;
+}
+
+.attraction {
+	background-color:#D3B9C7;
 }
 

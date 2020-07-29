@@ -13,3 +13,25 @@
 	font-size:0.8em;
 	font-weight:bold;
 }
+
+.selectcell {
+  display: flex;
+  align-items: center;
+}
+
+.highlightbox {
+	padding-left:60px;
+	padding-right:60px;
+}
+
+.lenssecond {
+	padding:15px;
+}
+
+.consider {
+	margin-top:-30px;
+}
+
+.subhighlight {
+	text-align:left;
+}

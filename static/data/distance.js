@@ -1,6 +1,6 @@
-let data = [
+let distanceData = [
  {
-   "country id": 1,
+   "country_id": 1,
    "country name": "United States",
    "Q12": 88.45,
    "Q16-most": 47.98,
@@ -10,7 +10,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 2,
+   "country_id": 2,
    "country name": "Egypt",
    "Q12": 64.76,
    "Q16-most": 29.45,
@@ -20,7 +20,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 3,
+   "country_id": 3,
    "country name": "Morocco",
    "Q12": 69.46,
    "Q16-most": 15.63,
@@ -30,7 +30,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 4,
+   "country_id": 4,
    "country name": "Lebanon",
    "Q12": 82.31,
    "Q16-most": 27.83,
@@ -40,7 +40,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 5,
+   "country_id": 5,
    "country name": "Saudi Arabia",
    "Q12": 73.85,
    "Q16-most": 55.62,
@@ -50,7 +50,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 6,
+   "country_id": 6,
    "country name": "Jordan",
    "Q12": 77.5,
    "Q16-most": 22.44,
@@ -60,7 +60,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 8,
+   "country_id": 8,
    "country name": "Turkey",
    "Q12": 75.74,
    "Q16-most": 28.73,
@@ -70,7 +70,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 9,
+   "country_id": 9,
    "country name": "Pakistan",
    "Q12": 61.99,
    "Q16-most": 28.27,
@@ -80,7 +80,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 10,
+   "country_id": 10,
    "country name": "Indonesia",
    "Q12": 69.3,
    "Q16-most": 24.48,
@@ -90,7 +90,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 11,
+   "country_id": 11,
    "country name": "Bangladesh",
    "Q12": 82.74,
    "Q16-most": 36.38,
@@ -100,7 +100,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 12,
+   "country_id": 12,
    "country name": "United Kingdom",
    "Q12": 90.07,
    "Q16-most": 50.26,
@@ -110,7 +110,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 13,
+   "country_id": 13,
    "country name": "France",
    "Q12": 93.83,
    "Q16-most": 47.26,
@@ -120,7 +120,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 14,
+   "country_id": 14,
    "country name": "Germany",
    "Q12": 93.66,
    "Q16-most": 42.87,
@@ -130,7 +130,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 15,
+   "country_id": 15,
    "country name": "Netherlands",
    "Q12": 85.92,
    "Q16-most": 50.36,
@@ -140,7 +140,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 16,
+   "country_id": 16,
    "country name": "Belgium",
    "Q12": 94.84,
    "Q16-most": 52.07,
@@ -150,7 +150,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 17,
+   "country_id": 17,
    "country name": "Spain",
    "Q12": 92.39,
    "Q16-most": 47.58,
@@ -160,7 +160,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 18,
+   "country_id": 18,
    "country name": "Italy",
    "Q12": 91,
    "Q16-most": 55.83,
@@ -170,7 +170,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 19,
+   "country_id": 19,
    "country name": "Poland",
    "Q12": 87.85,
    "Q16-most": 38.6,
@@ -180,7 +180,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 20,
+   "country_id": 20,
    "country name": "Hungary",
    "Q12": 88.85,
    "Q16-most": 35.42,
@@ -190,7 +190,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 21,
+   "country_id": 21,
    "country name": "Czech Republic",
    "Q12": 75.88,
    "Q16-most": 47.56,
@@ -200,7 +200,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 22,
+   "country_id": 22,
    "country name": "Romania",
    "Q12": 75.67,
    "Q16-most": 27.52,
@@ -210,7 +210,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 23,
+   "country_id": 23,
    "country name": "Sweden",
    "Q12": 95.39,
    "Q16-most": 40.95,
@@ -220,7 +220,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 24,
+   "country_id": 24,
    "country name": "Greece",
    "Q12": 79.78,
    "Q16-most": 56.47,
@@ -230,7 +230,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 25,
+   "country_id": 25,
    "country name": "Denmark",
    "Q12": 95.95,
    "Q16-most": 77.95,
@@ -240,7 +240,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 26,
+   "country_id": 26,
    "country name": "Iran",
    "Q12": 76.91,
    "Q16-most": 34.62,
@@ -250,7 +250,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 28,
+   "country_id": 28,
    "country name": "Singapore",
    "Q12": 79.21,
    "Q16-most": 39.64,
@@ -260,7 +260,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 29,
+   "country_id": 29,
    "country name": "Japan",
    "Q12": 88.08,
    "Q16-most": 29.25,
@@ -270,7 +270,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 30,
+   "country_id": 30,
    "country name": "China",
    "Q12": 81.25,
    "Q16-most": 60.18,
@@ -280,7 +280,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 31,
+   "country_id": 31,
    "country name": "India",
    "Q12": 73.77,
    "Q16-most": 39.39,
@@ -290,7 +290,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 32,
+   "country_id": 32,
    "country name": "Venezuela",
    "Q12": 72.65,
    "Q16-most": 29.25,
@@ -300,7 +300,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 33,
+   "country_id": 33,
    "country name": "Brazil",
    "Q12": 64.18,
    "Q16-most": 23.86,
@@ -310,7 +310,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 34,
+   "country_id": 34,
    "country name": "Mexico",
    "Q12": 72.08,
    "Q16-most": 23.15,
@@ -320,7 +320,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 35,
+   "country_id": 35,
    "country name": "Nigeria",
    "Q12": 68.84,
    "Q16-most": 45.02,
@@ -330,7 +330,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 36,
+   "country_id": 36,
    "country name": "Kenya",
    "Q12": 70.96,
    "Q16-most": 41.35,
@@ -340,7 +340,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 37,
+   "country_id": 37,
    "country name": "Tanzania",
    "Q12": 80.81,
    "Q16-most": 49.58,
@@ -350,7 +350,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 38,
+   "country_id": 38,
    "country name": "Israel",
    "Q12": 84.2,
    "Q16-most": 43.27,
@@ -360,7 +360,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 39,
+   "country_id": 39,
    "country name": "Palestinian Territories",
    "Q12": 73.23,
    "Q16-most": 23.95,
@@ -370,7 +370,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 40,
+   "country_id": 40,
    "country name": "Ghana",
    "Q12": 70.48,
    "Q16-most": 39.6,
@@ -380,7 +380,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 41,
+   "country_id": 41,
    "country name": "Uganda",
    "Q12": 68.75,
    "Q16-most": 35.94,
@@ -390,7 +390,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 42,
+   "country_id": 42,
    "country name": "Benin",
    "Q12": 50.22,
    "Q16-most": 24.97,
@@ -400,7 +400,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 43,
+   "country_id": 43,
    "country name": "Madagascar",
    "Q12": 48.21,
    "Q16-most": 14.65,
@@ -410,7 +410,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 44,
+   "country_id": 44,
    "country name": "Malawi",
    "Q12": 61.32,
    "Q16-most": 49.01,
@@ -420,7 +420,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 45,
+   "country_id": 45,
    "country name": "South Africa",
    "Q12": 52.07,
    "Q16-most": 23.4,
@@ -430,7 +430,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 46,
+   "country_id": 46,
    "country name": "Canada",
    "Q12": 88.31,
    "Q16-most": 47.29,
@@ -440,7 +440,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 47,
+   "country_id": 47,
    "country name": "Australia",
    "Q12": 94.1,
    "Q16-most": 51.26,
@@ -450,7 +450,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 48,
+   "country_id": 48,
    "country name": "Philippines",
    "Q12": 76.46,
    "Q16-most": 45.84,
@@ -460,7 +460,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 49,
+   "country_id": 49,
    "country name": "Sri Lanka",
    "Q12": 79.87,
    "Q16-most": 22.69,
@@ -470,7 +470,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 50,
+   "country_id": 50,
    "country name": "Vietnam",
    "Q12": 48.04,
    "Q16-most": 22.63,
@@ -480,7 +480,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 51,
+   "country_id": 51,
    "country name": "Thailand",
    "Q12": 79.41,
    "Q16-most": 24.71,
@@ -490,7 +490,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 52,
+   "country_id": 52,
    "country name": "Cambodia",
    "Q12": 55.42,
    "Q16-most": 28.6,
@@ -500,7 +500,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 53,
+   "country_id": 53,
    "country name": "Laos",
    "Q12": 56.33,
    "Q16-most": 45.4,
@@ -510,7 +510,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 54,
+   "country_id": 54,
    "country name": "Myanmar",
    "Q12": 81.92,
    "Q16-most": 37.17,
@@ -520,7 +520,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 55,
+   "country_id": 55,
    "country name": "New Zealand",
    "Q12": 95.04,
    "Q16-most": 44.33,
@@ -530,7 +530,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 57,
+   "country_id": 57,
    "country name": "Botswana",
    "Q12": 46.69,
    "Q16-most": 40.42,
@@ -540,7 +540,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 60,
+   "country_id": 60,
    "country name": "Ethiopia",
    "Q12": 70.22,
    "Q16-most": 32.65,
@@ -550,7 +550,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 61,
+   "country_id": 61,
    "country name": "Mali",
    "Q12": 63.49,
    "Q16-most": 30.32,
@@ -560,7 +560,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 62,
+   "country_id": 62,
    "country name": "Mauritania",
    "Q12": 39.56,
    "Q16-most": 12.89,
@@ -570,7 +570,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 63,
+   "country_id": 63,
    "country name": "Mozambique",
    "Q12": 53.54,
    "Q16-most": 38.09,
@@ -580,7 +580,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 64,
+   "country_id": 64,
    "country name": "Niger",
    "Q12": 68.08,
    "Q16-most": 35.57,
@@ -590,7 +590,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 65,
+   "country_id": 65,
    "country name": "Rwanda",
    "Q12": 57.79,
    "Q16-most": 42.37,
@@ -600,7 +600,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 66,
+   "country_id": 66,
    "country name": "Senegal",
    "Q12": 64.23,
    "Q16-most": 27.92,
@@ -610,7 +610,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 67,
+   "country_id": 67,
    "country name": "Zambia",
    "Q12": 50.92,
    "Q16-most": 31.89,
@@ -620,7 +620,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 68,
+   "country_id": 68,
    "country name": "South Korea",
    "Q12": 89.97,
    "Q16-most": 43.88,
@@ -630,7 +630,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 69,
+   "country_id": 69,
    "country name": "Taiwan",
    "Q12": 72.22,
    "Q16-most": 35.37,
@@ -640,7 +640,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 70,
+   "country_id": 70,
    "country name": "Afghanistan",
    "Q12": 67.41,
    "Q16-most": 17.37,
@@ -650,7 +650,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 71,
+   "country_id": 71,
    "country name": "Belarus",
    "Q12": 83.61,
    "Q16-most": 53.06,
@@ -660,7 +660,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 72,
+   "country_id": 72,
    "country name": "Georgia",
    "Q12": 74.33,
    "Q16-most": 20.66,
@@ -670,7 +670,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 73,
+   "country_id": 73,
    "country name": "Kazakhstan",
    "Q12": 81.07,
    "Q16-most": 46.49,
@@ -680,7 +680,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 74,
+   "country_id": 74,
    "country name": "Kyrgyzstan",
    "Q12": 86.74,
    "Q16-most": 23.89,
@@ -690,7 +690,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 75,
+   "country_id": 75,
    "country name": "Moldova",
    "Q12": 66.7,
    "Q16-most": 13.78,
@@ -700,7 +700,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 76,
+   "country_id": 76,
    "country name": "Russia",
    "Q12": 80.86,
    "Q16-most": 43.46,
@@ -710,7 +710,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 77,
+   "country_id": 77,
    "country name": "Ukraine",
    "Q12": 77.14,
    "Q16-most": 44.29,
@@ -720,7 +720,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 78,
+   "country_id": 78,
    "country name": "Burkina Faso",
    "Q12": 56.05,
    "Q16-most": 33.47,
@@ -730,7 +730,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 79,
+   "country_id": 79,
    "country name": "Cameroon",
    "Q12": 65.65,
    "Q16-most": 31.42,
@@ -740,7 +740,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 80,
+   "country_id": 80,
    "country name": "Sierra Leone",
    "Q12": 49.05,
    "Q16-most": 33.21,
@@ -750,7 +750,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 81,
+   "country_id": 81,
    "country name": "Zimbabwe",
    "Q12": 64.97,
    "Q16-most": 49.05,
@@ -760,7 +760,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 82,
+   "country_id": 82,
    "country name": "Costa Rica",
    "Q12": 80.51,
    "Q16-most": 34.11,
@@ -770,7 +770,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 83,
+   "country_id": 83,
    "country name": "Albania",
    "Q12": 67.34,
    "Q16-most": 21.38,
@@ -780,7 +780,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 84,
+   "country_id": 84,
    "country name": "Algeria",
    "Q12": 61.22,
    "Q16-most": 12.57,
@@ -790,7 +790,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 87,
+   "country_id": 87,
    "country name": "Argentina",
    "Q12": 81.15,
    "Q16-most": 21.95,
@@ -800,7 +800,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 88,
+   "country_id": 88,
    "country name": "Armenia",
    "Q12": 79.02,
    "Q16-most": 24.65,
@@ -810,7 +810,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 89,
+   "country_id": 89,
    "country name": "Austria",
    "Q12": 88.83,
    "Q16-most": 44,
@@ -820,7 +820,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 90,
+   "country_id": 90,
    "country name": "Azerbaijan",
    "Q12": 87.41,
    "Q16-most": 34.09,
@@ -830,7 +830,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 96,
+   "country_id": 96,
    "country name": "Bolivia",
    "Q12": 64.54,
    "Q16-most": 16.48,
@@ -840,7 +840,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 97,
+   "country_id": 97,
    "country name": "Bosnia and Herzegovina",
    "Q12": 62.04,
    "Q16-most": 29.77,
@@ -850,7 +850,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 99,
+   "country_id": 99,
    "country name": "Bulgaria",
    "Q12": 73.05,
    "Q16-most": 29.44,
@@ -860,7 +860,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 100,
+   "country_id": 100,
    "country name": "Burundi",
    "Q12": 45.7,
    "Q16-most": 22.1,
@@ -870,7 +870,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 103,
+   "country_id": 103,
    "country name": "Chad",
    "Q12": 49.77,
    "Q16-most": 35.47,
@@ -880,7 +880,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 104,
+   "country_id": 104,
    "country name": "Chile",
    "Q12": 74.83,
    "Q16-most": 19.36,
@@ -890,7 +890,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 105,
+   "country_id": 105,
    "country name": "Colombia",
    "Q12": 68.19,
    "Q16-most": 23.09,
@@ -900,7 +900,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 106,
+   "country_id": 106,
    "country name": "Comoros",
    "Q12": 68.91,
    "Q16-most": 21.14,
@@ -910,7 +910,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 108,
+   "country_id": 108,
    "country name": "Republic of Congo",
    "Q12": 50.06,
    "Q16-most": 17.69,
@@ -920,7 +920,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 109,
+   "country_id": 109,
    "country name": "Croatia",
    "Q12": 73.29,
    "Q16-most": 30.99,
@@ -930,7 +930,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 111,
+   "country_id": 111,
    "country name": "Cyprus",
    "Q12": 76.8,
    "Q16-most": 37.55,
@@ -940,7 +940,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 114,
+   "country_id": 114,
    "country name": "Dominican Republic",
    "Q12": 78.79,
    "Q16-most": 30.51,
@@ -950,7 +950,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 115,
+   "country_id": 115,
    "country name": "Ecuador",
    "Q12": 68.72,
    "Q16-most": 16.51,
@@ -960,7 +960,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 116,
+   "country_id": 116,
    "country name": "El Salvador",
    "Q12": 72.87,
    "Q16-most": 18.48,
@@ -970,7 +970,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 119,
+   "country_id": 119,
    "country name": "Estonia",
    "Q12": 85.71,
    "Q16-most": 48.84,
@@ -980,7 +980,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 121,
+   "country_id": 121,
    "country name": "Finland",
    "Q12": 95.17,
    "Q16-most": 64.68,
@@ -990,7 +990,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 122,
+   "country_id": 122,
    "country name": "Gabon",
    "Q12": 56.17,
    "Q16-most": 22.44,
@@ -1000,7 +1000,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 124,
+   "country_id": 124,
    "country name": "Guatemala",
    "Q12": 60.32,
    "Q16-most": 18.12,
@@ -1010,7 +1010,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 125,
+   "country_id": 125,
    "country name": "Guinea",
    "Q12": 69.18,
    "Q16-most": 28.46,
@@ -1020,7 +1020,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 128,
+   "country_id": 128,
    "country name": "Haiti",
    "Q12": 69.98,
    "Q16-most": 11.1,
@@ -1030,7 +1030,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 129,
+   "country_id": 129,
    "country name": "Honduras",
    "Q12": 67.57,
    "Q16-most": 22.68,
@@ -1040,7 +1040,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 130,
+   "country_id": 130,
    "country name": "Iceland",
    "Q12": 94.06,
    "Q16-most": 62.57,
@@ -1050,7 +1050,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 131,
+   "country_id": 131,
    "country name": "Iraq",
    "Q12": 75.53,
    "Q16-most": 28.47,
@@ -1060,7 +1060,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 132,
+   "country_id": 132,
    "country name": "Ireland",
    "Q12": 89.75,
    "Q16-most": 49.59,
@@ -1070,7 +1070,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 134,
+   "country_id": 134,
    "country name": "Ivory Coast",
    "Q12": 48.26,
    "Q16-most": 16.58,
@@ -1080,7 +1080,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 137,
+   "country_id": 137,
    "country name": "Kuwait",
    "Q12": 70.75,
    "Q16-most": 42.07,
@@ -1090,7 +1090,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 138,
+   "country_id": 138,
    "country name": "Latvia",
    "Q12": 78.37,
    "Q16-most": 48.41,
@@ -1100,7 +1100,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 140,
+   "country_id": 140,
    "country name": "Liberia",
    "Q12": 71.29,
    "Q16-most": 42.98,
@@ -1110,7 +1110,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 141,
+   "country_id": 141,
    "country name": "Libya",
    "Q12": 69.19,
    "Q16-most": 20.54,
@@ -1120,7 +1120,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 143,
+   "country_id": 143,
    "country name": "Lithuania",
    "Q12": 78.95,
    "Q16-most": 44.36,
@@ -1130,7 +1130,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 144,
+   "country_id": 144,
    "country name": "Luxembourg",
    "Q12": 94.14,
    "Q16-most": 48.49,
@@ -1140,7 +1140,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 145,
+   "country_id": 145,
    "country name": "Macedonia",
    "Q12": 62.25,
    "Q16-most": 22.86,
@@ -1150,7 +1150,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 146,
+   "country_id": 146,
    "country name": "Malaysia",
    "Q12": 61.71,
    "Q16-most": 31.54,
@@ -1160,7 +1160,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 148,
+   "country_id": 148,
    "country name": "Malta",
    "Q12": 79.32,
    "Q16-most": 42.7,
@@ -1170,7 +1170,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 150,
+   "country_id": 150,
    "country name": "Mauritius",
    "Q12": 79.73,
    "Q16-most": 56.19,
@@ -1180,7 +1180,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 153,
+   "country_id": 153,
    "country name": "Mongolia",
    "Q12": 72.99,
    "Q16-most": 16.84,
@@ -1190,7 +1190,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 154,
+   "country_id": 154,
    "country name": "Montenegro",
    "Q12": 61.2,
    "Q16-most": 16.35,
@@ -1200,7 +1200,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 155,
+   "country_id": 155,
    "country name": "Namibia",
    "Q12": 52.78,
    "Q16-most": 20.17,
@@ -1210,7 +1210,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 157,
+   "country_id": 157,
    "country name": "Nepal",
    "Q12": 72.5,
    "Q16-most": 47.76,
@@ -1220,7 +1220,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 158,
+   "country_id": 158,
    "country name": "Nicaragua",
    "Q12": 67.04,
    "Q16-most": 24.78,
@@ -1230,7 +1230,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 160,
+   "country_id": 160,
    "country name": "Norway",
    "Q12": 95.78,
    "Q16-most": 51.57,
@@ -1240,7 +1240,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 163,
+   "country_id": 163,
    "country name": "Panama",
    "Q12": 66.81,
    "Q16-most": 19.47,
@@ -1250,7 +1250,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 164,
+   "country_id": 164,
    "country name": "Paraguay",
    "Q12": 63.83,
    "Q16-most": 9.67,
@@ -1260,7 +1260,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 165,
+   "country_id": 165,
    "country name": "Peru",
    "Q12": 63.42,
    "Q16-most": 15.58,
@@ -1270,7 +1270,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 166,
+   "country_id": 166,
    "country name": "Portugal",
    "Q12": 87.73,
    "Q16-most": 31.42,
@@ -1280,7 +1280,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 173,
+   "country_id": 173,
    "country name": "Serbia",
    "Q12": 75.93,
    "Q16-most": 30.96,
@@ -1290,7 +1290,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 175,
+   "country_id": 175,
    "country name": "Slovakia",
    "Q12": 83.32,
    "Q16-most": 26.54,
@@ -1300,7 +1300,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 176,
+   "country_id": 176,
    "country name": "Slovenia",
    "Q12": 89.12,
    "Q16-most": 41.44,
@@ -1310,7 +1310,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 183,
+   "country_id": 183,
    "country name": "Eswatini",
    "Q12": 68.47,
    "Q16-most": 41.07,
@@ -1320,7 +1320,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 184,
+   "country_id": 184,
    "country name": "Switzerland",
    "Q12": 88.43,
    "Q16-most": 46.99,
@@ -1330,7 +1330,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 185,
+   "country_id": 185,
    "country name": "Tajikistan",
    "Q12": 87.06,
    "Q16-most": 51.65,
@@ -1340,7 +1340,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 186,
+   "country_id": 186,
    "country name": "The Gambia",
    "Q12": 73.41,
    "Q16-most": 55.79,
@@ -1350,7 +1350,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 187,
+   "country_id": 187,
    "country name": "Togo",
    "Q12": 39.73,
    "Q16-most": 19.43,
@@ -1360,7 +1360,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 190,
+   "country_id": 190,
    "country name": "Tunisia",
    "Q12": 69.03,
    "Q16-most": 18.24,
@@ -1370,7 +1370,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 191,
+   "country_id": 191,
    "country name": "Turkmenistan",
    "Q12": 84.05,
    "Q16-most": 56.48,
@@ -1380,7 +1380,7 @@ let data = [
    "WBI": 3
  },
  {
-   "country id": 193,
+   "country_id": 193,
    "country name": "United Arab Emirates",
    "Q12": 74.37,
    "Q16-most": 46.44,
@@ -1390,7 +1390,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 194,
+   "country_id": 194,
    "country name": "Uruguay",
    "Q12": 80.27,
    "Q16-most": 24.77,
@@ -1400,7 +1400,7 @@ let data = [
    "WBI": 4
  },
  {
-   "country id": 195,
+   "country_id": 195,
    "country name": "Uzbekistan",
    "Q12": 98.32,
    "Q16-most": 55.93,
@@ -1410,7 +1410,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 197,
+   "country_id": 197,
    "country name": "Yemen",
    "Q12": 56.57,
    "Q16-most": 28.51,
@@ -1420,7 +1420,7 @@ let data = [
    "WBI": 1
  },
  {
-   "country id": 198,
+   "country_id": 198,
    "country name": "Kosovo",
    "Q12": 75.87,
    "Q16-most": 21.75,
@@ -1430,7 +1430,7 @@ let data = [
    "WBI": 2
  },
  {
-   "country id": 202,
+   "country_id": 202,
    "country name": "Northern Cyprus",
    "Q12": 93.06,
    "Q16-most": 37.77,
