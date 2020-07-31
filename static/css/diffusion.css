@@ -1,3 +1,25 @@
 .country_label {
 	font-size:10px;
 }
+
+#diffusion0A {
+  position:absolute;
+  width:70%;
+  left:15%;
+  top:150px;
+  z-index:-1;
+}
+
+.storycase {
+	background-color:#E5DAD4;
+}
+
+#viz4 {
+	margin-top:-10%;
+}
+
+#vietnamstoryimg {
+	margin-left: calc(-100% - 45px);
+	width:calc(200% + 45px);
+	z-index:-1;
+}

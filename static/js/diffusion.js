@@ -3,13 +3,13 @@ console.log(data);
 let graphWidth = $('#scatterplot1').width();
 let graphHeight = $('#scatterplot1').width();
 
-let scatterplot1 = scatterplot('#scatterplot1',data,'distrust_society_nogov','distrust_scientists','Trust in Society',"Percent answering 'A lot' or 'Some' to trusting scientist in their country",'WBI',graphWidth,graphHeight,0,60,0,60);
+let scatterplot1 = scatterplot('#scatterplot1',data,'distrust_society_nogov','distrust_scientists',['Trust in Society'],["Percent answering 'A lot' or 'Some' to trusting scientist in their country"],'WBI',graphWidth,graphHeight,0,60,0,60);
 generateDiffusionIcons(data);
 
 function generateDiffusionIcons(data){
 	let width = $('#viz1').width();
 	let height = width/16*9;
-	generateDiffusion('#viz1',data,width,height,16,9);
+	generateDiffusion('#viz1',data,width,height,16,9,false);
 
 	let width2 = $('#viz2').width();
 	let height2 = $('#viz2').width();
@@ -20,11 +20,11 @@ function generateDiffusionIcons(data){
 			return false;
 		}
 	});
-	generateDiffusion('#viz2',southAfrica,width2,height2,1,1);
+	generateDiffusion('#viz2',southAfrica,width2,height2,1,1,true);
 
   let width3 = $('#viz3').width();
   let height3 = width/16*9;
-  generateDiffusion('#viz3',data,width,height,16,9);	
+  generateDiffusion('#viz3',data,width,height,16,9,false);	
 
   let width4 = $('#viz2').width();
   let height4 = $('#viz2').width();
@@ -35,21 +35,24 @@ function generateDiffusionIcons(data){
       return false;
     }
   });
-  generateDiffusion('#viz4',vietnam,width4,height4,1,1);
+  generateDiffusion('#viz4',vietnam,width4,height4,1,1,true);
+
+  let pieData = {"Don't Know":50,"Distrust":30,"Trust":20};
+  donutGraph('#viz5',pieData);
 }
 
-function generateDiffusion(id,data,width,height,columns,lines){
+/*function generateDiffusion(id,data,width,height,columns,lines){
 
-	/*let count = data.length;
+	//let count = data.length;
 
-	let columns = Math.ceil(16*Math.sqrt(count)/12)+1;
-	let lines = Math.max(Math.floor(9*Math.sqrt(count)/12),1);
-	console.log(id);
-	console.log(columns);
+	//let columns = Math.ceil(16*Math.sqrt(count)/12)+1;
+	//let lines = Math.max(Math.floor(9*Math.sqrt(count)/12),1);
+	//console.log(id);
+	//console.log(columns);
 
-	if((columns-1)*lines<=count){
-		columns=columns-1;
-	}*/
+	//if((columns-1)*lines<=count){
+	//	columns=columns-1;
+	//}
 
 	let scale = width/columns;
 
@@ -121,12 +124,12 @@ function generateDiffusion(id,data,width,height,columns,lines){
 
         let angle = j*72/ 180 * Math.PI;
 
-      /*for(k=0;k<data.length;k++){
-        	let value = data[k][variables[j]];
-	    	let cx = Math.floor(k / lines) * scale + scale*0.5 + Math.sin(angle)*(scale/7+scale*0.4*value/100);
-	    	let cy = (k % lines)*scale*0.9 + scale*0.5 - Math.cos(angle)*(scale/7+scale*0.4*value/100); 
-	    	circleToDots(svg,cx,cy,value,scale,colors[j]);
-    	}*/
+      //for(k=0;k<data.length;k++){
+      //  	let value = data[k][variables[j]];
+	    //	let cx = Math.floor(k / lines) * scale + scale*0.5 + Math.sin(angle)*(scale/7+scale*0.4*value/100);
+	    //	let cy = (k % lines)*scale*0.9 + scale*0.5 - Math.cos(angle)*(scale/7+scale*0.4*value/100); 
+	    //	circleToDots(svg,cx,cy,value,scale,colors[j]);
+    	//}
 
       svg.selectAll(".linesgrey"+j)
           .data(data)
@@ -210,12 +213,12 @@ function generateDiffusion(id,data,width,height,columns,lines){
         })
         .attr("fill","#009EE2");
 
-    /*for(j=0;j<data.length;j++){
-    	let cx = Math.floor(j / lines) * scale + scale*0.5;
-    	let cy = (j % lines)*scale*0.9 + scale*0.5;
-    	let value = data[j]['distrust_scientists'];
-    	circleToDots(svg,cx,cy,value,scale,'#2196F3');
-    }*/
+    //for(j=0;j<data.length;j++){
+    //	let cx = Math.floor(j / lines) * scale + scale*0.5;
+    //	let cy = (j % lines)*scale*0.9 + scale*0.5;
+    //	let value = data[j]['distrust_scientists'];
+    //	circleToDots(svg,cx,cy,value,scale,'#2196F3');
+    //}
     
     
     svg.selectAll("text")
@@ -238,4 +241,4 @@ function getHex(value){
   let g = Math.floor(upper[1]*value/50 + lower[1]*(1-value/50));
   let b = Math.floor(upper[2]*value/50 + lower[2]*(1-value/50));
   return "rgb("+r+","+g+","+b+")";
-}
+}*/

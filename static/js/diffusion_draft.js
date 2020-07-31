@@ -10,7 +10,7 @@ data2 = data2.sort(function(a,b){
   return b['key_indicator_rank_no_gov'] - a['key_indicator_rank_no_gov'];
 });
 
-generateVisual(data2);
+/*generateVisual(data2);
 
 function generateVisual(data) {
     console.log(data);
@@ -131,4 +131,4 @@ function byIncomeGroup(data,ig){
     });
     $('#viz').append('<p>Income Group '+ig+'</p>')
     generateVisual(newData);
-}
+}*/

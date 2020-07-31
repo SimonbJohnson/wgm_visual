@@ -94,6 +94,8 @@
     {{ if eq .Title "Diffusion"}}
       {{ $data := "data/diffusion2.js" | absURL }}
       <script src="{{ $data }}"></script>
+      {{ $javascript := "js/icons/diffusion_icons.js" | absURL }}
+      <script src="{{ $javascript }}"></script>
       {{ $javascript := "js/diffusion.js" | absURL }}
       <script src="{{ $javascript }}"></script>
     {{end}}
@@ -135,18 +137,24 @@
       <script src="{{ $data }}"></script>
       {{ $data2 := "data/diffusion2.js" | absURL }}
       <script src="{{ $data2 }}"></script>
+      {{ $javascript := "js/diffusion_icons.js" | absURL }}
+      <script src="{{ $javascript }}"></script>
       {{ $javascript := "js/diffusion_draft.js" | absURL }}
       <script src="{{ $javascript }}"></script>
     {{end}}
     {{ if eq .Title "Distance draft"}}
       {{ $data := "data/distance.js" | absURL }}
       <script src="{{ $data }}"></script>
+      {{ $javascript := "js/icons/distance_icons.js" | absURL }}
+      <script src="{{ $javascript }}"></script>
       {{ $javascript := "js/distance_draft.js" | absURL }}
       <script src="{{ $javascript }}"></script>
     {{end}}
     {{ if eq .Title "Attraction draft"}}
       {{ $data := "data/attraction.js" | absURL }}
       <script src="{{ $data }}"></script>
+      {{ $javascript := "js/icons/attraction_icons.js" | absURL }}
+      <script src="{{ $javascript }}"></script>
       {{ $javascript := "js/attraction_draft.js" | absURL }}
       <script src="{{ $javascript }}"></script>
     {{end}}

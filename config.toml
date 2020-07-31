@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://simonbjohnson.github.io/wgmtemp/public/"
 languageCode = "en-us"
 title = "WGM Visual"
 

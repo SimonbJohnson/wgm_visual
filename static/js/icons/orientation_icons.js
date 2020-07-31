@@ -58,6 +58,7 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
     svg.selectAll("text")
       .data(data)
     .enter().append("text")
+      .attr("fill","#aaaaaa")
       .attr('class','countrylabel')
       .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
       .attr("y",function(d,i) { return (i % rows)*scale + scale; })
@@ -80,7 +81,6 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
             .startAngle(0 * (PI/180))
             .endAngle(function(d, i) {
                 let percent = d['subAagree'] / d['A-D1-Yes-Q12-low'];
-                console.log(percent);
                 return percent * PI*2;
             });
             
@@ -136,7 +136,6 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
             .startAngle(0 * (PI/180))
             .endAngle(function(d, i) {
                 let percent = d['subADisagreeReligion'] / d['A-D1-Yes-Q12-low'];
-                console.log(percent);
                 return percent * PI*2;
             });
             
@@ -201,6 +200,8 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
 function generateOrientationAfter(id,data,columns,rows,state,details,animate){
 
     let width = $(id).width();
+    console.log(data);
+    console.log(width);
     let scale = width/columns;
 
     let svg = d3.select(id)
@@ -208,13 +209,11 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
             .attr("width", scale*columns)
             .attr("height", scale*rows);
 
-    console.log(data);
-
     let plungeLines1 = svg.selectAll(".linesgrey1")
           .data(data)
         .enter().append("line")
           .attr("class", "line")
-          .attr("x1",function(d,i) { console.log(i);return Math.floor(i / rows) * scale + scale*0.2 })
+          .attr("x1",function(d,i) { return Math.floor(i / rows) * scale + scale*0.2 })
           .attr("y1",function(d,i) { return (i % rows)*scale + scale*0.4; })
           .attr("x2",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4 })
           .attr("y2",function(d,i) { 
@@ -271,6 +270,23 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
       .attr("r", function(d){ return scale/75*Math.sqrt(d['B-Q30-religion-Q12 high']*100) })
       .attr("fill",'#E95A0C');
 
+    if(details==true){
+      svg.selectAll("text")
+        .data(data)
+      .enter().append("text")
+        .attr('class',function(d){
+              return 'countrylabellarge'
+        })
+        .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4; })
+        .attr("y",function(d,i) { return (i % rows)*scale + scale*0.4 + d['B-Q30-religion-Q12 high']*scale+scale/75*Math.sqrt(d['B-Q30-religion-Q12 high']*100); })
+        .attr("dy","1rem")
+        .style("text-anchor", "middle")
+        .attr("fill",'#000000')
+        .text(function(d){
+          return parseInt(d['B-Q30-religion-Q12 high']*100)+'%';
+        });
+    }
+
     svg.selectAll(".circle1")
       .data(data)
     .enter().append("circle")
@@ -289,7 +305,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
       .attr("r", function(d){ return scale/75*Math.sqrt(d['D-D1-No-Q12-High']*100) })
       .attr("fill",'#193C78');
 
-    svg.selectAll("text")
+    svg.selectAll("text1")
       .data(data)
     .enter().append("text")
       .attr('class',function(d){
@@ -299,9 +315,16 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
             return 'countrylabel'
         }
       })
-      .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4 })
+      .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
       .attr("y",function(d,i) { return (i % rows)*scale + scale*0.9; })
       .style("text-anchor", "middle")
+      .attr("fill",function(d){
+        if(details==true){
+            return '#000000'
+        } else {
+            return '#aaaaaa'
+        }
+      })
       .text(function(d){
         return d['country name'];
       });

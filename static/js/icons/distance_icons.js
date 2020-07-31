@@ -1,4 +1,4 @@
-function generateDistance(id,data,rows,columns){
+function generateDistance(id,data,rows,columns,state){
 	console.log('distance');
     let width = $(id).width();
     let scale = width/columns;
@@ -6,16 +6,16 @@ function generateDistance(id,data,rows,columns){
     let svg = d3.select(id)
             .append("svg")
             .attr("width", width)
-            .attr("height", columns*scale);
-
-    let layerSize = [1,5,9,13,17]
+            .attr("height", rows*scale);
 
     data.forEach(function(d){
         let circleWeight1 = d['Q16-most'];
         let circleWeight2 = d['Q16-few'];
         let circleWeight3 = d['Q17'];
-        d.circle1Y = Math.min(d['Q16-most']/d['Q16-few']*20,40)+10;
-        d.circle2Y = Math.min(d['Q16-few']/d['Q16-most']*20,40)+10;
+        //d.circle1Y = Math.min(d['Q16-most']/d['Q16-few']*20,40)+10;
+        d.circle1Y = Math.min(d['Q16-most'],50)
+        //d.circle2Y = Math.min(d['Q16-few']/d['Q16-most']*20,40)+10;
+        d.circle2Y = Math.min(d['Q16-few'],50)
         d.circle3X = d['Q17'];
     });
 
@@ -23,7 +23,7 @@ function generateDistance(id,data,rows,columns){
     svg.selectAll("text")
       .data(data)
     .enter().append("text")
-      .attr('class','country_label')
+      .attr('class','countrylabel')
       .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
       .attr("y",function(d,i) { return (i % rows)*scale + scale*0.9; })
       .style("text-anchor", "middle")
@@ -31,50 +31,66 @@ function generateDistance(id,data,rows,columns){
         return d['country name'];
       });
 
-    svg.selectAll("line2")
-      .data(data)
-    .enter().append("line")
-      .attr("class", "line")
-      .attr("x1", function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
-      .attr("x2", function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
-      .attr("y1", function(d,i) {
-        return (i % rows)*scale + scale * 0.15
-      })
-      .attr("y2", function(d,i) {
-        return (i % rows)*scale + scale * 0.65
-      })
-      .attr("stroke","#ffffff00")
-      .attr("stroke-width",scale*0.1)
-      .attr("stroke-linecap","round");
+    if(state>1){
+      if(state>2){
+        svg.selectAll("line2")
+          .data(data)
+        .enter().append("line")
+          .attr("class", "line")
+          .attr("x1", function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
+          .attr("x2", function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
+          .attr("y1", function(d,i) {
+            return (i % rows)*scale + scale * 0.15
+          })
+          .attr("y2", function(d,i) {
+            return (i % rows)*scale + scale * 0.65
+          })
+          .attr("stroke","#ffffff00")
+          .attr("stroke-width",scale*0.1)
+          .attr("stroke-linecap","round");
 
-    svg.selectAll("line3")
-      .data(data)
-    .enter().append("line")
-      .attr("class", "line")
-      .attr("x1", function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
-      .attr("x2", function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
-      .attr("y1", function(d,i) {
-        return (i % rows)*scale + scale * 0.1+(1-d['Q17']/100.0)*0.6*scale
-      })
-      .attr("y2", function(d,i) {
-        return (i % rows)*scale + scale * 0.7
-      })
-      .attr("stroke",function(d){
-        return getHex(d['Q17']);
-      })
-      .attr("stroke-width",scale*0.1)
-      .attr("stroke-linecap","round");
+        svg.selectAll("line3")
+          .data(data)
+        .enter().append("line")
+          .attr("class", "line")
+          .attr("x1", function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
+          .attr("x2", function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
+          .attr("y1", function(d,i) {
+            return (i % rows)*scale + scale * 0.1+(1-d['Q17']/100.0)*0.6*scale
+          })
+          .attr("y2", function(d,i) {
+            return (i % rows)*scale + scale * 0.7
+          })
+          .attr("stroke",function(d){
+            return getHex(d['Q17']);
+          })
+          .attr("stroke-width",scale*0.1)
+          .attr("stroke-linecap","round");
+      }
 
-    svg.selectAll("line4")
-      .data(data)
-    .enter().append("line")
-      .attr("class", "line")
-      .attr("x1", function(d,i) { return Math.floor(i / rows) * scale + 0.25*scale })
-      .attr("y1", function(d,i) { return (i % rows)*scale+d.circle1Y*scale/75; })
-      .attr("x2", function(d,i) { return Math.floor(i / rows) * scale + 0.75*scale })
-      .attr("y2", function(d,i) { return (i % rows)*scale+d.circle2Y*scale/75; })
-      .attr("stroke", "#3F1A13")
-      .attr("stroke-width", 2*scale/100);
+      svg.selectAll("line4")
+        .data(data)
+      .enter().append("line")
+        .attr("class", "line")
+        .attr("x1", function(d,i) { return Math.floor(i / rows) * scale + 0.25*scale })
+        .attr("y1", function(d,i) { return (i % rows)*scale+d.circle1Y*scale/75; })
+        .attr("x2", function(d,i) { return Math.floor(i / rows) * scale + 0.75*scale })
+        .attr("y2", function(d,i) { return (i % rows)*scale+d.circle2Y*scale/75; })
+        .attr("stroke", "#3F1A13")
+        .attr("stroke-width", 2*scale/100);
+
+
+      svg.selectAll(".circle2")
+        .data(data)
+      .enter().append("circle")
+        .attr("class", "circle")
+        .attr("cx", function(d,i) { return Math.floor(i / rows) * scale + 0.75*scale })
+        .attr("cy", function(d,i) { return (i % rows)*scale+d.circle2Y*scale/75; })
+        .attr("r", function(d){
+          return Math.sqrt(d['Q16-few'])*scale/75
+        })
+        .attr("fill","#F8B133");
+  }
 
   svg.selectAll(".whitecircle1")
       .data(data)
@@ -101,29 +117,15 @@ function generateDistance(id,data,rows,columns){
       .attr("cx", function(d,i) { return Math.floor(i / rows) * scale + 0.25*scale })
       .attr("cy", function(d,i) { return (i % rows)*scale+d.circle1Y*scale/75; })
       .attr("r", function(d){ 
-      	console.log(d['Q16-most']);
-      	console.log(Math.sqrt(d['Q16-most'])*scale/75);
       	return Math.sqrt(d['Q16-most'])*scale/75
       })
       .attr("fill","#4DAFCE");
-
-    svg.selectAll(".circle2")
-      .data(data)
-    .enter().append("circle")
-      .attr("class", "circle")
-      .attr("cx", function(d,i) { return Math.floor(i / rows) * scale + 0.75*scale })
-      .attr("cy", function(d,i) { return (i % rows)*scale+d.circle2Y*scale/75; })
-      .attr("r", function(d){
-      	console.log(d['Q16-few']);
-      	console.log(Math.sqrt(d['Q16-few'])*scale/75);
-      	return Math.sqrt(d['Q16-few'])*scale/75
-      })
-      .attr("fill","#F8B133");
 }
 
 function getHex(value){
   let upper = [63, 26, 19];
-  let lower = [185, 178, 164];
+  //let lower = [185, 178, 164];
+  let lower = [211, 206, 197];
   value = Math.max(value - 50,0);
   let r = Math.floor(upper[0]*value/50 + lower[0]*(1-value/50));
   let g = Math.floor(upper[1]*value/50 + lower[1]*(1-value/50));

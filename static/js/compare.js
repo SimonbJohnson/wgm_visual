@@ -31,13 +31,13 @@ function addIcons(countryID,row){
 	distanceDataCut = getData(countryID,distanceData);
 	if(distanceDataCut!=false){
 		$('#compare'+row+'3').html('');
-		generateDistance('#compare'+row+'3',distanceDataCut,1,1);
+		generateDistance('#compare'+row+'3',distanceDataCut,1,1,3);
 	}
 
 	attractionDataCut = getData(countryID,attractionData);
 	if(attractionDataCut!=false){
 		$('#compare'+row+'4').html('');
-		generateAttraction('#compare'+row+'4',attractionDataCut,1,1);
+		generateAttraction('#compare'+row+'4',attractionDataCut,1,1,6);
 	}
 }
 

@@ -35,6 +35,45 @@ generateOrientationBefore('#orientationviz3UM',newData,5,9,3,false,true);
 newData = sortByAlpha(byIncomeGroup(orientationData,4),'country name');
 generateOrientationBefore('#orientationviz3H',newData,5,9,3,false,true);
 
+let india = orientationData.filter(function(d){
+  if(d['country name']=='India'){
+    return true;
+  } else {
+    return false;
+  }
+});
+generateOrientationAfter('#instance1',india,1,1,0,true,false);
+
+let ghana = orientationData.filter(function(d){
+  if(d['country name']=='Ghana'){
+    return true;
+  } else {
+    return false;
+  }
+});
+
+generateOrientationAfter('#instance2',ghana,1,1,0,true,false);
+
+let nigeria = orientationData.filter(function(d){
+  if(d['country name']=='Nigeria'){
+    return true;
+  } else {
+    return false;
+  }
+});
+
+generateOrientationAfter('#instance3',nigeria,1,1,0,true,false);
+
+let westafrica = orientationData.filter(function(d){
+  if(['Guinea','Liberia','Sierra Leone'].indexOf(d['country name'])>-1){
+    return true;
+  } else {
+    return false;
+  }
+});
+
+generateOrientationAfter('#instance4',westafrica,2,2,1,true,false);
+
 newData = sortByAlpha(byIncomeGroup(orientationData,1),'country name');
 generateOrientationAfter('#orientationviz4L',newData,5,9,3,false,true);
 newData = sortByAlpha(byIncomeGroup(orientationData,2),'country name');
@@ -48,7 +87,7 @@ generateOrientationAfter('#orientationviz6',religionData,3,2,1,true,true);
 
 let wPlot = $('#orientationviz5').width();
 let hPlot = $('#orientationviz5').width();
-scatterplot('#orientationviz5',orientationData,'Q22','Q30-Religion','xtitle','ytitle','WBI',wPlot,hPlot,0,50,0,50);
+scatterplot('#orientationviz5',orientationData,'Q22','Q30-Religion',['Q22 Percent who said not much, or not at all'],['Q30 Percent who chose religion out of the whole population'],'WBI',wPlot,hPlot,0,50,0,50);
 /*
 function generateOrientationBefore(id,data,columns,rows,state){
 

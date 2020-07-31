@@ -6,6 +6,7 @@ let distanceData = [
    "Q16-most": 47.98,
    "Q16-few": 10.47,
    "Q17": 82.83,
+   "Q12-neg": 5.02,
    "Index": 0.47,
    "WBI": 4
  },
@@ -16,6 +17,7 @@ let distanceData = [
    "Q16-most": 29.45,
    "Q16-few": 19.82,
    "Q17": 50.89,
+   "Q12-neg": 10.33,
    "Index": 0.28,
    "WBI": 2
  },
@@ -26,6 +28,7 @@ let distanceData = [
    "Q16-most": 15.63,
    "Q16-few": 29.6,
    "Q17": 43.82,
+   "Q12-neg": 5.73,
    "Index": 0.14,
    "WBI": 2
  },
@@ -36,6 +39,7 @@ let distanceData = [
    "Q16-most": 27.83,
    "Q16-few": 20.19,
    "Q17": 58.57,
+   "Q12-neg": 13.49,
    "Index": 0.25,
    "WBI": 3
  },
@@ -46,6 +50,7 @@ let distanceData = [
    "Q16-most": 55.62,
    "Q16-few": 13.02,
    "Q17": 89.18,
+   "Q12-neg": 8.12,
    "Index": 0.55,
    "WBI": 4
  },
@@ -56,6 +61,7 @@ let distanceData = [
    "Q16-most": 22.44,
    "Q16-few": 26.92,
    "Q17": 55.71,
+   "Q12-neg": 15.92,
    "Index": 0.19,
    "WBI": 3
  },
@@ -66,6 +72,7 @@ let distanceData = [
    "Q16-most": 28.73,
    "Q16-few": 22.43,
    "Q17": 63.84,
+   "Q12-neg": 11.09,
    "Index": 0.27,
    "WBI": 3
  },
@@ -76,6 +83,7 @@ let distanceData = [
    "Q16-most": 28.27,
    "Q16-few": 13.52,
    "Q17": 68.46,
+   "Q12-neg": 23.88,
    "Index": 0.26,
    "WBI": 2
  },
@@ -86,6 +94,7 @@ let distanceData = [
    "Q16-most": 24.48,
    "Q16-few": 18.43,
    "Q17": 76.73,
+   "Q12-neg": 17.96,
    "Index": 0.23,
    "WBI": 2
  },
@@ -96,6 +105,7 @@ let distanceData = [
    "Q16-most": 36.38,
    "Q16-few": 13.39,
    "Q17": 84.49,
+   "Q12-neg": 9.73,
    "Index": 0.35,
    "WBI": 2
  },
@@ -106,6 +116,7 @@ let distanceData = [
    "Q16-most": 50.26,
    "Q16-few": 8.72,
    "Q17": 81.99,
+   "Q12-neg": 8.37,
    "Index": 0.47,
    "WBI": 4
  },
@@ -116,6 +127,7 @@ let distanceData = [
    "Q16-most": 47.26,
    "Q16-few": 14.07,
    "Q17": 71.62,
+   "Q12-neg": 5.47,
    "Index": 0.41,
    "WBI": 4
  },
@@ -126,6 +138,7 @@ let distanceData = [
    "Q16-most": 42.87,
    "Q16-few": 14.61,
    "Q17": 84.98,
+   "Q12-neg": 5.4,
    "Index": 0.42,
    "WBI": 4
  },
@@ -136,6 +149,7 @@ let distanceData = [
    "Q16-most": 50.36,
    "Q16-few": 16.98,
    "Q17": 72.01,
+   "Q12-neg": 14.08,
    "Index": 0.48,
    "WBI": 4
  },
@@ -146,6 +160,7 @@ let distanceData = [
    "Q16-most": 52.07,
    "Q16-few": 11.78,
    "Q17": 75.89,
+   "Q12-neg": 3.31,
    "Index": 0.51,
    "WBI": 4
  },
@@ -156,6 +171,7 @@ let distanceData = [
    "Q16-most": 47.58,
    "Q16-few": 10.65,
    "Q17": 79.14,
+   "Q12-neg": 5.21,
    "Index": 0.44,
    "WBI": 4
  },
@@ -166,6 +182,7 @@ let distanceData = [
    "Q16-most": 55.83,
    "Q16-few": 15.46,
    "Q17": 81.02,
+   "Q12-neg": 8.19,
    "Index": 0.52,
    "WBI": 4
  },
@@ -176,6 +193,7 @@ let distanceData = [
    "Q16-most": 38.6,
    "Q16-few": 7.48,
    "Q17": 70.32,
+   "Q12-neg": 8.69,
    "Index": 0.36,
    "WBI": 4
  },
@@ -186,6 +204,7 @@ let distanceData = [
    "Q16-most": 35.42,
    "Q16-few": 15.63,
    "Q17": 61.51,
+   "Q12-neg": 6.17,
    "Index": 0.33,
    "WBI": 4
  },
@@ -196,6 +215,7 @@ let distanceData = [
    "Q16-most": 47.56,
    "Q16-few": 12.22,
    "Q17": 70.42,
+   "Q12-neg": 17.2,
    "Index": 0.46,
    "WBI": 4
  },
@@ -206,6 +226,7 @@ let distanceData = [
    "Q16-most": 27.52,
    "Q16-few": 30.03,
    "Q17": 49.17,
+   "Q12-neg": 18.23,
    "Index": 0.22,
    "WBI": 3
  },
@@ -216,6 +237,7 @@ let distanceData = [
    "Q16-most": 40.95,
    "Q16-few": 12.23,
    "Q17": 75.34,
+   "Q12-neg": 3.21,
    "Index": 0.38,
    "WBI": 4
  },
@@ -226,6 +248,7 @@ let distanceData = [
    "Q16-most": 56.47,
    "Q16-few": 10.35,
    "Q17": 72.24,
+   "Q12-neg": 14.14,
    "Index": 0.54,
    "WBI": 4
  },
@@ -236,6 +259,7 @@ let distanceData = [
    "Q16-most": 77.95,
    "Q16-few": 5.92,
    "Q17": 88.02,
+   "Q12-neg": 4.05,
    "Index": 0.75,
    "WBI": 4
  },
@@ -246,6 +270,7 @@ let distanceData = [
    "Q16-most": 34.62,
    "Q16-few": 22.78,
    "Q17": 64.33,
+   "Q12-neg": 4.51,
    "Index": 0.32,
    "WBI": 3
  },
@@ -256,6 +281,7 @@ let distanceData = [
    "Q16-most": 39.64,
    "Q16-few": 7.05,
    "Q17": 74.83,
+   "Q12-neg": 13.3,
    "Index": 0.38,
    "WBI": 4
  },
@@ -266,6 +292,7 @@ let distanceData = [
    "Q16-most": 29.25,
    "Q16-few": 14.68,
    "Q17": 62.7,
+   "Q12-neg": 6.73,
    "Index": 0.27,
    "WBI": 4
  },
@@ -276,6 +303,7 @@ let distanceData = [
    "Q16-most": 60.18,
    "Q16-few": 8.09,
    "Q17": 75.85,
+   "Q12-neg": 7.72,
    "Index": 0.54,
    "WBI": 3
  },
@@ -286,6 +314,7 @@ let distanceData = [
    "Q16-most": 39.39,
    "Q16-few": 13.14,
    "Q17": 64.86,
+   "Q12-neg": 16.65,
    "Index": 0.35,
    "WBI": 2
  },
@@ -296,6 +325,7 @@ let distanceData = [
    "Q16-most": 29.25,
    "Q16-few": 37.94,
    "Q17": 59.86,
+   "Q12-neg": 22.88,
    "Index": 0.27,
    "WBI": 3
  },
@@ -306,6 +336,7 @@ let distanceData = [
    "Q16-most": 23.86,
    "Q16-few": 37.57,
    "Q17": 56.07,
+   "Q12-neg": 29.53,
    "Index": 0.21,
    "WBI": 3
  },
@@ -316,6 +347,7 @@ let distanceData = [
    "Q16-most": 23.15,
    "Q16-few": 32.42,
    "Q17": 66.62,
+   "Q12-neg": 22.37,
    "Index": 0.22,
    "WBI": 3
  },
@@ -326,6 +358,7 @@ let distanceData = [
    "Q16-most": 45.02,
    "Q16-few": 11.84,
    "Q17": 80.46,
+   "Q12-neg": 21.12,
    "Index": 0.43,
    "WBI": 2
  },
@@ -336,6 +369,7 @@ let distanceData = [
    "Q16-most": 41.35,
    "Q16-few": 25.75,
    "Q17": 75.76,
+   "Q12-neg": 22.83,
    "Index": 0.39,
    "WBI": 2
  },
@@ -346,6 +380,7 @@ let distanceData = [
    "Q16-most": 49.58,
    "Q16-few": 21.8,
    "Q17": 74.14,
+   "Q12-neg": 7.18,
    "Index": 0.46,
    "WBI": 1
  },
@@ -356,6 +391,7 @@ let distanceData = [
    "Q16-most": 43.27,
    "Q16-few": 8.38,
    "Q17": 73.84,
+   "Q12-neg": 13.44,
    "Index": 0.39,
    "WBI": 4
  },
@@ -366,6 +402,7 @@ let distanceData = [
    "Q16-most": 23.95,
    "Q16-few": 19.31,
    "Q17": 56.45,
+   "Q12-neg": 18.12,
    "Index": 0.19,
    "WBI": 2
  },
@@ -376,6 +413,7 @@ let distanceData = [
    "Q16-most": 39.6,
    "Q16-few": 14.94,
    "Q17": 75.9,
+   "Q12-neg": 16.52,
    "Index": 0.38,
    "WBI": 2
  },
@@ -386,6 +424,7 @@ let distanceData = [
    "Q16-most": 35.94,
    "Q16-few": 25.65,
    "Q17": 75.88,
+   "Q12-neg": 22.37,
    "Index": 0.34,
    "WBI": 1
  },
@@ -396,6 +435,7 @@ let distanceData = [
    "Q16-most": 24.97,
    "Q16-few": 28.87,
    "Q17": 55.86,
+   "Q12-neg": 34.79,
    "Index": 0.21,
    "WBI": 1
  },
@@ -406,6 +446,7 @@ let distanceData = [
    "Q16-most": 14.65,
    "Q16-few": 32.71,
    "Q17": 45.72,
+   "Q12-neg": 34.25,
    "Index": 0.11,
    "WBI": 1
  },
@@ -416,6 +457,7 @@ let distanceData = [
    "Q16-most": 49.01,
    "Q16-few": 32.22,
    "Q17": 68.86,
+   "Q12-neg": 26.6,
    "Index": 0.43,
    "WBI": 1
  },
@@ -426,6 +468,7 @@ let distanceData = [
    "Q16-most": 23.4,
    "Q16-few": 36.6,
    "Q17": 54.14,
+   "Q12-neg": 30.48,
    "Index": 0.19,
    "WBI": 3
  },
@@ -436,6 +479,7 @@ let distanceData = [
    "Q16-most": 47.29,
    "Q16-few": 8.64,
    "Q17": 85.1,
+   "Q12-neg": 4.31,
    "Index": 0.45,
    "WBI": 4
  },
@@ -446,6 +490,7 @@ let distanceData = [
    "Q16-most": 51.26,
    "Q16-few": 8.04,
    "Q17": 84.79,
+   "Q12-neg": 4.94,
    "Index": 0.5,
    "WBI": 4
  },
@@ -456,6 +501,7 @@ let distanceData = [
    "Q16-most": 45.84,
    "Q16-few": 16.78,
    "Q17": 78.23,
+   "Q12-neg": 20.39,
    "Index": 0.43,
    "WBI": 2
  },
@@ -466,6 +512,7 @@ let distanceData = [
    "Q16-most": 22.69,
    "Q16-few": 26.65,
    "Q17": 45.1,
+   "Q12-neg": 8.56,
    "Index": 0.17,
    "WBI": 2
  },
@@ -476,6 +523,7 @@ let distanceData = [
    "Q16-most": 22.63,
    "Q16-few": 11.15,
    "Q17": 62.4,
+   "Q12-neg": 19.88,
    "Index": 0.2,
    "WBI": 2
  },
@@ -486,6 +534,7 @@ let distanceData = [
    "Q16-most": 24.71,
    "Q16-few": 4,
    "Q17": 67.39,
+   "Q12-neg": 7.36,
    "Index": 0.21,
    "WBI": 3
  },
@@ -496,6 +545,7 @@ let distanceData = [
    "Q16-most": 28.6,
    "Q16-few": 24.17,
    "Q17": 59.84,
+   "Q12-neg": 5.89,
    "Index": 0.24,
    "WBI": 2
  },
@@ -506,6 +556,7 @@ let distanceData = [
    "Q16-most": 45.4,
    "Q16-few": 9.58,
    "Q17": 71.65,
+   "Q12-neg": 15.05,
    "Index": 0.4,
    "WBI": 2
  },
@@ -516,6 +567,7 @@ let distanceData = [
    "Q16-most": 37.17,
    "Q16-few": 6.16,
    "Q17": 70.74,
+   "Q12-neg": 4.2,
    "Index": 0.35,
    "WBI": 2
  },
@@ -526,6 +578,7 @@ let distanceData = [
    "Q16-most": 44.33,
    "Q16-few": 8.15,
    "Q17": 81.43,
+   "Q12-neg": 3.57,
    "Index": 0.42,
    "WBI": 4
  },
@@ -536,6 +589,7 @@ let distanceData = [
    "Q16-most": 40.42,
    "Q16-few": 22.8,
    "Q17": 71.6,
+   "Q12-neg": 33.62,
    "Index": 0.36,
    "WBI": 3
  },
@@ -546,6 +600,7 @@ let distanceData = [
    "Q16-most": 32.65,
    "Q16-few": 12.2,
    "Q17": 67.95,
+   "Q12-neg": 9.87,
    "Index": 0.31,
    "WBI": 1
  },
@@ -556,6 +611,7 @@ let distanceData = [
    "Q16-most": 30.32,
    "Q16-few": 14.31,
    "Q17": 57.4,
+   "Q12-neg": 21.21,
    "Index": 0.25,
    "WBI": 1
  },
@@ -566,6 +622,7 @@ let distanceData = [
    "Q16-most": 12.89,
    "Q16-few": 26.38,
    "Q17": 27.7,
+   "Q12-neg": 31.49,
    "Index": 0.11,
    "WBI": 2
  },
@@ -576,6 +633,7 @@ let distanceData = [
    "Q16-most": 38.09,
    "Q16-few": 21.14,
    "Q17": 67.09,
+   "Q12-neg": 22.57,
    "Index": 0.33,
    "WBI": 1
  },
@@ -586,6 +644,7 @@ let distanceData = [
    "Q16-most": 35.57,
    "Q16-few": 22.56,
    "Q17": 61.99,
+   "Q12-neg": 17.02,
    "Index": 0.3,
    "WBI": 1
  },
@@ -596,6 +655,7 @@ let distanceData = [
    "Q16-most": 42.37,
    "Q16-few": 12.01,
    "Q17": 70.85,
+   "Q12-neg": 18.3,
    "Index": 0.39,
    "WBI": 1
  },
@@ -606,6 +666,7 @@ let distanceData = [
    "Q16-most": 27.92,
    "Q16-few": 18.57,
    "Q17": 59.29,
+   "Q12-neg": 22.48,
    "Index": 0.24,
    "WBI": 1
  },
@@ -616,6 +677,7 @@ let distanceData = [
    "Q16-most": 31.89,
    "Q16-few": 22.76,
    "Q17": 67.24,
+   "Q12-neg": 34.5,
    "Index": 0.29,
    "WBI": 2
  },
@@ -626,6 +688,7 @@ let distanceData = [
    "Q16-most": 43.88,
    "Q16-few": 20.45,
    "Q17": 73.23,
+   "Q12-neg": 7.74,
    "Index": 0.4,
    "WBI": 4
  },
@@ -636,6 +699,7 @@ let distanceData = [
    "Q16-most": 35.37,
    "Q16-few": 24.61,
    "Q17": 65.48,
+   "Q12-neg": 11.08,
    "Index": 0.31,
    "WBI": 4
  },
@@ -646,6 +710,7 @@ let distanceData = [
    "Q16-most": 17.37,
    "Q16-few": 31.97,
    "Q17": 50.95,
+   "Q12-neg": 18.91,
    "Index": 0.17,
    "WBI": 1
  },
@@ -656,6 +721,7 @@ let distanceData = [
    "Q16-most": 53.06,
    "Q16-few": 8.61,
    "Q17": 69.83,
+   "Q12-neg": 10.32,
    "Index": 0.47,
    "WBI": 3
  },
@@ -666,6 +732,7 @@ let distanceData = [
    "Q16-most": 20.66,
    "Q16-few": 29.12,
    "Q17": 37.87,
+   "Q12-neg": 15.85,
    "Index": 0.17,
    "WBI": 2
  },
@@ -676,6 +743,7 @@ let distanceData = [
    "Q16-most": 46.49,
    "Q16-few": 10.19,
    "Q17": 64.79,
+   "Q12-neg": 6.33,
    "Index": 0.42,
    "WBI": 3
  },
@@ -686,6 +754,7 @@ let distanceData = [
    "Q16-most": 23.89,
    "Q16-few": 20.34,
    "Q17": 60.25,
+   "Q12-neg": 6.48,
    "Index": 0.22,
    "WBI": 2
  },
@@ -696,6 +765,7 @@ let distanceData = [
    "Q16-most": 13.78,
    "Q16-few": 28.66,
    "Q17": 41.87,
+   "Q12-neg": 28,
    "Index": 0.12,
    "WBI": 2
  },
@@ -706,6 +776,7 @@ let distanceData = [
    "Q16-most": 43.46,
    "Q16-few": 14.74,
    "Q17": 62.44,
+   "Q12-neg": 8.66,
    "Index": 0.39,
    "WBI": 3
  },
@@ -716,6 +787,7 @@ let distanceData = [
    "Q16-most": 44.29,
    "Q16-few": 12.5,
    "Q17": 59.5,
+   "Q12-neg": 9.95,
    "Index": 0.37,
    "WBI": 2
  },
@@ -726,6 +798,7 @@ let distanceData = [
    "Q16-most": 33.47,
    "Q16-few": 17.95,
    "Q17": 56.77,
+   "Q12-neg": 22.72,
    "Index": 0.28,
    "WBI": 1
  },
@@ -736,6 +809,7 @@ let distanceData = [
    "Q16-most": 31.42,
    "Q16-few": 23.28,
    "Q17": 67.7,
+   "Q12-neg": 25.9,
    "Index": 0.28,
    "WBI": 2
  },
@@ -746,6 +820,7 @@ let distanceData = [
    "Q16-most": 33.21,
    "Q16-few": 18.79,
    "Q17": 67.98,
+   "Q12-neg": 34.12,
    "Index": 0.31,
    "WBI": 1
  },
@@ -756,6 +831,7 @@ let distanceData = [
    "Q16-most": 49.05,
    "Q16-few": 12.05,
    "Q17": 70.56,
+   "Q12-neg": 23.51,
    "Index": 0.46,
    "WBI": 1
  },
@@ -766,6 +842,7 @@ let distanceData = [
    "Q16-most": 34.11,
    "Q16-few": 29.59,
    "Q17": 59.78,
+   "Q12-neg": 16.29,
    "Index": 0.3,
    "WBI": 3
  },
@@ -776,6 +853,7 @@ let distanceData = [
    "Q16-most": 21.38,
    "Q16-few": 45.35,
    "Q17": 40.19,
+   "Q12-neg": 28.62,
    "Index": 0.15,
    "WBI": 3
  },
@@ -786,6 +864,7 @@ let distanceData = [
    "Q16-most": 12.57,
    "Q16-few": 22.28,
    "Q17": 45.47,
+   "Q12-neg": 25.37,
    "Index": 0.1,
    "WBI": 3
  },
@@ -796,6 +875,7 @@ let distanceData = [
    "Q16-most": 21.95,
    "Q16-few": 29.77,
    "Q17": 59.09,
+   "Q12-neg": 15.52,
    "Index": 0.2,
    "WBI": 4
  },
@@ -806,6 +886,7 @@ let distanceData = [
    "Q16-most": 24.65,
    "Q16-few": 27.75,
    "Q17": 42.17,
+   "Q12-neg": 14.21,
    "Index": 0.2,
    "WBI": 3
  },
@@ -816,6 +897,7 @@ let distanceData = [
    "Q16-most": 44,
    "Q16-few": 12.76,
    "Q17": 78.47,
+   "Q12-neg": 9.59,
    "Index": 0.39,
    "WBI": 4
  },
@@ -826,6 +908,7 @@ let distanceData = [
    "Q16-most": 34.09,
    "Q16-few": 12.61,
    "Q17": 55.95,
+   "Q12-neg": 6.36,
    "Index": 0.28,
    "WBI": 3
  },
@@ -836,16 +919,18 @@ let distanceData = [
    "Q16-most": 16.48,
    "Q16-few": 42.83,
    "Q17": 51.88,
+   "Q12-neg": 28.73,
    "Index": 0.14,
    "WBI": 2
  },
  {
    "country_id": 97,
-   "country name": "Bosnia and Herzegovina",
+   "country name": "Bosnia and Her.",
    "Q12": 62.04,
    "Q16-most": 29.77,
    "Q16-few": 25.03,
    "Q17": 48.89,
+   "Q12-neg": 30.91,
    "Index": 0.26,
    "WBI": 3
  },
@@ -856,6 +941,7 @@ let distanceData = [
    "Q16-most": 29.44,
    "Q16-few": 13.34,
    "Q17": 57.18,
+   "Q12-neg": 14.04,
    "Index": 0.28,
    "WBI": 3
  },
@@ -866,6 +952,7 @@ let distanceData = [
    "Q16-most": 22.1,
    "Q16-few": 29.67,
    "Q17": 56.3,
+   "Q12-neg": 48.21,
    "Index": 0.2,
    "WBI": 1
  },
@@ -876,6 +963,7 @@ let distanceData = [
    "Q16-most": 35.47,
    "Q16-few": 31.49,
    "Q17": 57.18,
+   "Q12-neg": 35.63,
    "Index": 0.29,
    "WBI": 1
  },
@@ -886,6 +974,7 @@ let distanceData = [
    "Q16-most": 19.36,
    "Q16-few": 34.15,
    "Q17": 48.07,
+   "Q12-neg": 20.23,
    "Index": 0.17,
    "WBI": 4
  },
@@ -896,6 +985,7 @@ let distanceData = [
    "Q16-most": 23.09,
    "Q16-few": 35.3,
    "Q17": 54.84,
+   "Q12-neg": 23.12,
    "Index": 0.2,
    "WBI": 3
  },
@@ -906,6 +996,7 @@ let distanceData = [
    "Q16-most": 21.14,
    "Q16-few": 32.72,
    "Q17": 44.87,
+   "Q12-neg": 22.27,
    "Index": 0.16,
    "WBI": 1
  },
@@ -916,6 +1007,7 @@ let distanceData = [
    "Q16-most": 17.69,
    "Q16-few": 32.95,
    "Q17": 45.7,
+   "Q12-neg": 35.83,
    "Index": 0.13,
    "WBI": 2
  },
@@ -926,6 +1018,7 @@ let distanceData = [
    "Q16-most": 30.99,
    "Q16-few": 16.65,
    "Q17": 50.34,
+   "Q12-neg": 18.75,
    "Index": 0.28,
    "WBI": 4
  },
@@ -936,16 +1029,18 @@ let distanceData = [
    "Q16-most": 37.55,
    "Q16-few": 20.02,
    "Q17": 64.36,
+   "Q12-neg": 8.45,
    "Index": 0.34,
    "WBI": 4
  },
  {
    "country_id": 114,
-   "country name": "Dominican Republic",
+   "country name": "Dominican Rep.",
    "Q12": 78.79,
    "Q16-most": 30.51,
    "Q16-few": 29.15,
    "Q17": 58.64,
+   "Q12-neg": 16,
    "Index": 0.26,
    "WBI": 3
  },
@@ -956,6 +1051,7 @@ let distanceData = [
    "Q16-most": 16.51,
    "Q16-few": 44.97,
    "Q17": 47.12,
+   "Q12-neg": 27.56,
    "Index": 0.14,
    "WBI": 3
  },
@@ -966,6 +1062,7 @@ let distanceData = [
    "Q16-most": 18.48,
    "Q16-few": 43.58,
    "Q17": 50.91,
+   "Q12-neg": 23.29,
    "Index": 0.17,
    "WBI": 2
  },
@@ -976,6 +1073,7 @@ let distanceData = [
    "Q16-most": 48.84,
    "Q16-few": 8.59,
    "Q17": 65.95,
+   "Q12-neg": 3.93,
    "Index": 0.46,
    "WBI": 4
  },
@@ -986,6 +1084,7 @@ let distanceData = [
    "Q16-most": 64.68,
    "Q16-few": 9.02,
    "Q17": 82.68,
+   "Q12-neg": 4.5,
    "Index": 0.61,
    "WBI": 4
  },
@@ -996,6 +1095,7 @@ let distanceData = [
    "Q16-most": 22.44,
    "Q16-few": 36.63,
    "Q17": 46.32,
+   "Q12-neg": 36.71,
    "Index": 0.17,
    "WBI": 3
  },
@@ -1006,6 +1106,7 @@ let distanceData = [
    "Q16-most": 18.12,
    "Q16-few": 48.05,
    "Q17": 58.92,
+   "Q12-neg": 30.59,
    "Index": 0.16,
    "WBI": 3
  },
@@ -1016,6 +1117,7 @@ let distanceData = [
    "Q16-most": 28.46,
    "Q16-few": 21.22,
    "Q17": 53.75,
+   "Q12-neg": 18.13,
    "Index": 0.23,
    "WBI": 1
  },
@@ -1026,6 +1128,7 @@ let distanceData = [
    "Q16-most": 11.1,
    "Q16-few": 23.22,
    "Q17": 35.54,
+   "Q12-neg": 23.18,
    "Index": 0.08,
    "WBI": 1
  },
@@ -1036,6 +1139,7 @@ let distanceData = [
    "Q16-most": 22.68,
    "Q16-few": 46.61,
    "Q17": 52.01,
+   "Q12-neg": 25.15,
    "Index": 0.19,
    "WBI": 2
  },
@@ -1046,6 +1150,7 @@ let distanceData = [
    "Q16-most": 62.57,
    "Q16-few": 5.06,
    "Q17": 87.87,
+   "Q12-neg": 2.03,
    "Index": 0.61,
    "WBI": 4
  },
@@ -1056,6 +1161,7 @@ let distanceData = [
    "Q16-most": 28.47,
    "Q16-few": 22.9,
    "Q17": 60.37,
+   "Q12-neg": 16.09,
    "Index": 0.25,
    "WBI": 3
  },
@@ -1066,6 +1172,7 @@ let distanceData = [
    "Q16-most": 49.59,
    "Q16-few": 8.67,
    "Q17": 80.95,
+   "Q12-neg": 9.06,
    "Index": 0.46,
    "WBI": 4
  },
@@ -1076,6 +1183,7 @@ let distanceData = [
    "Q16-most": 16.58,
    "Q16-few": 23.7,
    "Q17": 45.36,
+   "Q12-neg": 32.34,
    "Index": 0.13,
    "WBI": 2
  },
@@ -1086,6 +1194,7 @@ let distanceData = [
    "Q16-most": 42.07,
    "Q16-few": 15.18,
    "Q17": 71.37,
+   "Q12-neg": 11.67,
    "Index": 0.38,
    "WBI": 4
  },
@@ -1096,6 +1205,7 @@ let distanceData = [
    "Q16-most": 48.41,
    "Q16-few": 9.69,
    "Q17": 66.29,
+   "Q12-neg": 6.32,
    "Index": 0.44,
    "WBI": 4
  },
@@ -1106,6 +1216,7 @@ let distanceData = [
    "Q16-most": 42.98,
    "Q16-few": 17.76,
    "Q17": 77.59,
+   "Q12-neg": 15.59,
    "Index": 0.41,
    "WBI": 1
  },
@@ -1116,6 +1227,7 @@ let distanceData = [
    "Q16-most": 20.54,
    "Q16-few": 32.68,
    "Q17": 65.08,
+   "Q12-neg": 9.45,
    "Index": 0.18,
    "WBI": 3
  },
@@ -1126,6 +1238,7 @@ let distanceData = [
    "Q16-most": 44.36,
    "Q16-few": 10.52,
    "Q17": 50.82,
+   "Q12-neg": 10.3,
    "Index": 0.36,
    "WBI": 4
  },
@@ -1136,6 +1249,7 @@ let distanceData = [
    "Q16-most": 48.49,
    "Q16-few": 11.99,
    "Q17": 73.82,
+   "Q12-neg": 4.86,
    "Index": 0.39,
    "WBI": 4
  },
@@ -1146,6 +1260,7 @@ let distanceData = [
    "Q16-most": 22.86,
    "Q16-few": 25.63,
    "Q17": 38.01,
+   "Q12-neg": 25.86,
    "Index": 0.19,
    "WBI": 3
  },
@@ -1156,6 +1271,7 @@ let distanceData = [
    "Q16-most": 31.54,
    "Q16-few": 5.71,
    "Q17": 68.39,
+   "Q12-neg": 20.06,
    "Index": 0.29,
    "WBI": 3
  },
@@ -1166,6 +1282,7 @@ let distanceData = [
    "Q16-most": 42.7,
    "Q16-few": 10.41,
    "Q17": 75.76,
+   "Q12-neg": 13,
    "Index": 0.39,
    "WBI": 4
  },
@@ -1176,6 +1293,7 @@ let distanceData = [
    "Q16-most": 56.19,
    "Q16-few": 21.13,
    "Q17": 70.92,
+   "Q12-neg": 17.78,
    "Index": 0.48,
    "WBI": 3
  },
@@ -1186,6 +1304,7 @@ let distanceData = [
    "Q16-most": 16.84,
    "Q16-few": 37.62,
    "Q17": 35.82,
+   "Q12-neg": 13.12,
    "Index": 0.13,
    "WBI": 2
  },
@@ -1196,6 +1315,7 @@ let distanceData = [
    "Q16-most": 16.35,
    "Q16-few": 33.01,
    "Q17": 31.88,
+   "Q12-neg": 25.49,
    "Index": 0.13,
    "WBI": 3
  },
@@ -1206,6 +1326,7 @@ let distanceData = [
    "Q16-most": 20.17,
    "Q16-few": 30.29,
    "Q17": 46.86,
+   "Q12-neg": 34.12,
    "Index": 0.16,
    "WBI": 3
  },
@@ -1216,6 +1337,7 @@ let distanceData = [
    "Q16-most": 47.76,
    "Q16-few": 18.31,
    "Q17": 66.64,
+   "Q12-neg": 4.76,
    "Index": 0.41,
    "WBI": 1
  },
@@ -1226,6 +1348,7 @@ let distanceData = [
    "Q16-most": 24.78,
    "Q16-few": 35.35,
    "Q17": 53.62,
+   "Q12-neg": 29.24,
    "Index": 0.22,
    "WBI": 2
  },
@@ -1236,6 +1359,7 @@ let distanceData = [
    "Q16-most": 51.57,
    "Q16-few": 6.91,
    "Q17": 81.23,
+   "Q12-neg": 2.79,
    "Index": 0.49,
    "WBI": 4
  },
@@ -1246,6 +1370,7 @@ let distanceData = [
    "Q16-most": 19.47,
    "Q16-few": 37.36,
    "Q17": 46.2,
+   "Q12-neg": 30.4,
    "Index": 0.15,
    "WBI": 4
  },
@@ -1256,6 +1381,7 @@ let distanceData = [
    "Q16-most": 9.67,
    "Q16-few": 37.73,
    "Q17": 30.68,
+   "Q12-neg": 23.8,
    "Index": 0.08,
    "WBI": 3
  },
@@ -1266,6 +1392,7 @@ let distanceData = [
    "Q16-most": 15.58,
    "Q16-few": 44.84,
    "Q17": 46.56,
+   "Q12-neg": 27.4,
    "Index": 0.13,
    "WBI": 3
  },
@@ -1276,6 +1403,7 @@ let distanceData = [
    "Q16-most": 31.42,
    "Q16-few": 19.19,
    "Q17": 70.22,
+   "Q12-neg": 10.86,
    "Index": 0.29,
    "WBI": 4
  },
@@ -1286,6 +1414,7 @@ let distanceData = [
    "Q16-most": 30.96,
    "Q16-few": 18.35,
    "Q17": 52.55,
+   "Q12-neg": 17.64,
    "Index": 0.28,
    "WBI": 3
  },
@@ -1296,6 +1425,7 @@ let distanceData = [
    "Q16-most": 26.54,
    "Q16-few": 13.81,
    "Q17": 57.68,
+   "Q12-neg": 11.86,
    "Index": 0.24,
    "WBI": 4
  },
@@ -1306,6 +1436,7 @@ let distanceData = [
    "Q16-most": 41.44,
    "Q16-few": 20.9,
    "Q17": 69.81,
+   "Q12-neg": 10.41,
    "Index": 0.39,
    "WBI": 4
  },
@@ -1316,6 +1447,7 @@ let distanceData = [
    "Q16-most": 41.07,
    "Q16-few": 24.06,
    "Q17": 65.2,
+   "Q12-neg": 19.33,
    "Index": 0.35,
    "WBI": 2
  },
@@ -1326,6 +1458,7 @@ let distanceData = [
    "Q16-most": 46.99,
    "Q16-few": 7.98,
    "Q17": 80.1,
+   "Q12-neg": 7.07,
    "Index": 0.44,
    "WBI": 4
  },
@@ -1336,6 +1469,7 @@ let distanceData = [
    "Q16-most": 51.65,
    "Q16-few": 6.79,
    "Q17": 74.77,
+   "Q12-neg": 7.26,
    "Index": 0.49,
    "WBI": 1
  },
@@ -1346,6 +1480,7 @@ let distanceData = [
    "Q16-most": 55.79,
    "Q16-few": 12.11,
    "Q17": 74.17,
+   "Q12-neg": 15.63,
    "Index": 0.49,
    "WBI": 1
  },
@@ -1356,6 +1491,7 @@ let distanceData = [
    "Q16-most": 19.43,
    "Q16-few": 27.99,
    "Q17": 43.1,
+   "Q12-neg": 41.95,
    "Index": 0.16,
    "WBI": 1
  },
@@ -1366,6 +1502,7 @@ let distanceData = [
    "Q16-most": 18.24,
    "Q16-few": 23.12,
    "Q17": 57.47,
+   "Q12-neg": 15.52,
    "Index": 0.17,
    "WBI": 2
  },
@@ -1376,16 +1513,18 @@ let distanceData = [
    "Q16-most": 56.48,
    "Q16-few": 5.24,
    "Q17": 72.48,
+   "Q12-neg": 8.95,
    "Index": 0.53,
    "WBI": 3
  },
  {
    "country_id": 193,
-   "country name": "United Arab Emirates",
+   "country name": "U.A.E.",
    "Q12": 74.37,
    "Q16-most": 46.44,
    "Q16-few": 11.77,
    "Q17": 79.4,
+   "Q12-neg": 10.62,
    "Index": 0.42,
    "WBI": 4
  },
@@ -1396,6 +1535,7 @@ let distanceData = [
    "Q16-most": 24.77,
    "Q16-few": 26.98,
    "Q17": 56.15,
+   "Q12-neg": 13.59,
    "Index": 0.23,
    "WBI": 4
  },
@@ -1406,6 +1546,7 @@ let distanceData = [
    "Q16-most": 55.93,
    "Q16-few": 7.13,
    "Q17": 83.08,
+   "Q12-neg": 0.34,
    "Index": 0.54,
    "WBI": 2
  },
@@ -1416,6 +1557,7 @@ let distanceData = [
    "Q16-most": 28.51,
    "Q16-few": 18.9,
    "Q17": 57.83,
+   "Q12-neg": 22.88,
    "Index": 0.27,
    "WBI": 1
  },
@@ -1426,17 +1568,8 @@ let distanceData = [
    "Q16-most": 21.75,
    "Q16-few": 35.25,
    "Q17": 41.27,
+   "Q12-neg": 18.69,
    "Index": 0.15,
    "WBI": 2
- },
- {
-   "country_id": 202,
-   "country name": "Northern Cyprus",
-   "Q12": 93.06,
-   "Q16-most": 37.77,
-   "Q16-few": 11.71,
-   "Q17": 79.52,
-   "Index": 0.37,
-   "WBI": null
  }
 ];

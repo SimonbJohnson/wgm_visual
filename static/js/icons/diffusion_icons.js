@@ -1,4 +1,4 @@
-function generateDiffusion(id,data,width,height,columns,lines){
+function generateDiffusion(id,data,width,height,columns,lines,details){
 
 	/*let count = data.length;
 
@@ -23,7 +23,7 @@ function generateDiffusion(id,data,width,height,columns,lines){
             .attr("width", width)
             .attr("height", height);
 
-	var defs = svg.append('defs');
+	/*var defs = svg.append('defs');
 
 	var filter = defs.append('filter').attr('id','gooey');
 	
@@ -39,54 +39,59 @@ function generateDiffusion(id,data,width,height,columns,lines){
 	filter.append('feComposite')
 		.attr('in','SourceGraphic')
 		.attr('in2','gooey')
-		.attr('operator','atop');
+		.attr('operator','atop');*/
 
 
     colors = ['#D1AB39','#193C78','#CC3333','#29A78A','#F28000'];
     variables = ['distrust_neighbours','distrust_government', 'distrust_journalists','distrust_doctors','distrust_ngos'];
     var g = svg.append("g").style("filter", "url(#gooey)");
   
-
-
-
-    for(j=0;j<5;j++){
-
-        let angle = j*72/ 180 * Math.PI;
-
-        svg.selectAll(".circlegrey"+j)
+    if(details==true){
+      svg.selectAll(".circletrust")
           .data(data)
         .enter().append("circle")
-          .attr("class", "backcircle")
+          .attr("class", "circle")
           .attr("cx", function(d,i) {
-            let value = d[variables[j]];
-            return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100)
+            return Math.floor(i / lines) * scale + scale*0.5
           })
           .attr("cy", function(d,i) {
-            let value = d[variables[j]]; 
-            return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
+            return (i % lines)*scale + scale*0.4
           })
-          .attr("r", scale*0.12)
-          .attr("fill","#FFFFFF00")
-          .attr("opacity",function(d){
-          	let value = d[variables[j]];
-          	if(value == 'None'){
-          		return 0
-          	} else {
-          		return 1;
-          	}
-          });
+          .attr("r",function(d){
+            return scale*0.12*10/15
+          })
+          .attr("fill","#F2EADF00")
+          .style("stroke",'#999999')
+          .style("stroke-width",1)
+          .attr("opacity",1);
     }
 
     for(j=0;j<5;j++){
 
         let angle = j*72/ 180 * Math.PI;
 
-      /*for(k=0;k<data.length;k++){
-        	let value = data[k][variables[j]];
-	    	let cx = Math.floor(k / lines) * scale + scale*0.5 + Math.sin(angle)*(scale/7+scale*0.4*value/100);
-	    	let cy = (k % lines)*scale*0.9 + scale*0.5 - Math.cos(angle)*(scale/7+scale*0.4*value/100); 
-	    	circleToDots(svg,cx,cy,value,scale,colors[j]);
-    	}*/
+        if(details==true){
+          svg.selectAll(".circlecolor"+j)
+            .data(data)
+          .enter().append("circle")
+            .attr("class", "circle")
+            .attr("cx", function(d,i) {
+              let value = d[variables[j]];
+              return Math.floor(i / 9) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100)
+            })
+            .attr("cy", function(d,i) {
+              let value = d[variables[j]]; 
+              return (i % 9)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
+            })
+            .attr("r", function(d,i){
+              let value = d[variables[j]];
+              return scale*0.12*Math.sqrt(100)/15
+            })
+            .attr("fill",'#00000000')
+            .style("stroke",'#999999')
+            .style("stroke-width",1)
+            .attr("opacity",1);
+        }     
 
       svg.selectAll(".linesgrey"+j)
           .data(data)
@@ -120,7 +125,7 @@ function generateDiffusion(id,data,width,height,columns,lines){
               let value = d['distrust_scientists'];
               return value*scale/1500;
               //return 2*scale/100
-            })      
+            }) 
 
         svg.selectAll(".circlecolor"+j)
           .data(data)
@@ -147,19 +152,6 @@ function generateDiffusion(id,data,width,height,columns,lines){
       .enter().append("circle")
         .attr("class", "circle")
         .attr("cx", function(d,i) {
-          return Math.floor(i / lines) * scale + scale*0.5
-        })
-        .attr("cy", function(d,i) {
-          return (i % lines)*scale + scale*0.4
-        })
-        .attr("r", scale*0.06)
-        .attr("fill","#F2EADF00");
-
-    svg.selectAll(".circletrust")
-        .data(data)
-      .enter().append("circle")
-        .attr("class", "circle")
-        .attr("cx", function(d,i) {
           return Math.floor(i / 9) * scale + scale*0.5
         })
         .attr("cy", function(d,i) {
@@ -170,22 +162,28 @@ function generateDiffusion(id,data,width,height,columns,lines){
           	return scale*0.12*value/15
         })
         .attr("fill","#009EE2");
-
-    /*for(j=0;j<data.length;j++){
-    	let cx = Math.floor(j / lines) * scale + scale*0.5;
-    	let cy = (j % lines)*scale*0.9 + scale*0.5;
-    	let value = data[j]['distrust_scientists'];
-    	circleToDots(svg,cx,cy,value,scale,'#2196F3');
-    }*/
     
     
     svg.selectAll("text")
       .data(data)
     .enter().append("text")
-    	.attr('class','country_label')
+    	.attr('class',function(d){
+        if(details==true){
+          return 'countrylargelabel'
+        } else {
+          return 'countrylabel'
+        }
+      })
       .attr("x",function(d,i) { return Math.floor(i / lines) * scale + scale*0.5 })
       .attr("y",function(d,i) { return (i % lines)*scale + scale*0.9; })
       .style("text-anchor", "middle")
+      .attr("fill", function(d){
+        if(details==true){
+          return '#000000'
+        } else {
+          return '#aaaaaa'
+        }
+      })
       .text(function(d){
         return d['country_name'];
       });

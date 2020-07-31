@@ -3,7 +3,7 @@ function scatterplot(id,data,xKey,yKey,xTitle,yTitle,colorKey,w,h,xmin,xmax,ymin
     console.log('Creating scatterplot in element '+id);
     colors = ['#cccccc','#FF0000','#00B3CC','#FFC500','#3F1A13'];
 
-    let padding = 50;
+    let padding = 60;
 
     var xScale = d3.scaleLinear()
         .domain([xmin, xmax])
@@ -66,22 +66,102 @@ function scatterplot(id,data,xKey,yKey,xTitle,yTitle,colorKey,w,h,xmin,xmax,ymin
         .attr("transform", "translate(" + padding + ", 0)")
         .call(yAxis);
 
-    svg.append("text")             
-        .attr("transform",
-            "translate(" + (w/2) + " ," + 
-                           (h-10) + ")")
+    svg.selectAll('xtext')
+        .data(xTitle)
+        .enter()
+        .append("text")
+        .attr("class","chartaxislabel")             
+        .attr("transform",function(d,i){
+            return "translate(" + (w/2) + " ," + 
+                           (h-24+14*i) + ")"
+        })
         .style("text-anchor", "middle")
-        .text(xTitle);
+        .text(function(d){
+            return d;
+        });
 
-    svg.append("text")
-        .attr("transform", "rotate(-90)")
+    svg.selectAll('xtext')
+        .data(yTitle)
+        .enter().
+        append("text")
+        .attr("class","chartaxislabel")
+        .attr("transform", function(d,i){
+            return "rotate(-90)"
+        })
         .attr("y", 0)
         .attr("x",10 - (h / 2))
-        .attr("dy", "1em")
+        .attr("dy", function(d,i){
+            return (1*i+1)+"em";
+        })
         .style("text-anchor", "middle")
-        .text(yTitle);  
+        .text(function(d){
+            return d;
+        });  
 
-    return svg;   
+    return svg;
+}
+
+
+function donutGraph(id,data){
+
+    
+    let width = $(id).width();
+    let height = $(id).width();
+    let margin = 80;
+
+    var radius = width / 2 - margin
+
+    var svg = d3.select(id)
+      .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+      .append("g")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    var color = d3.scaleOrdinal()
+      .domain(data)
+      .range(['#D1AB39','#CC3333','#29A78A'])
+
+    var pie = d3.pie()
+      .value(function(d) {return d.value; })
+    var data_ready = pie(d3.entries(data))
+
+    svg
+      .selectAll('pies')
+      .data(data_ready)
+      .enter()
+      .append('path')
+      .attr('d', d3.arc()
+        .innerRadius(radius/3*2)
+        .outerRadius(radius)
+      )
+      .attr('fill', function(d){ return(color(d.data.key)) })
+      .attr("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("opacity", 0.7);
+
+    var outerArc = d3.arc()
+        .innerRadius(radius * 0.9)
+        .outerRadius(radius * 0.9);
+
+    svg
+      .selectAll('allLabels')
+      .data(data_ready)
+      .enter()
+      .append('text')
+        .attr("class",'keylabel')
+        .text( function(d) { console.log(d.data.key) ; return d.data.key } )
+        .attr('transform', function(d) {
+            var pos = outerArc.centroid(d);
+            var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
+            pos[0] = radius * 1.01 * (midangle < Math.PI ? 1 : -1);
+            return 'translate(' + pos + ')';
+        })
+        .style('text-anchor', function(d) {
+            var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
+            return (midangle < Math.PI ? 'start' : 'end')
+        })
+
 }
 
 function circleToDots(svg,cx,cy,value,scale,color,includeGrey=false){
