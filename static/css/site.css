@@ -200,3 +200,73 @@ h2 {
 .storycaseparent {
 	z-index:10;
 }
+
+.simplifiedicon {
+	min-height:70px;
+	width:60px;
+}
+
+.sectionheader {
+	color:#ffffff;
+	background-color:var(--mainDark);
+	font-weight:500;
+	height:45px;
+	padding-top:20px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:15px;
+    margin-top:30px;
+}
+
+.center-text {
+	justify-content: center;
+	text-align:center;
+}
+
+.lensbox {
+	border-bottom-style:solid;
+	border-bottom-width:10px;
+	border-bottom-color:#E8A8A2;
+	padding:15px;
+	padding-top:20px;
+	margin-top:30px;
+}
+
+.orientationcolor {
+	border-bottom-color:#E8A8A2;
+}
+
+.diffusioncolor {
+	border-bottom-color:#E5DAD4;
+}
+
+.distancecolor {
+	border-bottom-color:#D3B9C7;
+}
+
+.attractioncolor {
+	border-bottom-color:#B7DADE;
+}
+
+.smallhighlight {
+	font-size:0.8em;
+	font-weight:bold;
+}
+
+.seeingfurthernote {
+	margin-top:30px;
+}
+
+.homeicon {
+	margin-bottom:15px;
+}
+
+.notvisible {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.homelink a {
+	color:#777777
+}

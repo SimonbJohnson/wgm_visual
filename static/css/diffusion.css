@@ -23,3 +23,7 @@
 	width:calc(200% + 45px);
 	z-index:-1;
 }
+
+#viz1legend {
+  	margin: 0 auto;
+}

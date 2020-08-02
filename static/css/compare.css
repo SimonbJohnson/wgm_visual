@@ -39,3 +39,74 @@
 .countrylabel {
 	font-size:1rem;
 }
+
+.lensbutton {
+	border-style:solid;
+	border-width:1px;
+	border-color:var(--highlightColor);
+	padding-top:15px;
+	cursor:pointer;
+}
+
+.activelens {
+	background-color:#f5d9d6;
+}
+
+.lensdetails {
+	display:none;
+}				
+
+.lensboxplan {
+	padding-top:0px;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+.orientationtitlebox {
+	background-color:#f5d9d6;
+	padding-top:15px;
+	margin-bottom:15px;
+}
+
+.diffusiontitlebox {
+	background-color:#E5DAD4;
+	padding-top:15px;
+	margin-bottom:15px;
+}
+
+.distancetitlebox {
+	background-color:#D3B9C7;
+	padding-top:15px;
+	margin-bottom:15px;
+}
+.attractiontitlebox {
+	background-color:#B7DADE;
+	padding-top:15px;
+	margin-bottom:15px;
+	padding-left:0px;
+}
+
+.stepnumber {
+	border-style:solid;
+	border-width:1px;
+	border-color:var(--highlightColor);
+	font-size:1.2rem;
+	color:var(--highlightColor);
+	width:36px;
+	height:36px;
+	border-radius:18px;
+	padding-top:3px;
+	display: inline-block;
+	margin-bottom:15px;
+}
+
+.comparesection {
+	margin-top:30px;
+}
+
+.lensbuttoncontainer {
+	margin-left:-38px;
+	margin-right:-38px;
+	margin-bottom:30px;
+	margin-top:10px;
+}

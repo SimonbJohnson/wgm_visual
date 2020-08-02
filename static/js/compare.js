@@ -12,6 +12,19 @@ function init(){
 		console.log($(this).attr('data-id'));
 		addIcons(this.value,$(this).attr('data-id'));
 	});
+
+	$('.lensbutton').on('click',function(d,i){
+		let id = '.lens'+ $(this).attr('data');
+		$('.lensdetails').hide();
+		$(id).show();
+		$('.lensbutton').removeClass('activelens');
+		$(this).addClass('activelens');
+	});
+
+	let id = '.lensorientation';
+	
+	$('.lensdetails').hide();
+	$(id).show();
 }
 
 function addIcons(countryID,row){
@@ -25,7 +38,7 @@ function addIcons(countryID,row){
 	diffusionDataCut = getData(countryID,diffusionData);
 	if(diffusionDataCut!=false){
 		$('#compare'+row+'2').html('');
-		generateDiffusion('#compare'+row+'2',diffusionDataCut,cellHeight,cellHeight,1,1);
+		generateDiffusion('#compare'+row+'2',diffusionDataCut,cellHeight,cellHeight,1,1,true,false);
 	}
 
 	distanceDataCut = getData(countryID,distanceData);

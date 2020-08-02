@@ -1,4 +1,4 @@
-function generateDiffusion(id,data,width,height,columns,lines,details){
+function generateDiffusion(id,data,width,height,columns,lines,details,animate){
 
 	/*let count = data.length;
 
@@ -93,7 +93,7 @@ function generateDiffusion(id,data,width,height,columns,lines,details){
             .attr("opacity",1);
         }     
 
-      svg.selectAll(".linesgrey"+j)
+      let trustlines = svg.selectAll(".linesgrey"+j)
           .data(data)
         .enter().append("line")
           .attr("class", "line")
@@ -103,14 +103,28 @@ function generateDiffusion(id,data,width,height,columns,lines,details){
           .attr("y1", function(d,i) {
             return (i % lines)*scale + scale*0.4
           })
-            .attr("x2", function(d,i) {
+          .attr("x2", function(d,i) {
+              let value = d[variables[j]];
+              if(animate==true){
+                value=0;
+              }
+              return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.4*value/100)
+          })
+          .attr("y2", function(d,i) {
+              let value = d[variables[j]]; 
+              if(animate==true){
+                value=0;
+              }
+              return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.4*value/100)
+          })
+            /*.attr("x2", function(d,i) {
               let value = d[variables[j]];
               return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100)
             })
             .attr("y2", function(d,i) {
               let value = d[variables[j]]; 
               return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
-            })
+            })*/
           .attr("stroke","#3F1A13")
           .attr("opacity",function(d){
               let value = d[variables[j]];
@@ -127,41 +141,107 @@ function generateDiffusion(id,data,width,height,columns,lines,details){
               //return 2*scale/100
             }) 
 
-        svg.selectAll(".circlecolor"+j)
+        trustlines.transition().delay(2000)
+            .duration(function(d){
+              let value = d[variables[j]];
+              return 4000
+            })
+            .attr("x2", function(d,i) {
+              let value = d[variables[j]];
+              return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.4*value/100)
+            })
+            .attr("y2", function(d,i) {
+              let value = d[variables[j]]; 
+              return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.4*value/100) 
+            })
+
+
+        let societycircles = svg.selectAll(".circlecolor"+j)
           .data(data)
         .enter().append("circle")
           .attr("class", "circle")
           .attr("cx", function(d,i) {
             let value = d[variables[j]];
-            return Math.floor(i / 9) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100)
+            return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100)
           })
           .attr("cy", function(d,i) {
             let value = d[variables[j]]; 
-            return (i % 9)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
+            return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
           })
           .attr("r", function(d,i){
-          	let value = d[variables[j]];
-          	return scale*0.12*Math.sqrt(value)/15
+          	//let value = d[variables[j]];
+          	//return scale*0.12*Math.sqrt(value)/15
+            return scale/30
           })
           .attr("fill",colors[j])
-          .attr("opacity",1);
+          .attr("opacity",function(d,i){
+            if(animate==true){
+              return 0;
+            } else {
+              return 1;
+            }
+            
+          });
+
+        societycircles.transition()
+          .delay(function(d,i){
+            return 6000+250*j
+          })
+          .attr("opacity",function(d,i){
+            return 1;
+          });
     }
 
-    svg.selectAll(".circletrust")
+    let sciencetrust = svg.selectAll(".circletrust")
         .data(data)
       .enter().append("circle")
         .attr("class", "circle")
         .attr("cx", function(d,i) {
-          return Math.floor(i / 9) * scale + scale*0.5
+          return Math.floor(i / lines) * scale + scale*0.5
         })
         .attr("cy", function(d,i) {
-          return (i % 9)*scale + scale*0.4
+          return (i % lines)*scale + scale*0.4
         })
         .attr("r", function(d){
         	let value = Math.sqrt(d['distrust_scientists']);
           	return scale*0.12*value/15
         })
-        .attr("fill","#009EE2");
+        .attr("fill","#009EE2")
+        .attr("opacity",function(d){
+          if(animate==true){
+            return 0;
+          } else {
+            return 1;
+          }
+        });
+
+    sciencetrust.transition()
+      .delay(function(d,i){
+        let value = d['distrust_scientists'];
+            return value*30;
+      })
+      .attr("opacity",1)
+
+    /*svg.selectAll(".circletrust")
+        .data(data)
+      .enter().append("rect")
+        .attr("x", function(d,i) {
+          let value = Math.sqrt(d['distrust_scientists']);
+          return Math.floor(i / 9) * scale + scale*0.5-scale*0.12*value/15*1.5
+        })
+        .attr("y", function(d,i) {
+          let value = Math.sqrt(d['distrust_scientists']);
+          return (i % 9)*scale + scale*0.4 -scale*0.12*value/15*1.5
+        })
+        .attr("width", function(d){
+          let value = Math.sqrt(d['distrust_scientists']);
+            return scale*0.12*value/15*3
+        })
+        .attr("height", function(d){
+          let value = Math.sqrt(d['distrust_scientists']);
+            return scale*0.12*value/15*3
+        })
+        .attr("fill","#009EE2");*/
     
     
     svg.selectAll("text")
