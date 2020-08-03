@@ -8,8 +8,6 @@ function init(){
 	});
 
 	$('.countrieslist').on('change',function(d){
-		console.log(this.value);
-		console.log($(this).attr('data-id'));
 		addIcons(this.value,$(this).attr('data-id'));
 	});
 
@@ -25,6 +23,9 @@ function init(){
 	
 	$('.lensdetails').hide();
 	$(id).show();
+
+	addIcons(12,1);
+	$('#countrylist1').val(12);
 }
 
 function addIcons(countryID,row){
@@ -44,13 +45,13 @@ function addIcons(countryID,row){
 	distanceDataCut = getData(countryID,distanceData);
 	if(distanceDataCut!=false){
 		$('#compare'+row+'3').html('');
-		generateDistance('#compare'+row+'3',distanceDataCut,1,1,3);
+		generateDistance('#compare'+row+'3',distanceDataCut,1,1,3,true);
 	}
 
 	attractionDataCut = getData(countryID,attractionData);
 	if(attractionDataCut!=false){
 		$('#compare'+row+'4').html('');
-		generateAttraction('#compare'+row+'4',attractionDataCut,1,1,6);
+		generateAttraction('#compare'+row+'4',attractionDataCut,1,1,6,true);
 	}
 }
 

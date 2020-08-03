@@ -1,9 +1,9 @@
-console.log(data);
+console.log(diffusionData);
 
 let graphWidth = $('#scatterplot1').width();
 let graphHeight = $('#scatterplot1').width();
 
-let scatterplot1 = scatterplot('#scatterplot1',data,'distrust_society_nogov','distrust_scientists',['Distrust in Society'],["Percent answering 'A lot' or 'Some' to trusting scientist in their country"],'WBI',graphWidth,graphHeight,0,60,0,60);
+let scatterplot1 = scatterplot('#scatterplot1',diffusionData,'distrust_society_nogov','distrust_scientists',['Distrust in Society'],["Percent answering 'A lot' or 'Some' to trusting scientist in their country"],'WBI',graphWidth,graphHeight,0,60,0,60);
 
 
 let legenddata =  [{
@@ -64,7 +64,7 @@ let legenddata =  [{
    "WBI": 4
  }];
 
- generateDiffusionIcons(data);
+ generateDiffusionIcons(diffusionData);
 
 
 function generateDiffusionIcons(data){
@@ -73,18 +73,18 @@ function generateDiffusionIcons(data){
   generateScaleArrow('#viz1scale');
   //generateDiffusion('#viz1legend',legenddata,400,100,4,1,false,true,0);
 
-  let newData = data.sort(function(a,b){
+  let newData = diffusionData.sort(function(a,b){
     return parseFloat(a['distrust_scientists']) - parseFloat(b['distrust_scientists']);
   });
 
   console.log(newData);
-	generateDiffusion('#viz1',newData,width,height,16,9,false,true,0);
+	generateDiffusion('#viz1',newData,width,height,16,9,false,false,0);
   generateDiffusion('#viz1b',newData,width,height,16,9,false,false,1);
     generateDiffusion('#viz1c',newData,width,height,16,9,false,false,2);
       generateDiffusion('#viz1d',newData,width,height,16,9,false,false,3);
 	let width2 = $('#viz2').width();
 	let height2 = $('#viz2').width();
-	let southAfrica = data.filter(function(d){
+	let southAfrica = diffusionData.filter(function(d){
 		if(d['country_name']=='South Africa'){
 			return true;
 		} else {
@@ -99,7 +99,7 @@ function generateDiffusionIcons(data){
 
   let width4 = $('#viz2').width();
   let height4 = $('#viz2').width();
-  let vietnam = data.filter(function(d){
+  let vietnam = diffusionData.filter(function(d){
     if(d['country_name']=='Vietnam'){
       return true;
     } else {
@@ -124,16 +124,33 @@ function generateScaleArrow(id){
         .attr("width", width)
         .attr("height", height);
 
+    let aSize = scale/5
+
+    svg
+      .append('defs')
+      .append('marker')
+      .attr('id', 'arrow')
+      .attr('viewBox', [0, 0, aSize, aSize])
+      .attr('refX', aSize/2)
+      .attr('refY', aSize/2)
+      .attr('markerWidth', aSize)
+      .attr('markerHeight', aSize)
+      .attr('orient', 'auto-start-reverse')
+      .append('path')
+      .attr('d', d3.line()([[0, 0], [0, aSize], [aSize, aSize*0.5]]))
+      .attr('stroke', 'black');
+
     let line = svg.append('line')
-        .attr('x1',100)
-        .attr('x2',100)
+        .attr('x1',200)
+        .attr('x2',200)
         .attr('y1',height/4*3)
         .attr('y2',height/4*3)
+        .attr('marker-end', 'url(#arrow)')
         .style('stroke','black')
         .style('stroke-width',1);
 
     line.transition().duration(1500)
-      .attr('x2',width-100)
+      .attr('x2',width-200)
 
     svg.append("text")
       .attr("x",0)
@@ -155,7 +172,7 @@ function generateScaleArrow(id){
       .enter().append("circle")
         .attr("class", "circle")
         .attr("cx", function(d,i) {
-          return width/6*(i+1)
+          return (width-200)/6*(i+1)+100
         })
         .attr("cy", height*1/4)
         .attr("r", function(d,i){

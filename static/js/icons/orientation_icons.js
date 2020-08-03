@@ -275,7 +275,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
         .data(data)
       .enter().append("text")
         .attr('class',function(d){
-              return 'countrylabellarge'
+              return 'percentlabel'
         })
         .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4; })
         .attr("y",function(d,i) { return (i % rows)*scale + scale*0.4 + d['B-Q30-religion-Q12 high']*scale+scale/75*Math.sqrt(d['B-Q30-religion-Q12 high']*100); })

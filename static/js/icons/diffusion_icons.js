@@ -55,12 +55,12 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate,st
             return Math.floor(i / lines) * scale + scale*0.5
           })
           .attr("cy", function(d,i) {
-            return (i % lines)*scale + scale*0.4
+            return (i % lines)*scale + scale*0.5
           })
           .attr("r",function(d){
             return scale*0.12*10/15
           })
-          .attr("fill","#F2EADF00")
+          .attr("fill","#ffffff")
           .style("stroke",'#999999')
           .style("stroke-width",1)
           .attr("opacity",1);
@@ -70,7 +70,7 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate,st
 
         let angle = j*72/ 180 * Math.PI;
 
-        if(details==true){
+        /*if(details==true){
           svg.selectAll(".circlecolor"+j)
             .data(data)
           .enter().append("circle")
@@ -81,17 +81,17 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate,st
             })
             .attr("cy", function(d,i) {
               let value = d[variables[j]]; 
-              return (i % 9)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
+              return (i % 9)*scale + scale*0.5 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
             })
             .attr("r", function(d,i){
               let value = d[variables[j]];
               return scale*0.12*Math.sqrt(100)/15
             })
-            .attr("fill",'#00000000')
+            .attr("fill",'#ffffff')
             .style("stroke",'#999999')
             .style("stroke-width",1)
             .attr("opacity",1);
-        }     
+        }*/     
 
       let trustlines = svg.selectAll(".linesgrey"+j)
           .data(data)
@@ -101,7 +101,7 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate,st
             return Math.floor(i / lines) * scale + scale*0.5
           })
           .attr("y1", function(d,i) {
-            return (i % lines)*scale + scale*0.4
+            return (i % lines)*scale + scale*0.5
           })
           /*.attr("x2", function(d,i) {
               let value = d[variables[j]];
@@ -126,9 +126,9 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate,st
             .attr("y2", function(d,i) {
               let value = d[variables[j]];
               if(value=='None'){
-                return (i % lines)*scale + scale*0.4
+                return (i % lines)*scale + scale*0.5
               } else {
-                return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100);
+                return (i % lines)*scale + scale*0.5 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100);
               }
               
             })
@@ -159,11 +159,17 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate,st
           .attr("class", "circle")
           .attr("cx", function(d,i) {
             let value = d[variables[j]];
+            if(value=="None"){
+              return 0;
+            }
             return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100)
           })
           .attr("cy", function(d,i) {
-            let value = d[variables[j]]; 
-            return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
+            let value = d[variables[j]];
+            if(value=="None"){
+              return 0;
+            } 
+            return (i % lines)*scale + scale*0.5 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
           })
           .attr("r", function(d,i){
           	//let value = d[variables[j]];
@@ -198,6 +204,40 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate,st
               }
             }
           });
+
+      if(details==true){
+        svg.selectAll("textpercent")
+          .data(data)
+        .enter().append("text")
+          .attr('class',function(d){
+                return 'percentlabel'
+          })
+          .attr("x", function(d,i) {
+            let value = d[variables[j]];
+            if(value=="None"){
+              return 0;
+            }
+            return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.16+scale*0.4*value/100)
+          })
+          .attr("y", function(d,i) {
+            let value = d[variables[j]];
+            if(value=="None"){
+              return 0;
+            } 
+            return (i % lines)*scale + scale*0.5 - Math.cos(angle)*(scale*0.16+scale*0.4*value/100) 
+          })
+          .attr("dy","0.5rem")
+          .style("text-anchor", "middle")
+          .attr("fill",'#000000')
+          .text(function(d){
+            let value = d[variables[j]];
+            if(value=="None"){
+              return ''
+            } else {
+              return parseInt(value)+'%';
+            }
+          });
+      }
 
       if(animate==true){
         initTrans2 = false;
@@ -238,7 +278,7 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate,st
           return Math.floor(i / lines) * scale + scale*0.5
         })
         .attr("cy", function(d,i) {
-          return (i % lines)*scale + scale*0.4
+          return (i % lines)*scale + scale*0.5
         })
         .attr("r", function(d){
         	let value = Math.sqrt(d['distrust_scientists']);
@@ -272,30 +312,8 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate,st
             }
           });
     }
-
-    /*svg.selectAll(".circletrust")
-        .data(data)
-      .enter().append("rect")
-        .attr("x", function(d,i) {
-          let value = Math.sqrt(d['distrust_scientists']);
-          return Math.floor(i / 9) * scale + scale*0.5-scale*0.12*value/15*1.5
-        })
-        .attr("y", function(d,i) {
-          let value = Math.sqrt(d['distrust_scientists']);
-          return (i % 9)*scale + scale*0.4 -scale*0.12*value/15*1.5
-        })
-        .attr("width", function(d){
-          let value = Math.sqrt(d['distrust_scientists']);
-            return scale*0.12*value/15*3
-        })
-        .attr("height", function(d){
-          let value = Math.sqrt(d['distrust_scientists']);
-            return scale*0.12*value/15*3
-        })
-        .attr("fill","#009EE2");*/
     
-    
-    svg.selectAll("text")
+    svg.selectAll("textcountry")
       .data(data)
     .enter().append("text")
     	.attr('class',function(d){

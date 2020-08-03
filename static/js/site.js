@@ -22,7 +22,7 @@ function scatterplot(id,data,xKey,yKey,xTitle,yTitle,colorKey,w,h,xmin,xmax,ymin
                .attr("width", w)
                .attr("height", h);
                
-    let circles = svg.selectAll("circle")
+    /*let circles = svg.selectAll("circle")
         .data(data)
         .enter()
         .append("circle")
@@ -35,6 +35,22 @@ function scatterplot(id,data,xKey,yKey,xTitle,yTitle,colorKey,w,h,xmin,xmax,ymin
         .attr("r", 3)
         .attr("fill", function(d){
             return colors[d[colorKey]];
+        });*/
+
+    let rects = svg.selectAll("rect")
+        .data(data)
+        .enter()
+        .append("rect")
+        .attr("x", function(d) {
+            return xScale(xmin);
+        })
+        .attr("y", function(d) {
+            return yScale(d[yKey]);
+        })
+        .attr("height", 5)
+        .attr("width", 5)
+        .attr("fill", function(d){
+            return colors[d[colorKey]];
         });
 
     let init = false;
@@ -44,10 +60,10 @@ function scatterplot(id,data,xKey,yKey,xTitle,yTitle,colorKey,w,h,xmin,xmax,ymin
             let topWin = $(window).scrollTop();
             let topElement = $(id).offset().top;
             if(topWin>topElement-50){
-                circles.transition().ease(d3.easeCubic).duration(function(d){
+                rects.transition().ease(d3.easeCubic).duration(function(d){
                     let distance = d[xKey]-20;
                     return distance*25;
-                }).attr('cx', function(d) {
+                }).attr('x', function(d) {
                     return xScale(d[xKey]);
                 });
                 init=true;

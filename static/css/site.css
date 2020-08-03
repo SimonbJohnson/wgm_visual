@@ -98,7 +98,15 @@ h2 {
 }
 
 .countrylabellarge {
-	font-size:1rem;
+	font-size:0.8rem;
+}
+
+.countrylargelabel {
+	font-size:0.8rem;
+}
+
+.percentlabel {
+	font-size:0.7rem;
 }
 
 .keylabel {
@@ -184,7 +192,6 @@ h2 {
   margin-right:12px;
   margin-top:3px;
   text-transform: uppercase;
-  border-radius:6px;
 }
 
 .chartaxislabel {
@@ -211,6 +218,11 @@ h2 {
 .simplifiedicon {
 	min-height:70px;
 	width:60px;
+}
+
+.typeicon {
+	min-height:70px;
+	width:40px;
 }
 
 .sectionheader {
@@ -282,22 +294,34 @@ h2 {
 	background-color:#f5d9d6;
 	padding-top:15px;
 	margin-bottom:15px;
+	text-align:center;
 }
 
 .diffusiontitlebox {
 	background-color:#E5DAD4;
 	padding-top:15px;
 	margin-bottom:15px;
+	text-align:center;
 }
 
 .distancetitlebox {
 	background-color:#D3B9C7;
 	padding-top:15px;
 	margin-bottom:15px;
+	text-align:center;
 }
 .attractiontitlebox {
 	background-color:#B7DADE;
 	padding-top:15px;
 	margin-bottom:15px;
 	padding-left:0px;
+	text-align:center;
+}
+
+.lensbutton {
+	border-style:solid;
+	border-width:1px;
+	border-color:var(--highlightColor);
+	padding-top:15px;
+	cursor:pointer;
 }
