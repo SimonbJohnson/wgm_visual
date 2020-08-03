@@ -24,6 +24,35 @@
 	z-index:-1;
 }
 
-#viz1legend {
-  	margin: 0 auto;
+#diffusion1legend {
+  	padding-top:30px;
+	padding-bottom:30px;
+}
+
+.scientists {
+	color:#009EE2;
+}
+
+.neighbours {
+	color:#D1AB39;
+}
+
+.government {
+	color:#193C78;
+}
+
+.journalists {
+	color:#CC3333;
+}
+
+.doctors {
+	color:#29A78A;
+}
+
+.nonprofits {
+	color:#F28000;
+}
+
+#saranking {
+	padding-bottom:30px;
 }

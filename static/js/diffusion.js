@@ -8,13 +8,13 @@ let scatterplot1 = scatterplot('#scatterplot1',data,'distrust_society_nogov','di
 
 let legenddata =  [{
    "country_id": 1,
-   "country_name": "Low Distrust in society",
-   "distrust_neighbours": 10,
-   "distrust_government": 10,
+   "country_name": "Low distrust in society and scientists",
+   "distrust_neighbours": 20,
+   "distrust_government": 20,
    "distrust_scientists": 20,
-   "distrust_journalists": 10,
-   "distrust_doctors": 10,
-   "distrust_ngos": 10,
+   "distrust_journalists": 20,
+   "distrust_doctors": 20,
+   "distrust_ngos": 20,
    "distrust_society": 25.848,
    "distrust_society_nogov": 20.0775,
    "key_indicator_score": -0.11456,
@@ -22,13 +22,41 @@ let legenddata =  [{
    "WBI": 4
  },{
    "country_id": 1,
-   "country_name": "High Distrust in society",
-   "distrust_neighbours": 40,
-   "distrust_government": 40,
-   "distrust_scientists": 20,
-   "distrust_journalists": 40,
-   "distrust_doctors": 40,
-   "distrust_ngos": 40,
+   "country_name": "Low distrust in scientists and high distrust in society",
+   "distrust_neighbours": 50,
+   "distrust_government": 50,
+   "distrust_scientists": 10,
+   "distrust_journalists": 50,
+   "distrust_doctors": 50,
+   "distrust_ngos": 50,
+   "distrust_society": 25.848,
+   "distrust_society_nogov": 20.0775,
+   "key_indicator_score": -0.11456,
+   "key_indicator_rank": 111,
+   "WBI": 4
+ },{
+   "country_id": 1,
+   "country_name": "High distrust in scientists and low distrust in society",
+   "distrust_neighbours": 20,
+   "distrust_government": 20,
+   "distrust_scientists": 50,
+   "distrust_journalists": 20,
+   "distrust_doctors": 20,
+   "distrust_ngos": 20,
+   "distrust_society": 25.848,
+   "distrust_society_nogov": 20.0775,
+   "key_indicator_score": -0.11456,
+   "key_indicator_rank": 111,
+   "WBI": 4
+ },{
+   "country_id": 1,
+   "country_name": "High distrust in scientists and high distrust in society",
+   "distrust_neighbours": 50,
+   "distrust_government": 50,
+   "distrust_scientists": 50,
+   "distrust_journalists": 50,
+   "distrust_doctors": 50,
+   "distrust_ngos": 50,
    "distrust_society": 25.848,
    "distrust_society_nogov": 20.0775,
    "key_indicator_score": -0.11456,
@@ -43,9 +71,17 @@ function generateDiffusionIcons(data){
 	let width = $('#viz1').width();
 	let height = width/16*9;
   generateScaleArrow('#viz1scale');
-  generateDiffusion('#viz1legend',legenddata,200,100,2,1,false,true);
-	generateDiffusion('#viz1',data,width,height,16,9,false,true);
+  //generateDiffusion('#viz1legend',legenddata,400,100,4,1,false,true,0);
 
+  let newData = data.sort(function(a,b){
+    return parseFloat(a['distrust_scientists']) - parseFloat(b['distrust_scientists']);
+  });
+
+  console.log(newData);
+	generateDiffusion('#viz1',newData,width,height,16,9,false,true,0);
+  generateDiffusion('#viz1b',newData,width,height,16,9,false,false,1);
+    generateDiffusion('#viz1c',newData,width,height,16,9,false,false,2);
+      generateDiffusion('#viz1d',newData,width,height,16,9,false,false,3);
 	let width2 = $('#viz2').width();
 	let height2 = $('#viz2').width();
 	let southAfrica = data.filter(function(d){
@@ -55,11 +91,11 @@ function generateDiffusionIcons(data){
 			return false;
 		}
 	});
-	generateDiffusion('#viz2',southAfrica,width2,height2,1,1,true);
+	generateDiffusion('#viz2',southAfrica,width2,height2,1,1,true,false,3);
 
-  let width3 = $('#viz3').width();
+  /*let width3 = $('#viz3').width();
   let height3 = width/16*9;
-  generateDiffusion('#viz3',data,width,height,16,9,false);	
+  generateDiffusion('#viz3',data,width,height,16,9,false,false,3);	*/
 
   let width4 = $('#viz2').width();
   let height4 = $('#viz2').width();
@@ -70,7 +106,7 @@ function generateDiffusionIcons(data){
       return false;
     }
   });
-  generateDiffusion('#viz4',vietnam,width4,height4,1,1,true);
+  generateDiffusion('#viz4',vietnam,width4,height4,1,1,true,false,3);
 
   let pieData = {"Don't Know":50,"Distrust":30,"Trust":20};
   donutGraph('#viz5',pieData);

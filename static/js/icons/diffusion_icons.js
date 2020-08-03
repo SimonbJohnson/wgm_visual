@@ -1,4 +1,4 @@
-function generateDiffusion(id,data,width,height,columns,lines,details,animate){
+function generateDiffusion(id,data,width,height,columns,lines,details,animate,state){
 
 	/*let count = data.length;
 
@@ -14,9 +14,9 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate){
 	let scale = width/columns;
 
 
-	data = data.sort(function(a,b){
+	/*data = data.sort(function(a,b){
 		return a.distrust_scientists - b.distrust_scientists;
-	});
+	});*/
 
     let svg = d3.select(id)
             .append("svg")
@@ -103,35 +103,46 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate){
           .attr("y1", function(d,i) {
             return (i % lines)*scale + scale*0.4
           })
-          .attr("x2", function(d,i) {
+          /*.attr("x2", function(d,i) {
               let value = d[variables[j]];
               if(animate==true){
                 value=0;
               }
               return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.4*value/100)
-          })
-          .attr("y2", function(d,i) {
-              let value = d[variables[j]]; 
+          })*/
+          /*    let value = d[variables[j]]; 
               if(animate==true){
                 value=0;
               }
               return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.4*value/100)
-          })
-            /*.attr("x2", function(d,i) {
+          })*/
+          .attr("x2", function(d,i) {
               let value = d[variables[j]];
+              if(value=='None'){
+                return Math.floor(i / lines) * scale + scale*0.5;
+              }
               return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100)
             })
             .attr("y2", function(d,i) {
-              let value = d[variables[j]]; 
-              return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100) 
-            })*/
+              let value = d[variables[j]];
+              if(value=='None'){
+                return (i % lines)*scale + scale*0.4
+              } else {
+                return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100);
+              }
+              
+            })
           .attr("stroke","#3F1A13")
           .attr("opacity",function(d){
               let value = d[variables[j]];
               if(value == 'None'){
                 return 0
               } else {
-                return 1;
+                if(animate==true){
+                  return 0;
+                } else {
+                  return 1;
+                }
               }
             })
             .attr("stroke-width",function(d){
@@ -139,23 +150,9 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate){
               let value = d['distrust_scientists'];
               return value*scale/1500;
               //return 2*scale/100
-            }) 
+            });
 
-        trustlines.transition().delay(2000)
-            .duration(function(d){
-              let value = d[variables[j]];
-              return 4000
-            })
-            .attr("x2", function(d,i) {
-              let value = d[variables[j]];
-              return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.4*value/100)
-            })
-            .attr("y2", function(d,i) {
-              let value = d[variables[j]]; 
-              return (i % lines)*scale + scale*0.4 - Math.cos(angle)*(scale*0.4*value/100) 
-            })
-
-
+        
         let societycircles = svg.selectAll(".circlecolor"+j)
           .data(data)
         .enter().append("circle")
@@ -171,25 +168,66 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate){
           .attr("r", function(d,i){
           	//let value = d[variables[j]];
           	//return scale*0.12*Math.sqrt(value)/15
-            return scale/30
+            if(state==0){
+              return 0;
+            }
+            if(state>0){
+              if(j==2 || j==4){
+                return scale/30;
+              }
+            }
+            if(state>1){
+              if(j==3){
+                return scale/30;
+              }              
+            }
+            if(state>2){
+                return scale/30;           
+            }            
           })
           .attr("fill",colors[j])
           .attr("opacity",function(d,i){
-            if(animate==true){
-              return 0;
+            let value = d[variables[j]];
+            if(value == 'None'){
+              return 0
             } else {
-              return 1;
+              if(animate==true){
+                return 0;
+              } else {
+                return 1;
+              }
             }
-            
           });
 
-        societycircles.transition()
-          .delay(function(d,i){
-            return 6000+250*j
-          })
-          .attr("opacity",function(d,i){
-            return 1;
-          });
+      if(animate==true){
+        initTrans2 = false;
+        $(window).scroll(function(){
+          if(!initTrans2[j]){
+              let topWin = $(window).scrollTop();
+              let topElement = $(id).offset().top;
+              if(topWin>topElement-100){
+
+                societycircles.transition()
+                  .delay(function(d,i){
+                    return 3000
+                  })
+                  .attr("opacity",function(d,i){
+                    return 1;
+                  });
+
+                    trustlines.transition().delay(2000)
+                      .duration(function(d){
+                        return 1000
+                      })
+                      .attr("opacity",function(d,i){
+                        return 1;
+                      });
+
+                  initTrans2=true
+              }
+            }
+        });
+      }
     }
 
     let sciencetrust = svg.selectAll(".circletrust")
@@ -215,12 +253,25 @@ function generateDiffusion(id,data,width,height,columns,lines,details,animate){
           }
         });
 
-    sciencetrust.transition()
-      .delay(function(d,i){
-        let value = d['distrust_scientists'];
-            return value*30;
-      })
-      .attr("opacity",1)
+    if(animate==true){
+      let initTrans = false;
+      $(window).scroll(function(){
+          if(!initTrans){
+              let topWin = $(window).scrollTop();
+              let topElement = $(id).offset().top;
+              if(topWin>topElement-100){
+                sciencetrust.transition()
+                  .delay(function(d,i){
+                    let value = d['distrust_scientists'];
+                        return value*30;
+                  })
+                  .attr("opacity",1);
+
+                  initTrans = true;            
+              }
+            }
+          });
+    }
 
     /*svg.selectAll(".circletrust")
         .data(data)

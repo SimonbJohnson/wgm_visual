@@ -2600,7 +2600,7 @@ let attractionData = [
  },
  {
    "country_id": 145,
-   "country_name": "Macedonia, the former Yugoslav Republic of",
+   "country_name": "Macedonia",
    "WBI": 3,
    "country code": "MKD",
    "agriculture": "15.72200012",

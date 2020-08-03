@@ -66,6 +66,13 @@ h2 {
 	text-align:center;
 }
 
+.summarytext {
+	font-size:1.2rem;
+	font-family:arial;
+	font-weight:600;
+	text-align:center;
+}
+
 .subtext {
 	font-size:1.2rem;
 	font-weight:600;
@@ -269,4 +276,28 @@ h2 {
 
 .homelink a {
 	color:#777777
+}
+
+.orientationtitlebox {
+	background-color:#f5d9d6;
+	padding-top:15px;
+	margin-bottom:15px;
+}
+
+.diffusiontitlebox {
+	background-color:#E5DAD4;
+	padding-top:15px;
+	margin-bottom:15px;
+}
+
+.distancetitlebox {
+	background-color:#D3B9C7;
+	padding-top:15px;
+	margin-bottom:15px;
+}
+.attractiontitlebox {
+	background-color:#B7DADE;
+	padding-top:15px;
+	margin-bottom:15px;
+	padding-left:0px;
 }

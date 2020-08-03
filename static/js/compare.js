@@ -38,7 +38,7 @@ function addIcons(countryID,row){
 	diffusionDataCut = getData(countryID,diffusionData);
 	if(diffusionDataCut!=false){
 		$('#compare'+row+'2').html('');
-		generateDiffusion('#compare'+row+'2',diffusionDataCut,cellHeight,cellHeight,1,1,true,false);
+		generateDiffusion('#compare'+row+'2',diffusionDataCut,cellHeight,cellHeight,1,1,true,false,3);
 	}
 
 	distanceDataCut = getData(countryID,distanceData);
