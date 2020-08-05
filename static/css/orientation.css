@@ -58,7 +58,7 @@
 }
 
 .screenpad {
-  margin-top:1000px;
+  margin-top:175vh;
 }
 
 #opacitynone {
@@ -72,4 +72,8 @@
 .disappear
 {
   opacity: 0;
+}
+
+.maintext {
+  background-color:#FFFCF8;
 }
