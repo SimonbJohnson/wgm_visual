@@ -225,7 +225,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
           })
           //.attr("y2",function(d,i) { return (i % 9)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; })
           .attr("stroke","#3F1A13")
-          .attr("stroke-width",2*scale/100);
+          .attr("stroke-width",1*scale/100);
 
     let plungeLines2 = svg.selectAll(".linesgrey2")
           .data(data)
@@ -242,7 +242,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
             }
           })
           //.attr("y2",function(d,i) { return (i % 9)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; })
-          .attr("stroke","#3F1A13")
+          .attr("stroke","#f8b233")
           .attr("stroke-width",2*scale/100);
 
     svg.selectAll(".circle1")
@@ -268,7 +268,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
       })
       //.attr("cy",function(d,i) { return (i % 9)*scale + scale*0.5 + d['B-Q30-religion-Q12 high']*scale; })
       .attr("r", function(d){ return scale/75*Math.sqrt(d['B-Q30-religion-Q12 high']*100) })
-      .attr("fill",'#E95A0C');
+      .attr("fill",'#f8b233');
 
     if(details==true){
       svg.selectAll("text")
@@ -334,7 +334,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
         if(!initPlunge){
             let topWin = $(window).scrollTop();
             let topElement = $(id).offset().top;
-            if(topWin>topElement-50){
+            if(topWin>topElement-100){
                 plungeCircles
                     .transition()
                     .ease(d3.easeCubic)

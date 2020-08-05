@@ -52,3 +52,24 @@
 #instance4 {
   margin-top:5%;
 }
+
+#state3 {
+  padding-bottom:1000px;
+}
+
+.screenpad {
+  margin-top:1000px;
+}
+
+#opacitynone {
+  opacity:0;
+}
+
+.fadeelement {
+  transition: opacity 1s ease;
+}
+
+.disappear
+{
+  opacity: 0;
+}

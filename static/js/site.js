@@ -59,7 +59,7 @@ function scatterplot(id,data,xKey,yKey,xTitle,yTitle,colorKey,w,h,xmin,xmax,ymin
         if(!init){
             let topWin = $(window).scrollTop();
             let topElement = $(id).offset().top;
-            if(topWin>topElement-50){
+            if(topWin>topElement-100){
                 rects.transition().ease(d3.easeCubic).duration(function(d){
                     let distance = d[xKey]-20;
                     return distance*25;

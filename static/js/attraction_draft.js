@@ -45,4 +45,8 @@ newData = attractionData.sort(function(a,b){
 
 generateAttraction('#viz5',newData,9,16,5);
 
+newData = attractionData.sort(function(a,b){
+  return a['HDI'] - b['HDI'];
+});
+
 generateAttraction('#viz6',newData,9,16,6);

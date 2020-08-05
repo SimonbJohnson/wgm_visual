@@ -132,6 +132,8 @@
     {{ if eq .Title "Orientation draft"}}
       {{ $data := "data/orientation2.js" | absURL }}
       <script src="{{ $data }}"></script>
+      {{ $javascript := "js/icons/orientation_icons_draft.js" | absURL }}
+      <script src="{{ $javascript }}"></script> 
       {{ $javascript := "js/orientation_draft.js" | absURL }}
       <script src="{{ $javascript }}"></script>
     {{end}}
