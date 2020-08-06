@@ -21,6 +21,10 @@
       {{ $css := "css/diffusion.css" | absURL }}
       <link rel="stylesheet" href="{{ $css }}">
     {{end}}
+    {{ if eq .Title "Attraction"}}
+      {{ $css := "css/attraction.css" | absURL }}
+      <link rel="stylesheet" href="{{ $css }}">
+    {{end}}
     {{ if eq .Title "Compare"}}
       {{ $css := "css/compare.css" | absURL }}
       <link rel="stylesheet" href="{{ $css }}">
@@ -66,14 +70,6 @@
         font-weight: 700;
         font-style: normal;
     }
-
-    @font-face {
-        font-family: "Wellcome";
-        src: 
-             url("https://company-57536.frontify.com/upload/screens/111957/8b4efcc8e33bf561cfb23c79dfbaf3f7-1488903380.otf") format("opentype");
-        font-weight: 700;
-        font-style: normal;
-    }
   </style>
   </head>  
   <body>
@@ -100,6 +96,15 @@
       {{ $javascript := "js/icons/diffusion_icons.js" | absURL }}
       <script src="{{ $javascript }}"></script>
       {{ $javascript := "js/diffusion.js" | absURL }}
+      <script src="{{ $javascript }}"></script>
+    {{end}}
+
+    {{ if eq .Title "Attraction"}}
+      {{ $data := "data/attraction.js" | absURL }}
+      <script src="{{ $data }}"></script>
+      {{ $javascript := "js/icons/attraction_icons.js" | absURL }}
+      <script src="{{ $javascript }}"></script>
+      {{ $javascript := "js/attraction.js" | absURL }}
       <script src="{{ $javascript }}"></script>
     {{end}}
 
