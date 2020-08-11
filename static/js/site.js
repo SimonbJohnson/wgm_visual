@@ -1,6 +1,19 @@
 function scatterplot(id,data,xKey,yKey,xTitle,yTitle,colorKey,w,h,xmin,xmax,ymin,ymax){
     
     console.log('Creating scatterplot in element '+id);
+
+    labels = [{'id':31,'label':'India'},{'id':36,'label':'Kenya'},{'id':44,'label':'Malawi'},{'id':45,'label':'South Africa'},{'id':50,'label':'Vietnam'},{'id':51,'label':'Thailand'},{'id':12,'label':'United Kingdom'},{'id':11,'label':'Bangladesh'},{'id':60,'label':'Ethiopia'}]
+
+    data.forEach(function(d){
+        labels.forEach(function(l){
+            if(d.country_id == l.id){
+                l.x = d[xKey];
+                l.y = d[yKey];
+            }   
+        });
+    });
+    console.log(labels);
+
     colors = ['#cccccc','#FF0000','#00B3CC','#FFC500','#3F1A13'];
 
     let padding = 60;
@@ -54,22 +67,6 @@ function scatterplot(id,data,xKey,yKey,xTitle,yTitle,colorKey,w,h,xmin,xmax,ymin
         });
 
     let init = false;
-
-    $(window).scroll(function(){
-        if(!init){
-            let topWin = $(window).scrollTop();
-            let topElement = $(id).offset().top;
-            if(topWin>topElement-100){
-                rects.transition().ease(d3.easeCubic).duration(function(d){
-                    let distance = d[xKey]-20;
-                    return distance*25;
-                }).attr('x', function(d) {
-                    return xScale(d[xKey]);
-                });
-                init=true;
-            }          
-        }
-    });
          
     svg.append("g")
         .attr("class", "x axis")   
@@ -112,7 +109,68 @@ function scatterplot(id,data,xKey,yKey,xTitle,yTitle,colorKey,w,h,xmin,xmax,ymin
         .style("text-anchor", "middle")
         .text(function(d){
             return d;
-        });  
+        });
+
+    let countrylabs = svg.selectAll('countrylabs')
+        .data(labels)
+        .enter()
+        .append("text")
+        .attr("class","countrylabs")
+        .attr("x", function(d) {
+            return xScale(d.x)+15;
+        })
+        .attr("y", function(d) {
+            return yScale(d.y)+2;
+        })
+        .attr("dy",'0.5em')
+        .style("text-anchor", "left")
+        .text(function(d){
+            return d.label;
+        })
+        .attr("opacity",0);
+
+    let countrylines = svg.selectAll('labellines')
+        .data(labels)
+        .enter()
+        .append("line")
+        .attr("class","labslines")
+        .attr("x1", function(d) {
+            return xScale(d.x)+13;
+        })
+        .attr("y1", function(d) {
+            return yScale(d.y)+2.5;
+        })
+        .attr("x2", function(d) {
+            return xScale(d.x)+2.5;
+        })
+        .attr("y2", function(d) {
+            return yScale(d.y)+2.5;
+        })
+        .attr("stroke","#3F1A13")
+        .attr("stroke-width",1)
+        .attr("opacity",0);
+
+    $(window).scroll(function(){
+        if(!init){
+            let topWin = $(window).scrollTop();
+            let topElement = $(id).offset().top;
+            if(topWin>topElement-100){
+                rects.transition().ease(d3.easeCubic).duration(function(d){
+                    let distance = d[xKey]-20;
+                    return distance*25;
+                }).attr('x', function(d) {
+                    return xScale(d[xKey]);
+                });
+                init=true;
+
+                countrylines.transition().delay(1000)
+                .attr("opacity",1);
+
+                countrylabs.transition().delay(1000)
+                .attr("opacity",1);
+            }          
+        }
+    });
 
     return svg;
 }
@@ -229,3 +287,67 @@ function sortByAlpha(data,key){
     return newData
 }
 
+function generateScaleArrow(id,lefttext,righttext){
+    
+    let width = $(id).width();
+    let height = 50
+
+    let svg = d3.select(id)
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    let aSize = 5
+
+    svg
+      .append('defs')
+      .append('marker')
+      .attr('id', 'arrow')
+      .attr('viewBox', [0, 0, aSize, aSize])
+      .attr('refX', aSize/2)
+      .attr('refY', aSize/2)
+      .attr('markerWidth', aSize)
+      .attr('markerHeight', aSize)
+      .attr('orient', 'auto-start-reverse')
+      .append('path')
+      .attr('d', d3.line()([[0, 0], [0, aSize], [aSize, aSize*0.5]]))
+      .attr('stroke', 'black');
+
+    let line = svg.append('line')
+        .attr('x1',200)
+        .attr('x2',width-200)
+        .attr('y1',height/2)
+        .attr('y2',height/2)
+        .attr('marker-end', 'url(#arrow)')
+        .attr('marker-start', 'url(#arrow)')
+        .style('stroke','black')
+        .style('stroke-width',2);
+
+    svg.append("text")
+      .attr("x",180)
+      .attr("y",height/2)
+      .attr("dy","0.5rem")
+      .style("text-anchor", "end")
+      .text(lefttext);
+
+    svg.append("text")
+      .attr("x",width-180)
+      .attr("y",height/2)
+      .attr("dy","0.5rem")
+      .style("text-anchor", "start")
+      .text(righttext);
+
+}
+
+function example3(list){
+  return list.splice(0,3)
+}
+
+/*function getMedian(n,key,list){
+
+    list = list.sort(function(a,b){
+        return a[key] - b[key];
+    });
+
+
+}*/

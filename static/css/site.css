@@ -2,6 +2,10 @@
 	--baseColor: #FFFCF8;
 	--highlightColor: #EC411B;
 	--mainDark: #3F1A13;
+	--orientation: #F6B7B2;
+	--diffusion: #E5DAD4;
+	--distance: #D3B9C7;
+	--attraction: #B7DADE;
 }
 
 html {
@@ -16,7 +20,7 @@ body {
 }
 
 .wellcomeheader {
-	font-size:2.85rem;
+	font-size:2rem;
 	text-align:center;
 	font-weight:600;
 	font-family:wellcome;
@@ -29,7 +33,6 @@ h1 {
 
 h2 {
 	font-size:1.57rem;
-	text-transform: capitalize;
 	font-weight:600;
 }
 
@@ -56,9 +59,11 @@ p {
 	border-color:var(--highlightColor);
 	border-style:solid;
 	background-color:var(--baseColor);
-	padding:3rem;
+	padding-top:1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1.5rem;
 }
-
 
 .fullscreensection {
 	margin-top:40px;
@@ -81,9 +86,32 @@ p {
 }
 
 .opportunity {
+	padding-top:1.5rem;
 	padding-left:2rem;
 	padding-right:2rem;
 	padding-bottom:2rem;
+}
+
+.navs {
+	float:right;
+}
+
+.navlink {
+	color:#777777;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.navlink:hover {
+	color:#777777
+}
+
+.switchbutton {
+	margin-top:15px;
+}
+
+.countrylabs {
+	font-size:9px;
 }
 
 /* old styling */
@@ -232,7 +260,7 @@ p {
 }
 
 .distance {
-	background-color:#B7DADE;
+	background-color:var(--distance);
 }
 
 .attraction {

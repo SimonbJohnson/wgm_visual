@@ -8,12 +8,16 @@
 
 #attractionchallenge1 {
 	background-image:url("../images/attraction/1-HAN00151.JPG");
+	margin-bottom:1px;
 }
 
 #attractionchallenge2 {
 	background-image:url("../images/attraction/2-safal-karki-nMxOjRQXx7g-unsplash.jpg");
+	margin-top:1px;
+	margin-bottom:1px;
 }
 
 #attractionchallenge3 {
 	background-image:url("../images/attraction/3-32904029037_f5c539e63d_k.jpg");
+	margin-top:1px;
 }

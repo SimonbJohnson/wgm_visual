@@ -1,129 +1,71 @@
 {{ define "main" }}
     <div class="row">
-  		<div id="frontheader" class="col-md-12">
-  			<img src="images/frontpage/frontpage-header.png" width=100% />
+  		<div class="col-md-12">
+  			<p>Going deeper <img src="images/Wellcome_Trust_logo.svg" width="40px" /> Seeing further</p>
   		</div>
     </div>
     <div class="row">
-    	<div class="col-md-8 offset-md-2">
-    		<p class="fronttitle">Trust in science plays a huge role in how people interpret and adopt scientific findings.</p>
-    		<p class="frontintro">We have explored the findings from the Wellcome Global Monitor 2018 and developed four lenses, to help make different aspects of trust visible and actionable for you.</p>
-    	</div>
+  		<div class="col-md-8 offset-md-2">
+  			<p class="wellcomeheader">Trust in science plays a huge role in how people interpret and adopt scientific findings.</p>
+  		</div>
     </div>
     <div class="row">
-      <div class="col-md-6 offset-md-1 center-text">
-        <div class="sectionheader center-text">
-          <p>Going Deeper</p>
-        </div>
-        <p>Through the lenses...</p>
+      <div class="col-md-6 offset-md-3">
+        <p>The lenses of Religion, Societal Institutions, Benefits and Future Economies help to go deeper into the data, stories, implications and challenges of trust in science from different points of view.  Comparing the lenses let you see further, ask questions and make the insights actionable.</p>
+        <a class="frontpagecompare" href="lenses/society">
+          <div class="comparebutton">
+            <h3 class="frontpagebuttontext">Compare the lenses</h3>
+          </div>
+        </a>
       </div>
-      <div class="col-md-4 center-text">
-        <div class="sectionheader ">
-          <p>Seeing Further</p>
-        </div>
-          <p>Use the lenses to find out</p>
-      </div>
-    </div>
-
     <div class="row">
-      <div class="col-md-6 offset-md-1 center-text">
-        <a class="notvisible" href="lenses/religion/">
-        <div class="lensdetails lensorientation">
-          <div class="row">
-            <div class="highlightbox lensbox orientationcolor">
-              <img class="simplifiedicon" src="images/icons/Orientation_Icon.svg" />
-              <p class="subtext">The Lens Of Religion</p>
-              <p>Religion and traditions co-exist across the world. In case of disagreement between the two belief systems - people switch sides - plunging the cultural authority of science.</p>
-              <p class="smallhighlight">India, Ghana, Guinea, Liberia, Sierra Leone</p>
+      <div class="col-md-12">
+        <div class="row">
+      		<div id="rootcol" class="col-md-3">
+            <a class="frontpagelink" href="lenses/religion">
+              <div class="frontpagebutton">
+                <h3 class="frontpagebuttontext">Religion</h3>
+              </div>
+            </a>
+      			<div id="circlereligion" class="frontpage-circle proportional"></div>  		
+      			<div id="frontreligion" class="frontpage-image proportional">
+      				<p>The association between religiosity and perception of cultural The association between religiosity and perception of cultural</p>
+      			</div>
+      		</div>
+          <div class="col-md-3">
+            <a class="frontpagelink" href="lenses/society">
+              <div class="frontpagebutton">
+                <h3 class="frontpagebuttontext">Societal Institutions</h3>
+              </div>
+            </a>
+            <div id="circlesociety" class="frontpage-circle proportional"></div>  
+            <div id="frontsociety" class="frontpage-image proportional">
+              <p>The association between religiosity and perception of cultural The association between religiosity and perception of cultural</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <a class="frontpagelink" href="lenses/benefits">
+              <div class="frontpagebutton">
+                <h3 class="frontpagebuttontext">Benefits</h3>
+              </div>
+            </a>
+            <div id="circlebenefits" class="frontpage-circle proportional"></div>  
+            <div id="frontbenefits" class="frontpage-image proportional">
+              <p>The association between religiosity and perception of cultural The association between religiosity and perception of cultural</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <a class="frontpagelink" href="lenses/future_economies">
+              <div class="frontpagebutton">
+                <h3 class="frontpagebuttontext">Future Economies</h3>
+              </div>
+            </a>
+            <div id="circleattraction" class="frontpage-circle proportional"></div>  
+            <div id="frontattraction" class="frontpage-image proportional">
+              <p>The association between religiosity and perception of cultural The association between religiosity and perception of cultural</p>
             </div>
           </div>
         </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4 center-text seeingfurthernote">
-        <a class="notvisible" href="compare/">
-        <div>
-          <img class="homeicon" src="images/icons/Home_orientation.svg" height="100px" />
-          <p>Which countries are at a risk of plunge in the cultural authority of science - in case there is a disagreement in beliefs?</p>
-        </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6 offset-md-1 center-text">
-        <a class="notvisible" href="lenses/society/">
-        <div class="lensdetails lensdiffusion">
-          <div class="row">
-            <div class="highlightbox lensbox diffusioncolor">
-              <img class="simplifiedicon" src="images/icons/Diffusion_Icon.svg" />
-              <p class="subtext">The Lens Of Societal institutions</p>
-              <p>Negative experiences with the state, non-profits, journalists, and neighbours may color the perception of science and scientists in both LMIC and HIC countries. </p>
-              <p class="smallhighlight">South Africa, Vietnam</p>
-            </div>
-          </div>
-        </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 center-text seeingfurthernote">
-        <a class="notvisible" href="compare/">
-          <div>
-            <img class="homeicon" src="images/icons/Home_diffusion.svg" height="100px" />
-            <p>How much or how little are different societal groups in a country trusted, and does this affect trust in scientists?</p>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6 offset-md-1 center-text">
-        <a class="notvisible" href="pdfs/wgm_benefits.pdf">    
-        <div class="lensdetails lensdistance">
-          <div class="row">
-            <div class="highlightbox lensbox distancecolor">
-              <img class="simplifiedicon" src="images/icons/Distance_Icon.svg" />
-              <p class="subtext">The Lens Of Benefits</p>
-              <p>LIC countries experience lower relatability to the benefits of science and may feel personally excluded, they are also twice as likely to distrust science.</p>
-              <p class="smallhighlight">Kenya, Malawi, South Africa</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      </a>
-      <div class="col-md-4 center-text seeingfurthernote">
-        <a class="notvisible" href="compare/">
-          <div>
-            <img class="homeicon" src="images/icons/Home_distance.svg" height="100px" />
-            <p>Which countries believe that the vast majority of its citizens benefit from science?</p>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6 offset-md-1 center-text">
-        <a class="notvisible" href="pdfs/wgm_future_economies.pdf">        
-        <div class="lensdetails lensattraction">
-          <div class="row">
-            <div class="highlightbox lensbox attractioncolor">
-              <img class="simplifiedicon" src="images/icons/Attraction_Icon.svg" />
-              <p class="subtext">The Lens Of Future Economies</p>
-              <p>As economies evolve, they become more likely to trust scientists to provide accurate information and also more skeptical of science’s ability to increase jobs.</p>
-              <p class="smallhighlight">India, Bangladesh</p>
-            </div>
-          </div>
-        </div>
-        </a>
-      </div>
-      <div class="col-md-4 center-text seeingfurthernote">
-        <a class="notvisible" href="compare/">
-          <div>
-            <img class="homeicon" src="images/icons/Home_attraction.svg" height="100px" />
-            <p>How much do people trust scientists today and how bullish are they about science’s impact on their future?</p>
-          </div>
-        </a>
       </div>
     </div>
 {{ end }}

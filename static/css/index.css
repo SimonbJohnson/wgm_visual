@@ -1,0 +1,144 @@
+/* front page styling */
+
+#frontreligion {
+	background-image:url("../images/attraction/2-safal-karki-nMxOjRQXx7g-unsplash.jpg");
+  	background-size: cover;
+  	margin-left:20%;
+}
+
+#frontreligion:hover {
+	background-image:none;
+  	background-color:var(--orientation);
+
+}
+
+#circlereligion {
+	background-color:var(--orientation);
+	transform:translateY(-20%);
+	z-index:-10;
+}
+
+#frontsociety {
+	background-image:url("../images/attraction/2-safal-karki-nMxOjRQXx7g-unsplash.jpg");
+  	background-size: cover;
+  	margin-left:30%;
+  	transform:translateY(-40%);
+}
+
+#frontsociety:hover {
+	background-image:none;
+  	background-color:var(--diffusion);
+}
+
+#circlesociety {
+	background-color:var(--diffusion);
+	transform:translateY(-20%);
+	z-index:-10;
+}
+
+#frontbenefits {
+	background-image:url("../images/attraction/2-safal-karki-nMxOjRQXx7g-unsplash.jpg");
+  	background-size: cover;
+  	margin-left:10%;
+  	transform:translateY(-70%);
+  	width:80%;
+}
+
+#frontbenefits:hover {
+	background-image:none;
+  	background-color:var(--distance);
+}
+
+#circlebenefits {
+	background-color:var(--distance);
+	transform:translateY(80%);
+	margin-left:30%;
+	z-index:-10;
+}
+
+#frontattraction {
+	background-image:url("../images/attraction/2-safal-karki-nMxOjRQXx7g-unsplash.jpg");
+  	background-size: cover;
+  	margin-right:20%;
+}
+
+#frontattraction:hover {
+	background-image:none;
+  	background-color:var(--attraction);
+}
+
+#circleattraction {
+	background-color:var(--attraction);
+	margin-left:40%;
+	transform:translateY(-20%);
+	z-index:-10;
+}
+
+.frontpage-image {
+	border-radius:50%;
+	width: 80%;
+	position: relative;
+	transform:translateY(-50%);
+	padding:10%;
+	display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.frontpage-image p {
+	opacity:0;
+}
+
+.frontpage-image:hover p {
+	opacity:1;
+}
+
+.frontpage-circle {
+	border-radius:50%;
+	width: 60%;
+	position: relative;
+	opacity:0.5;
+}
+
+.frontpagebutton {
+	padding-top:10px;
+	padding-left:15px;
+	padding-right:15px;
+	border-width:1px;
+	border-color:var(--highlightColor);
+	border-style:solid;
+	display:inline-block;
+}
+
+.frontpagebuttontext {
+	display:inline-block;
+}
+
+.frontpagelink {
+	color:var(--highlightColor);
+}
+
+.frontpagelink:hover {
+	color:var(--highlightColor);
+}
+
+.comparebutton {
+	padding-top:10px;
+	padding-left:15px;
+	padding-right:15px;
+	border-width:1px;
+	border-color:var(--mainDark);
+	border-style:solid;
+	display:inline-block;
+	margin-bottom:30px;
+}
+
+.frontpagecompare {
+	color:var(--mainDark);
+	padding-bottom:30px;
+}
+
+.frontpagecompare:hover {
+	color:var(--mainDark);
+}
