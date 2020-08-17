@@ -1,6 +1,6 @@
 function init(){
 	let cellHeight = $('#rootcell').width();
-	$('.comparerow').height(cellHeight);
+	$('.comparerow').css('min-height',cellHeight);
 
 	$('.countrieslist').append('<option>Add a country</option>');
 	countries.forEach(function(d){
@@ -45,7 +45,7 @@ function addIcons(countryID,row){
 	distanceDataCut = getData(countryID,distanceData);
 	if(distanceDataCut!=false){
 		$('#compare'+row+'3').html('');
-		generateDistance('#compare'+row+'3',distanceDataCut,1,1,3,true);
+		generateDistance('#compare'+row+'3',distanceDataCut,1,1,4,true);
 	}
 
 	attractionDataCut = getData(countryID,attractionData);

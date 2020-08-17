@@ -5,7 +5,9 @@
 	--orientation: #F6B7B2;
 	--diffusion: #E5DAD4;
 	--distance: #D3B9C7;
+	--distancelight: #e9dadf;
 	--attraction: #B7DADE;
+	--attractionlight:#dbecee;
 }
 
 html {
@@ -28,7 +30,6 @@ body {
 
 h1 {
 	font-size:1.19rem;
-	text-transform: capitalize;
 }
 
 h2 {
@@ -46,9 +47,6 @@ p {
 	font-size:1rem;
 }
 
-.footnote {
-	font-size:0.5rem;
-}
 
 .leftalign {
 	text-align:left;
@@ -66,6 +64,17 @@ p {
 }
 
 .fullscreensection {
+	margin-top:1px;
+	margin-bottom:1px;
+	padding-bottom: 45vh;
+	padding-top:45vh;
+	background-position: center;
+	background-size: cover;
+	margin-left:-30px;
+	margin-right:-30px;
+}
+
+.fullscreensectionsticky {
 	margin-top:40px;
 	margin-bottom:40px;
 	padding-bottom: 45vh;
@@ -74,6 +83,11 @@ p {
 	background-size: cover;
 	margin-left:-30px;
 	margin-right:-30px;
+	height:100vh;
+}
+
+.stickycontent {
+	margin-bottom:50vh;
 }
 
 .storysection {
@@ -114,14 +128,117 @@ p {
 	font-size:9px;
 }
 
+.countrylabel {
+	font-size:0.5rem;
+	color:#777777;
+	fill:#999999;
+}
+
+.countrylabellarge {
+	font-size:0.8rem;
+}
+
+.countrylargelabel {
+	font-size:0.8rem;
+}
+
+.percentlabel {
+	font-size:0.7rem;
+}
+
+.keylabel {
+	font-size:0.8em;
+}
+
+.lowincome {
+	background-color:#FF0000;
+}
+
+.lowermiddleincome {
+	background-color:#00B3CC;
+}
+
+.uppermiddleincome {
+	background-color:#FFC500;
+}
+
+.highincome {
+	background-color:#3F1A13;
+}
+
+.orientation {
+	background-color:#F6B7B2;
+}
+
+.diffusion {
+	background-color:#E5DAD4
+}
+
+.distance {
+	background-color:var(--distance);
+}
+
+.distancelight {
+	background-color:var(--distancelight);
+}
+
+
+.attraction {
+	background-color:#B7DADE;
+}
+
+.attractionlight {
+	background-color:var(--attractionlight);
+}
+
+.reference {
+	vertical-align: super;
+	font-size:8px;
+}
+
+.footnote {
+	font-size:8px;
+	text-align:left;
+	margin-bottom:0.2rem;
+}
+
+.footnote a {
+	color:black;
+}
+
+.footnotecontainer {
+	padding-top:15px;
+}
+
+.footnotecontainer:after {
+  content: "";
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 10%;
+  text-align:left;
+}
+
+.white {
+	color:#fff;
+	padding-left:15px;
+}
+
+.marginup {
+	margin-top:-40px;
+}
+
+.storysectionlarge {
+	margin-top:300px;
+}
+
+.comparecell {
+	padding:15px;
+}
 /* old styling */
 
-
-
-
-#main {
-	padding: 1rem;
-}
 
 .navbar {
 	padding: .5rem 1rem;
@@ -170,31 +287,6 @@ p {
 	text-align:center;
 }
 
-.storysectionlarge {
-	margin-top:300px;
-	margin-bottom:300px;
-}
-
-.countrylabel {
-	font-size:0.5rem;
-}
-
-.countrylabellarge {
-	font-size:0.8rem;
-}
-
-.countrylargelabel {
-	font-size:0.8rem;
-}
-
-.percentlabel {
-	font-size:0.7rem;
-}
-
-.keylabel {
-	font-size:0.8em;
-}
-
 .caption {
 	font-size:0.8em;
 }
@@ -206,22 +298,6 @@ p {
 	margin-right:12px;
 	margin-top:3px;
 	text-transform: uppercase;
-}
-
-.lowincome {
-	background-color:#FF0000;
-}
-
-.lowermiddleincome {
-	background-color:#00B3CC;
-}
-
-.uppermiddleincome {
-	background-color:#FFC500;
-}
-
-.highincome {
-	background-color:#3F1A13;
 }
 
 .callout {
@@ -249,22 +325,6 @@ p {
 	text-align:center;
 	margin-top:20px;
 	font-size:1.2rem;
-}
-
-.orientation {
-	background-color:#F6B7B2;
-}
-
-.diffusion {
-	background-color:#E5DAD4
-}
-
-.distance {
-	background-color:var(--distance);
-}
-
-.attraction {
-	background-color:#B7DADE;
 }
 
 .chartlegend {

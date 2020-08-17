@@ -1,5 +1,4 @@
 function generateAttraction(id,data,rows,columns,state,details,animate) {
-    console.log(id)
     let width = $(id).width();
     let scale = width/columns;
 
@@ -10,7 +9,6 @@ function generateAttraction(id,data,rows,columns,state,details,animate) {
 
     let aSize = scale/15
     let shortid = id.substr(1);
-    console.log(shortid);
     let markerend = svg
       .append('defs')
       .append('marker')
@@ -33,13 +31,13 @@ function generateAttraction(id,data,rows,columns,state,details,animate) {
         .attr("x1",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4 })
         .attr("y1",function(d,i) {
           if(state==1){
-            return (i % rows) * scale + scale*0.8
+            return (i % rows) * scale + scale*0.7
           } else {
             return (i % rows) * scale + scale*0.8-d['q13 - A lot, Some']*scale/200
           }
         })
         .attr("x2",function(d,i) { return Math.floor(i / rows) * scale + scale*0.4 })
-        .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.8; })
+        .attr("y2",function(d,i) { return (i % rows)*scale + scale*0.7; })
         .attr("stroke","#3F1A13")
         .attr("stroke-width",1.5);
 
@@ -180,7 +178,7 @@ function generateAttraction(id,data,rows,columns,state,details,animate) {
           .enter().append("circle")
             .attr("class", "circle")
             .attr("cx", function(d,i) { return Math.floor(i / rows) * scale + scale*0.15 })
-            .attr("cy", function(d,i) { return (i % 9)*scale + scale*0.6 })
+            .attr("cy", function(d,i) { return (i % rows)*scale + scale*0.6 })
             .attr("r", function(d){ return Math.sqrt(d['agriculture'])/100*scale})
             .attr("fill","#b1cc92")
             .attr('opacity',0);
@@ -260,10 +258,16 @@ function generateAttraction(id,data,rows,columns,state,details,animate) {
       }
     }
 
-    svg.selectAll("text")
+    svg.selectAll("textlabels")
       .data(data)
     .enter().append("text")
-      .attr('class','countrylabel')
+      .attr('class',function(d){
+        if(details==true){
+          return 'countrylargelabel'
+        } else {
+          return 'countrylabel'
+        }
+      })
       .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
       .attr("y",function(d,i) { return (i % rows)*scale + scale*0.9; })
       .style("text-anchor", "middle")
@@ -277,10 +281,11 @@ function generateAttraction(id,data,rows,columns,state,details,animate) {
       duration = 750
     }
     let init=false;
-    let topElement = $(id).offset().top;
+    
     $(window).scroll(function(){
         if(!init){
             let topWin = $(window).scrollTop();
+            let topElement = $(id).offset().top;
             if(topWin>topElement-150 || duration==0){
               init=true;
               if(state==1){

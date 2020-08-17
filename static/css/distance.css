@@ -1,0 +1,31 @@
+#benefit1implication {
+	background-image:url("../images/distance/aditya-septiansyah--NM7N_07guI-unsplash.jpg");
+}
+
+#bangladesh2 {
+	background-image:url("../images/distance/aditya-septiansyah--NM7N_07guI-unsplash.jpg");
+}
+
+#benefits3 {
+	background-image:url("../images/distance/matheo-jbt-_bCKq8i4CvQ-unsplash.jpg");
+}
+
+#benefits4 {
+	background-image:url("../images/distance/Benefits_6.jpg");
+}
+
+#benefits5 {
+	background-image:url("../images/distance/Benefits_3.jpg");
+}
+
+#benefits6 {
+	background-image:url("../images/distance/Benefits_5.jpg");
+}
+
+.howmightwe {
+	border-radius:50%;
+	padding:20%;
+	align-items: center;
+  	display: flex;
+  	justify-content: center;
+}

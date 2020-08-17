@@ -1,7 +1,7 @@
 /* front page styling */
 
 #frontreligion {
-	background-image:url("../images/attraction/2-safal-karki-nMxOjRQXx7g-unsplash.jpg");
+	background-image:url("../images/frontpage/Religion_Home_bill-wegener-NnbFeWRDUv4-unsplash.jpg");
   	background-size: cover;
   	margin-left:20%;
 }
@@ -18,8 +18,12 @@
 	z-index:-10;
 }
 
+#religionicon {
+	transform:translateY(-200%);
+}
+
 #frontsociety {
-	background-image:url("../images/attraction/2-safal-karki-nMxOjRQXx7g-unsplash.jpg");
+	background-image:url("../images/frontpage/Societal_Home_photo-1512025459928-92cefb597d90.jpg");
   	background-size: cover;
   	margin-left:30%;
   	transform:translateY(-40%);
@@ -36,8 +40,17 @@
 	z-index:-10;
 }
 
+#societyicon {
+	transform:translate(-20%,-375%);
+}
+
+#futureicon {
+	transform:translate(50%,-450%);
+}
+
+
 #frontbenefits {
-	background-image:url("../images/attraction/2-safal-karki-nMxOjRQXx7g-unsplash.jpg");
+	background-image:url("../images/frontpage/Benefits_Home_Feature2.jpg");
   	background-size: cover;
   	margin-left:10%;
   	transform:translateY(-70%);
@@ -57,7 +70,7 @@
 }
 
 #frontattraction {
-	background-image:url("../images/attraction/2-safal-karki-nMxOjRQXx7g-unsplash.jpg");
+	background-image:url("../images/frontpage/Future_Home_2-safal-karki-nMxOjRQXx7g-unsplash.jpg");
   	background-size: cover;
   	margin-right:20%;
 }
@@ -84,6 +97,7 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    cursor:pointer;
 }
 
 .frontpage-image p {

@@ -3,8 +3,18 @@ $('.proportional').each(function() {
     $(this).height(width);
 });
 
-$('#religionbutton').on('click',function(){
-	alert('click');
-})
+$('#frontreligion').on('click',function(){
+	window.location.href = 'lenses/religion/'
+});
 
-init();
+$('#frontsociety').on('click',function(){
+	window.location.href = 'lenses/society/'
+});
+
+$('#frontbenefits').on('click',function(){
+	window.location.href = 'lenses/benefits/'
+});
+
+$('#frontattraction').on('click',function(){
+	window.location.href = 'lenses/future_economies/'
+});

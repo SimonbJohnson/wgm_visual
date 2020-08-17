@@ -343,6 +343,17 @@ function example3(list){
   return list.splice(0,3)
 }
 
+function filterForIDs(list,IDs){
+    list = list.filter(function(d){
+        if(IDs.indexOf(d.country_id)>-1){
+            return true;
+        } else {
+            return false;
+        }
+    });
+    return list;
+}
+
 /*function getMedian(n,key,list){
 
     list = list.sort(function(a,b){
@@ -351,3 +362,14 @@ function example3(list){
 
 
 }*/
+
+function decimate(list){
+    newList = list.filter(function(d,i){
+        if(i % 10  ==0){
+            return true;
+        } else {
+            return false;
+        }
+    });
+    return newList;
+}
