@@ -20,191 +20,198 @@ Title: Compare
 	<div id="rootcell" class="col-md-2 offset-md-1 comparecell">
 		<p>COUNTRIES</p>
 	</div>
-	<div class="col-md-2 comparecell">
+	<div class="col-md-2 headercell">
 		<p>RELIGION</p>
 	</div>
-	<div class="col-md-2 comparecell">
+	<div class="col-md-2 headercell">
 		<p>SOCIETAL INSTITUTIONS</p>
 	</div>
-	<div class="col-md-2 comparecell">
+	<div class="col-md-2 headercell">
 		<p>BENEFITS</p>
 	</div>
-	<div class="col-md-2 comparecell">
+	<div class="col-md-2 headercell">
 		<p>FUTURE ECONOMIES</p>
 	</div>
 </div>
-<div class="row comparerow">
-	<div class="col-md-2 offset-md-1 comparecell selectcell">
-		<select id="countrylist1" data-id="1" class="countrieslist">
+<div id="comparerows">
+	<div class="row comparerow">
+		<div class="col-md-2 offset-md-1 selectcell">
+			<select id="countrieslist1" data-id="1" class="countrieslist">
+			</select>
+		</div>
+		<div id="compare11" class="col-md-2 comparecell">
+		</div>
+		<div id="compare12" class="col-md-2 comparecell">
+		</div>
+		<div id="compare13" class="col-md-2 comparecell">
+		</div>
+		<div id="compare14" class="col-md-2 comparecell">
+		</div>
+	</div>
+	<div class="row comparerow">
+		<div class="col-md-2 offset-md-1 selectcell">
+			<select id="countrieslist2" data-id="2" class="countrieslist">
+			</select>
+		</div>
+		<div id="compare21" class="col-md-2 comparecell">
+		</div>
+		<div id="compare22" class="col-md-2 comparecell">
+		</div>
+		<div id="compare23" class="col-md-2 comparecell">
+		</div>
+		<div id="compare24" class="col-md-2 comparecell">
+		</div>
+	</div>
+	<div class="row comparerow">
+		<div class="col-md-2 offset-md-1 selectcell">
+			<select id="countrieslist3" data-id="3" class="countrieslist">
+			</select>
+		</div>
+		<div id="compare31" class="col-md-2 comparecell">
+		</div>
+		<div id="compare32" class="col-md-2 comparecell">
+		</div>
+		<div id="compare33" class="col-md-2 comparecell">
+		</div>
+		<div id="compare34" class="col-md-2 comparecell">
+		</div>
+	</div>
+</div>
+<div class="row comparesection">
+	<div class="col-md-6">
+		<button id="addrows" class="btn btn-light">Add more rows</button>
+	</div>
+	<div class="col-md-6">
+		<select id="addregionselect">
+			<option value=1>Eastern Africa</option>
+			<option value=2>Central Africa</option>
+			<option value=3>North Africa</option>
+			<option value=4>Southern Africa</option>
+			<option value=5>Western Africa</option>
+			<option value=6>Central America and Mexico</option>
+			<option value=7>Northern America</option>
+			<option value=8>South America</option>
+			<option value=9>Central Asia</option>
+			<option value=10>East Asia</option>
+			<option value=11>Southeast Asia</option>
+			<option value=12>South Asia</option>
+			<option value=13>Middle East</option>
+			<option value=14>Eastern Europe</option>
+			<option value=15>Northern Europe</option>
+			<option value=16>Southern Europe</option>
+			<option value=17>Western Europe</option>
+			<option value=18>Aus/NZ</option>
 		</select>
-	</div>
-	<div id="compare11" class="col-md-2 comparecell">
-	</div>
-	<div id="compare12" class="col-md-2 comparecell">
-	</div>
-	<div id="compare13" class="col-md-2 comparecell">
-	</div>
-	<div id="compare14" class="col-md-2 comparecell">
+		<button id="addregion" class="btn btn-light">Add Region</button>
 	</div>
 </div>
-<div class="row comparerow">
-	<div class="col-md-2 offset-md-1 comparecell selectcell">
-		<select data-id="2" class="countrieslist">
-		</select>
+<div class="row">
+	<div id="rootcol" class="col-md-3">
+		<div id="circlereligion" class="frontpage-circle proportional"></div>  		
+		<div id="frontreligion" class="frontpage-image proportional"></div>
+      	<div class="frontpagebutton">
+       		<h3 class="frontpagebuttontext">Religion</h3>
+      	</div>		
 	</div>
-	<div id="compare21" class="col-md-2 comparecell">
+  	<div class="col-md-3">
+    	<div id="circlesociety" class="frontpage-circle proportional"></div>  
+    	<div id="frontsociety" class="frontpage-image proportional"></div>
+      	<div class="frontpagebutton">
+        	<h3 class="frontpagebuttontext">Societal Institutions</h3>
+      	</div>    	
+    </div>
+	<div class="col-md-3">
+	    <div id="circlebenefits" class="frontpage-circle proportional"></div>  
+	    <div id="frontbenefits" class="frontpage-image proportional"></div>
+	 	<div class="frontpagebutton">
+	    	<h3 class="frontpagebuttontext">Benefits</h3>
+	  	</div>	    
 	</div>
-	<div id="compare22" class="col-md-2 comparecell">
-	</div>
-	<div id="compare23" class="col-md-2 comparecell">
-	</div>
-	<div id="compare24" class="col-md-2 comparecell">
-	</div>
-</div>
-<div class="row comparerow">
-	<div class="col-md-2 offset-md-1 comparecell selectcell">
-		<select data-id="3" class="countrieslist">
-		</select>
-	</div>
-	<div id="compare31" class="col-md-2 comparecell">
-	</div>
-	<div id="compare32" class="col-md-2 comparecell">
-	</div>
-	<div id="compare33" class="col-md-2 comparecell">
-	</div>
-	<div id="compare34" class="col-md-2 comparecell">
-	</div>
-</div>
-<div class="row storysection">
-	<div class="col-md-4 offset-md-4 text-center">
-		<span class="stepnumber">2</span>
-		<p>Select a lens that looks important for your work</p>
+	<div class="col-md-3">
+	    <div id="circleattraction" class="frontpage-circle proportional"></div>  
+	    <div id="frontattraction" class="frontpage-image proportional"></div>
+	    <div class="frontpagebutton">
+	        <h3 class="frontpagebuttontext">Future Economies</h3>
+	    </div>	    
 	</div>
 </div>
-<div class="row lensbuttoncontainer">
-	<div class="col-md-2 offset-md-2 text-center lensbuttonparent">
-		<div class="lensbutton activelens" data="orientation">
-			<img class="simplifiedicon" src="../images/icons/Orientation_Icon.svg" />
-			<p>Religion</p>
-		</div>
+<div class="row comparesection">
+	<div class="col-md-3 leftalign">
+		<p><b>Where might people turn when there is a difference of opinion between religion and science?</b></p>
+		<p>Religion and traditions co-exist across the world. In case of disagreement between the two belief systems — people switch sides — plunging the cultural authority of science.</p>
+		<p><b>Use this lens</b> to help estimate the probability of a “plunge” in the authority of science, which could take place in a country when people are faced with factors such as unfamiliar science, controversies or epidemics.</p>
 	</div>
-	<div class="col-md-2 text-center lensbuttonparent">
-		<div class="lensbutton" data="diffusion">
-			<img class="simplifiedicon" src="../images/icons/Diffusion_Icon.svg" />
-			<p>Societal Institutions</p>
-		</div>
+	<div class="col-md-3 leftalign">
+		<p><b>How much or how little are different societal groups in a country trusted, and does this affect trust in scientists?</b></p>
+		<p>Negative experiences with the state, non-profits, journalists, neighbours, doctors and nurses may color the perception of science and scientists.</p>
+		<p><b>Use this lens</b> to understand how much or how little are the different societal groups in a country trusted, and whether this affects trust in scientists.</p>
 	</div>
-	<div class="col-md-2 text-center lensbuttonparent">
-		<div class="lensbutton" data="distance">
-			<img class="simplifiedicon" src="../images/icons/Distance_Icon.svg" />
-			<p>Benefits</p>
-		</div>
+	<div class="col-md-3 leftalign">
+		<p><b>How far removed might people feel they are from the benefits of science?</b></p>
+		<p>Some countries and regions experience lower reliability to the benefits of science and may feel personally excluded. This experience is correlated with distrust in science.</p>
+		<p><b>Use this lens</b> to understand how people feel about the distribution of the benefits of science to themselves and others, and how far away from science they feel as a result.</p>
 	</div>
-	<div class="col-md-2 text-center lensbuttonparent">
-		<div class="lensbutton" data="attraction">
-			<img class="simplifiedicon" src="../images/icons/Attraction_Icon.svg" />
-			<p>Future Economies</p>
-		</div>
+	<div class="col-md-3 leftalign">
+		<p><b>How much do people trust scientists today and how bullish are they about science’s impact on their future?</b></p>
+		<p>As economies evolve, they become more likely to trust scientists to provide accurate information and also more skeptical of science’s ability to increase jobs.</p>
+		<p><b>Use this lens</b> to help anticipate reaction to science in a country across three horizons, and contemplate what that infers about the role of science in contributing to a country's future.</p>
 	</div>
 </div>
-<div class="lensdetails lensorientation">
-	<div class="row">
-		<div class="col-md-8 offset-md-2 highlightbox lensbox orientationcolor">
-			<img class="simplifiedicon" src="../images/icons/Orientation_Icon.svg" />
-			<p class="subtext">The Lens Of Religion</p>
-			<p class="maintext">Where might people turn when there is a difference of opinion between religion and science?</p>
-			<p>Religion and traditions co-exist across the world. In case of disagreement between the two belief systems — people switch sides — plunging the cultural authority of science.</p>
-			<p><b>Use this lens</b> to help estimate the probability of a “plunge” in the authority of science, which could take place in a country when people are faced with factors such as unfamiliar science, controversies or epidemics.</p>
-			<img class="legend" src="../images/orientation/legend_orientation.svg" width="80%" />
-		</div>
+<div class="row">
+	<div class="col-md-3">
+		<img src="../images/compare/Religion_Key_Icon_text.svg" width="80%" />
+	</div>
+	<div class="col-md-3">
+		<img src="../images/compare/Societal_Key_Icon_text.svg" width="80%" />
+	</div>
+	<div class="col-md-3">
+		<img src="../images/compare/Benefits_Key_Icon_text.svg" width="80%" />
+	</div>
+	<div class="col-md-3">
+		<img src="../images/compare/Future_Key_Icon_text.svg" width="80%" />
 	</div>
 </div>
-<div class="lensdetails lensdiffusion">
-	<div class="row">
-		<div class="col-md-8 offset-md-2 highlightbox lensbox diffusioncolor">
-			<img class="simplifiedicon" src="../images/icons/Diffusion_Icon.svg" />
-			<p class="subtext">The Lens Of Societal Institutions</p>
-			<p class="maintext">How much or how little are different societal groups in a country trusted, and does this affect trust in scientists?</p>
-			<p>Negative experiences with the state, non-profits, journalists, neighbours, doctors and nurses may color the perception of science and scientists.</p>
-			<p><b>Use this lens</b> to understand how much or how little are the different societal groups in a country trusted, and whether this affects trust in scientists.</p>
-			<img class="legend" src="../images/diffusion/legend_diffusion.svg" width="80%" />
-		</div>
+<div class="row">
+	<div class="col-md-3 leftalign">
+		<p><b>Planning</b></p>
+		<p>Conduct further secondary research, commission contextual research or plan public engagement intervention to better understand: </p>
+		<ul>
+			<li><p>Location and distribution of religious populations</p></li>
+			<li><p>Relative importance of religious leaders in the country compared to cultural and political leaders</p></li>
+			<li><p>Relevant religious and traditional practices, knowledge and beliefs</p></li> 
+			<li><p>Historical scenarios where religion and science have conflicted</p></li>
+		</ul>
 	</div>
-</div>
-<div class="lensdetails lensdistance">
-	<div class="row">
-		<div class="col-md-8 offset-md-2 highlightbox lensbox distancecolor">
-			<img class="simplifiedicon" src="../images/icons/Distance_Icon.svg" />
-			<p class="subtext">The Lens Of Benefits</p>
-			<p class="maintext">How far removed might people feel they are from the benefits of science?</p>
-			<p>Some countries and regions experience lower reliability to the benefits of science and may feel personally excluded. This experience is correlated with distrust in science.</p>
-			<p><b>Use this lens</b> to understand how people feel about the distribution of the benefits of science to themselves and others, and how far away from science they feel as a result.</p>
-			<img class="legend" src="../images/distance/legend_distance.svg" width="80%" />
-		</div>
+	<div class="col-md-3 leftalign">
+		<p><b>Planning</b></p>
+		<p>Conduct further secondary research, commission contextual research or plan public engagement intervention to better understand : </p>
+		<ul>
+			<li><p>Historical incidents of mis-conduct of science and technology which might be coloring public perception</p></li>
+			<li><p>Prominence of scientists at a national level</p></li>
+			<li><p>Indicators which help explain stability of national institutes over time</p></li>
+			<li><p>Map informal and formal science communication networks</p></li>
+		</ul>
 	</div>
-</div>
-<div class="lensdetails lensattraction">
-	<div class="row">
-		<div class="col-md-8 offset-md-2 highlightbox lensbox attractioncolor">
-			<img class="simplifiedicon" src="../images/icons/Attraction_Icon.svg" />
-			<p class="subtext">The Lens Of Future Economies</p>
-			<p class="maintext">How much do people trust scientists today and how bullish are they about science’s impact on their future?</p>
-			<p>As economies evolve, they become more likely to trust scientists to provide accurate information and also more skeptical of science’s ability to increase jobs.</p>
-			<p><b>Use this lens</b> to help anticipate reaction to science in a country across three horizons, and contemplate what that infers about the role of science in contributing to a country's future.</p>
-			<img class="legend" src="../images/attraction/legend_attraction.svg" width="80%" />
-		</div>
+	<div class="col-md-3 leftalign">
+		<p><b>Planning</b></p>
+		<p>Conduct further secondary research, commission contextual research or plan public engagement intervention to better understand: </p>
+		<ul>
+			<li><p>Size and distribution of socio-economic segments</p></li> 
+			<li><p>Everyday contextual challenges faced by the most vulnerable members of society</p></li>
+			<li><p>Community’s expectation of everyday utility</p></li>
+			<li><p>Current distribution of benefits from existing and scaled interventions / solutions</p></li>
+		</ul>
 	</div>
-</div>
-<div class="row storysection">
-	<div class="col-md-4 offset-md-4 text-center">
-		<span class="stepnumber">3</span>
-		<p>Planning</p>
-	</div>
-</div>
-<div class="lensdetails lensorientation">
-	<div class="row">
-		<div class="col-md-8 offset-md-2 highlightbox lensbox lensboxplan orientationcolor">
-			<div class="row orientationtitlebox">
-				<div class="col-md-12 ">
-					<img class="simplifiedicon" src="../images/icons/Orientation_Icon.svg" />
-					<p class="subtext">The Lens Of Religion</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 text-left">
-					<p>Conduct further secondary research, commission contextual research or plan public engagement intervention to better understand : </p>
-					<ul>
-						<li><p>Location and distribution of religious populations</p></li>
-						<li><p>Relative importance of religious leaders in the country compared to cultural and political leaders</p></li>
-						<li><p>Relevant religious and traditional practices, knowledge and beliefs</p></li> 
-						<li><p>Historical scenarios where religion and science have conflicted</p></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="lensdetails lensdiffusion">
-	<div class="row">
-		<div class="col-md-8 offset-md-2 highlightbox lensbox lensboxplan diffusioncolor">
-			<div class="row diffusiontitlebox">
-				<div class="col-md-12 ">
-					<img class="simplifiedicon" src="../images/icons/Diffusion_Icon.svg" />
-					<p class="subtext">The Lens Of Societal Institutions</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 text-left">
-					<p>Conduct further secondary research, commission contextual research or plan public engagement intervention to better understand : </p>
-					<ul>
-						<li><p>1. Historical incidents of mis-conduct of science and technology which might be coloring public perception</p></li>
-						<li><p>2. Prominence of scientists at a national level</p></li>
-						<li><p>3. Indicators which help explain stability of national institutes over time</p></li>
-						<li><p>4. Map informal and formal science communication networks</p></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+	<div class="col-md-3 leftalign">
+		<p><b>Planning</b></p>
+		<p>Conduct further secondary research, commission contextual research or plan public engagement intervention to better understand:</p>
+		<ul>
+			<li><p>Hopes, beliefs and preferred visions of the future from communities</p></li>
+			<li><p>Possible socio-economic impact of new advances on relevant communities</p></li>
+			<li><p>Communities most likely to be left behind</p></li>
+			<li><p>Alternative, context specific trajectory of development</p></li>
+			<li><p>Climate change adaptations taking place at the grass-roots level</p></li>
+		</ul>
 	</div>
 </div>
 <div class="lensdetails lensdistance">

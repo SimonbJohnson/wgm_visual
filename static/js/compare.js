@@ -1,8 +1,10 @@
+let rowCount = 3;
+
 function init(){
 	let cellHeight = $('#rootcell').width();
 	$('.comparerow').css('min-height',cellHeight);
 
-	$('.countrieslist').append('<option>Add a country</option>');
+	$('.countrieslist').append('<option value="0">Add a country</option>');
 	countries.forEach(function(d){
 		$('.countrieslist').append('<option value="'+d['country id']+'">'+d['country name']+'</option>');
 	});
@@ -11,18 +13,13 @@ function init(){
 		addIcons(this.value,$(this).attr('data-id'));
 	});
 
-	$('.lensbutton').on('click',function(d,i){
-		let id = '.lens'+ $(this).attr('data');
-		$('.lensdetails').hide();
-		$(id).show();
-		$('.lensbutton').removeClass('activelens');
-		$(this).addClass('activelens');
+	$('#addrows').on('click',function(d){
+		addRows(3);
 	});
 
-	let id = '.lensorientation';
-	
-	$('.lensdetails').hide();
-	$(id).show();
+	$('#addregion').on('click',function(d){
+		addRegion($('#addregionselect').val());
+	});
 
 	addIcons(12,1);
 	$('#countrylist1').val(12);
@@ -64,5 +61,73 @@ function getData(id,dataSet){
 	});
 	return found;
 }
+
+function addRows(n){
+	for(i=0;i<n;i++){
+		html =`
+		<div class="row comparerow">
+			<div class="col-md-2 offset-md-1 selectcell">
+				<select data-id="{{row}}" id ="countrieslist{{row}}" class="countrieslist">
+				</select>
+			</div>
+			<div id="compare{{row}}1" class="col-md-2 comparecell">
+			</div>
+			<div id="compare{{row}}2" class="col-md-2 comparecell">
+			</div>
+			<div id="compare{{row}}3" class="col-md-2 comparecell">
+			</div>
+			<div id="compare{{row}}4" class="col-md-2 comparecell">
+			</div>
+		</div>
+		`;
+		rowCount++;
+		html = html.split('{{row}}').join(rowCount);
+
+		let cellHeight = $('#rootcell').width();
+		$('#comparerows').append(html);
+		$('.comparerow').css('min-height',cellHeight);
+		$('#countrieslist'+rowCount).append('<option>Add a country</option>');
+
+		countries.forEach(function(d){
+			$('#countrieslist'+rowCount).append('<option value="'+d['country id']+'">'+d['country name']+'</option>');
+		});
+
+		$('#countrieslist'+rowCount).on('change',function(d){
+			addIcons(this.value,$(this).attr('data-id'));
+		});
+	}
+}
+
+function addRegion(region){
+	$('.comparecell').html('');
+	$('.countrieslist').val(0);
+	let countries = getCountriesByRegion(region);
+	let diff = countries.length - rowCount;
+	if(diff>0){
+		addRows(diff);
+	}
+
+	countries.forEach(function(d,i){
+		let id = i+1
+		$('#countrieslist'+id).val(d['country id']);
+		addIcons(d['country id'],id);
+	});
+}
+
+function getCountriesByRegion(region){
+	let countries = regionsToCountries.filter(function(d){
+		if(d['region']==region){
+			return true
+		} else {
+			return false;
+		}
+	});
+	return countries;
+}
+
+$('.proportional').each(function() {
+	let width = $(this).width();
+    $(this).height(width);
+});
 
 init();
