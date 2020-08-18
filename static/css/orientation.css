@@ -33,20 +33,11 @@
 }
 
 #plungesection {
-  margin-top:40px;
-  margin-bottom:40px;
-  height: 110vh;
-  padding-top:50vh;
   background-image:url("../images/orientation/Ebola_burial.jpg");
-  background-position: center;
-  background-size: cover;
-  margin-left:-30px;
-  margin-right:-30px;
 }
 
 #plungetext {
-  background: var(--baseColor);
-  padding:15px;
+  padding-bottom:100vh;
 }
 
 #instance4 {
@@ -72,4 +63,24 @@
 .disappear
 {
   opacity: 0;
+}
+
+#religion1 {
+  background-image:url("../images/orientation/HERO_IMG_8755.jpg");
+  margin-bottom:1px;
+}
+
+#religion2 {
+  background-image:url("../images/orientation/HERO_dugba-cauley-hushie-FtEOLEdIMa8-unsplash.jpg");
+  margin-bottom:1px;
+}
+
+#religion4 {
+  background-image:url("../images/orientation/HERO_15738294138_bc25cc808c_o.jpg");
+  margin-bottom:1px;
+}
+
+#religion3 {
+  background-image:url("../images/orientation/HERO_34601930341_a99500709d_5k.jpg");
+  margin-bottom:1px;
 }

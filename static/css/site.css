@@ -75,8 +75,8 @@ p {
 }
 
 .fullscreensectionsticky {
-	margin-top:40px;
-	margin-bottom:40px;
+	margin-top:1px;
+	margin-bottom:1px;
 	padding-bottom: 45vh;
 	padding-top:45vh;
 	background-position: center;
@@ -233,6 +233,29 @@ p {
 .storysectionlarge {
 	margin-top:300px;
 }
+
+.topalign {
+	vertical-align:top;
+}
+
+td, th {
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+}
+
+table {
+	border-width:1px;
+	border-style:solid;
+	border-color:#000;
+}
+
+tr {
+	border-width:1px;
+	border-style:solid;
+	border-color:#000;	
+}
+
 
 /* old styling */
 

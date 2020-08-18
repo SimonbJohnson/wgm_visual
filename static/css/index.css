@@ -45,7 +45,8 @@
 }
 
 #futureicon {
-	transform:translate(50%,-450%);
+	transform:translate(50%,-550%);
+	z-index:-10;
 }
 
 

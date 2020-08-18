@@ -1,12 +1,12 @@
 function generateOrientationBefore(id,data,columns,rows,state,details,animate){
 
     let width = $(id).width();
-    let scale = width/5;
+    let scale = width/columns;
 
     let svg = d3.select(id)
             .append("svg")
             .attr("width", scale*columns)
-            .attr("height", scale*9);
+            .attr("height", scale*rows);
 
     svg.selectAll(".circle1")
       .data(data)
@@ -61,7 +61,7 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
       .attr("fill","#aaaaaa")
       .attr('class','countrylabel')
       .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
-      .attr("y",function(d,i) { return (i % rows)*scale + scale; })
+      .attr("y",function(d,i) { return (i % rows)*scale + scale*0.9; })
       .style("text-anchor", "middle")
       .text(function(d){
         return d['country name'];
