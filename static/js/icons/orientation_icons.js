@@ -85,7 +85,7 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
             });
             
 
-        svg.selectAll("paths")
+        var arcs1 = svg.selectAll("paths")
             .data(data)
             .enter().append("path")
             .attr("d", drawArc1)
@@ -94,7 +94,14 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
                 let cy = (i % rows)*scale + scale*0.5;
                 return "translate("+cx+","+cy+")";
             })
-            .attr("fill","#951B81");
+            .attr("fill","#951B81")
+            .attr("opacity",function(d){
+              if(animate==true){
+                return 0;
+              } else {
+                return 1;
+              }
+            });
 
         let drawArc2 = d3.arc()
             .innerRadius(function(d, i) {
@@ -109,7 +116,7 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
                 return percent * PI*2;
             });
 
-        svg.selectAll("paths")
+        var arcs2 = svg.selectAll("paths")
             .data(data)
             .enter().append("path")
             .attr("d", drawArc2)
@@ -118,7 +125,14 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
                 let cy = (i % rows)*scale + scale*0.5;
                 return "translate("+cx+","+cy+")";
             })
-            .attr("fill","#951B81");
+            .attr("fill","#951B81")
+            .attr("opacity",function(d){
+              if(animate==true){
+                return 0;
+              } else {
+                return 1;
+              }
+            });
 
     }
 
@@ -140,7 +154,7 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
             });
             
 
-        svg.selectAll("paths")
+        var arcs1 = svg.selectAll("paths")
             .data(data)
             .enter().append("path")
             .attr("d", drawArc1)
@@ -149,9 +163,16 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
                 let cy = (i % rows)*scale + scale*0.5;
                 return "translate("+cx+","+cy+")";
             })
-            .attr("fill","#F9B233");
+            .attr("fill","#F9B233")
+            .attr("opacity",function(d){
+              if(animate==true){
+                return 0;
+              } else {
+                return 1;
+              }
+            });
 
-        let drawArc2 = d3.arc()
+        var drawArc2 = d3.arc()
             .innerRadius(function(d, i) {
                 return  0;
             })
@@ -161,12 +182,11 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
             .startAngle(0 * (PI/180))
             .endAngle(function(d, i) {
                 let percent = d['B-Q30-religion-Q12 high'] / (d['B-Q30-religion-Q12 high']+d['C-D1-rest']);
-                //return 0;
                 return percent * PI*2;
             });
 
 
-        let arcs2 = svg.selectAll("paths")
+        var arcs2 = svg.selectAll("paths")
             .data(data)
             .enter().append("path")
             .attr("d", drawArc2)
@@ -175,17 +195,40 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
                 let cy = (i % rows)*scale + scale*0.5;
                 return "translate("+cx+","+cy+")";
             })
-            .attr("fill","#F9B233");
+            .attr("fill","#F9B233")
+            .attr("opacity",function(d){
+              if(animate==true){
+                return 0;
+              } else {
+                return 1;
+              }
+            });
 
-        /*arcs2.transition()
-            .duration(750)
-            .attrTween("d", function(d){
-                let percent = d['B-Q30-religion-Q12 high'] / (d['B-Q30-religion-Q12 high']+d['C-D1-rest']);
-                return arcTween2(percent * PI*2);
-            });*/       
     }
 
-    function arcTween2(newAngle) {
+    //transitions
+    let duration = 0;
+    if(animate==true){
+      duration = 1500
+    }
+
+    let init=false;
+    
+    $(window).scroll(function(){
+        if(!init){
+            let topWin = $(window).scrollTop();
+            let topElement = $(id).offset().top;
+            if(topWin>topElement-200 || duration==0){
+              init=true;
+              if(state==2 || state==3){
+                arcs1.transition().duration(duration).attr("opacity",1);
+                arcs2.transition().duration(duration).attr("opacity",2);
+              }
+            }
+        }
+    });
+
+    /*function arcTween2(newAngle) {
 
         return function(d) {
             var interpolate = d3.interpolate(d.endAngle, newAngle);
@@ -194,7 +237,7 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
                 return drawArc2(d);
             };
         };
-    }
+    }*/
 }
 
 function generateOrientationAfter(id,data,columns,rows,state,details,animate){
@@ -334,7 +377,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
         if(!initPlunge){
             let topWin = $(window).scrollTop();
             let topElement = $(id).offset().top;
-            if(topWin>topElement-100){
+            if(topWin>topElement-200){
                 plungeCircles
                     .transition()
                     .ease(d3.easeCubic)

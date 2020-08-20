@@ -4,6 +4,7 @@
 	--mainDark: #3F1A13;
 	--orientation: #F6B7B2;
 	--diffusion: #E5DAD4;
+	--diffusionlight:#f2ece9;
 	--distance: #D3B9C7;
 	--distancelight: #e9dadf;
 	--attraction: #B7DADE;
@@ -174,6 +175,10 @@ p {
 	background-color:#E5DAD4
 }
 
+.diffusionlight {
+	background-color:var(--diffusionlight);
+}
+
 .distance {
 	background-color:var(--distance);
 }
@@ -244,18 +249,37 @@ td, th {
 	padding-top:10px;
 }
 
-table {
-	border-width:1px;
-	border-style:solid;
-	border-color:#000;
-}
 
 tr {
-	border-width:1px;
-	border-style:solid;
-	border-color:#000;	
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#000;	
 }
 
+.lensbox {
+	padding-top:15px;
+	padding-bottom:5px;
+	padding-left:45px;
+	padding-right:45px;
+	margin-bottom:15px;
+	border-width:1px;
+	border-color:var(--highlightColor);
+	border-style:solid;
+	display:inline-block;
+	color:var(--highlightColor);
+}
+
+#main {
+	margin-top:0px;
+}
+
+.headerimage {
+	z-index:-10;
+}
+
+.menubar {
+	z-index:10;
+}
 
 /* old styling */
 
@@ -405,14 +429,14 @@ tr {
 	text-align:center;
 }
 
-.lensbox {
+/*.lensbox {
 	border-bottom-style:solid;
 	border-bottom-width:10px;
 	border-bottom-color:#E8A8A2;
 	padding:15px;
 	padding-top:20px;
 	margin-top:30px;
-}
+}*/
 
 .orientationcolor {
 	border-bottom-color:#E8A8A2;

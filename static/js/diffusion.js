@@ -5,6 +5,10 @@ let graphHeight = $('#scatterplot1').width();
 
 let scatterplot1 = scatterplot('#scatterplot1',diffusionData,'distrust_society_nogov','distrust_scientists',['Distrust in Society'],["Percent answering 'A lot' or 'Some' to trusting scientist in their country"],'WBI',graphWidth,graphHeight,0,60,0,60);
 
+$('.proportional').each(function() {
+  let width = $(this).width();
+    $(this).height(width);
+});
 
 let legenddata =  [{
    "country_id": 1,
@@ -68,8 +72,6 @@ let legenddata =  [{
 
 
 function generateDiffusionIcons(data){
-	let width = $('#viz1').width();
-	let height = width/16*9;
   generateScaleArrow('#viz1scale');
   //generateDiffusion('#viz1legend',legenddata,400,100,4,1,false,true,0);
 
@@ -77,11 +79,51 @@ function generateDiffusionIcons(data){
     return parseFloat(a['distrust_scientists']) - parseFloat(b['distrust_scientists']);
   });
 
-  console.log(newData);
-	generateDiffusion('#viz1',newData,width,height,16,9,false,false,0);
-  generateDiffusion('#viz1b',newData,width,height,16,9,false,false,1);
-    generateDiffusion('#viz1c',newData,width,height,16,9,false,false,2);
-      generateDiffusion('#viz1d',newData,width,height,16,9,false,false,3);
+  decData = decimate(newData);
+  decData.shift();
+
+  generateDiffusion('#viz1few',decData,7,2,false,true,0);
+	generateDiffusion('#viz1',newData,16,9,false,false,0);
+
+  $('#viz1').hide();
+
+  $('#viz1switch').on('click',function(d){
+    $('#viz1').toggle();
+    $('#viz1few').toggle();
+  });
+
+  generateDiffusion('#viz1bfew',decData,7,2,false,true,1);
+  generateDiffusion('#viz1b',newData,16,9,false,false,1);
+
+  $('#viz1b').hide();
+
+  $('#viz1bswitch').on('click',function(d){
+    $('#viz1b').toggle();
+    $('#viz1bfew').toggle();
+  });
+
+
+
+  generateDiffusion('#viz1cfew',decData,7,2,false,true,2);
+  generateDiffusion('#viz1c',newData,16,9,false,false,2);
+
+  $('#viz1c').hide();
+
+  $('#viz1cswitch').on('click',function(d){
+    $('#viz1c').toggle();
+    $('#viz1cfew').toggle();
+  });
+
+  generateDiffusion('#viz1dfew',decData,7,2,false,true,3);
+  generateDiffusion('#viz1d',newData,16,9,false,false,3);
+
+  $('#viz1d').hide();
+
+  $('#viz1dswitch').on('click',function(d){
+    $('#viz1d').toggle();
+    $('#viz1dfew').toggle();
+  });
+
 	let width2 = $('#viz2').width();
 	let height2 = $('#viz2').width();
 	let southAfrica = diffusionData.filter(function(d){
@@ -91,7 +133,7 @@ function generateDiffusionIcons(data){
 			return false;
 		}
 	});
-	generateDiffusion('#viz2',southAfrica,width2,height2,1,1,true,false,3);
+	generateDiffusion('#viz2',southAfrica,1,1,true,false,4);
 
   /*let width3 = $('#viz3').width();
   let height3 = width/16*9;
@@ -106,10 +148,7 @@ function generateDiffusionIcons(data){
       return false;
     }
   });
-  generateDiffusion('#viz4',vietnam,width4,height4,1,1,true,false,3);
-
-  let pieData = {"Don't Know":50,"Distrust":30,"Trust":20};
-  donutGraph('#viz5',pieData);
+  generateDiffusion('#viz4',vietnam,1,1,true,false,4);
 }
 
 function generateScaleArrow(id){
@@ -187,25 +226,5 @@ function generateScaleArrow(id){
           return i*250;
         })
         .attr("opacity",1);
-
-    /*svg.selectAll(".circletrust")
-        .data(data)
-      .enter().append("rect")
-        .attr("x", function(d,i) {
-          return width/6*(i+1)
-        })
-        .attr("y", function(d,i) {
-          let value = i*10+10;
-          return height*1/4
-        })
-        .attr("width", function(d,i){
-            let value = Math.sqrt(i*10+5);
-            return scale*0.12*value/15*3
-        })
-        .attr("height", function(d,i){
-            let value = Math.sqrt(i*10+5);
-            return scale*0.12*value/15*3
-        })
-        .attr("fill","#009EE2");*/
 
 }
