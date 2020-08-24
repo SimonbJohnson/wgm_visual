@@ -215,7 +215,7 @@ function generateDiffusion(id,data,columns,lines,details,animate,state){
           if(!initTrans){
               let topWin = $(window).scrollTop();
               let topElement = $(id).offset().top;
-              if(topWin>topElement-200){
+              if(topWin>topElement-250){
                 if(state==0){
                   sciencetrust.transition()
                     .delay(function(d,i){

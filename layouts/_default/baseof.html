@@ -17,19 +17,19 @@
       {{ $css := "css/index.css" | absURL }}
       <link rel="stylesheet" href="{{ $css }}">
     {{end}}      
-    {{ if eq .Title "Orientation"}}
+    {{ if eq .Title "Religion"}}
       {{ $css := "css/orientation.css" | absURL }}
       <link rel="stylesheet" href="{{ $css }}">
     {{end}}
-    {{ if eq .Title "Diffusion"}}
+    {{ if eq .Title "Societal Institutions"}}
       {{ $css := "css/diffusion.css" | absURL }}
       <link rel="stylesheet" href="{{ $css }}">
     {{end}}
-    {{ if eq .Title "Attraction"}}
+    {{ if eq .Title "Future Economies"}}
       {{ $css := "css/attraction.css" | absURL }}
       <link rel="stylesheet" href="{{ $css }}">
     {{end}}
-    {{ if eq .Title "Distance"}}
+    {{ if eq .Title "Benefits"}}
       {{ $css := "css/distance.css" | absURL }}
       <link rel="stylesheet" href="{{ $css }}">
     {{end}}
@@ -81,18 +81,27 @@
   </style>
   </head>  
   <body>
+    <div id="menucontainer" >
+      <div class="container">
+        {{ partial "menu.html" . }}
+      </div>
+    </div>
     <div class="container">
-      {{ partial "menu.html" . }}
       <main id="main">
        {{ block "main" . }}{{ end }}
       </main>
+    </div>
+    <div id="menucontainer" >
+      <div class="container">
+        {{ partial "footer.html" . }}
+      </div>
     </div>
     {{ if eq .Title "WGM Visual"}}
       {{ $javascript := "js/index.js" | absURL }}
       <script src="{{ $javascript }}"></script> 
     {{end}} 
 
-    {{ if eq .Title "Orientation"}}
+    {{ if eq .Title "Religion"}}
       {{ $data := "data/orientation2.js" | absURL }}
       <script src="{{ $data }}"></script>
       {{ $javascript := "js/icons/orientation_icons.js" | absURL }}
@@ -101,7 +110,7 @@
       <script src="{{ $javascript }}"></script>
     {{end}} 
 
-    {{ if eq .Title "Diffusion"}}
+    {{ if eq .Title "Societal Institutions"}}
       {{ $data := "data/diffusion2.js" | absURL }}
       <script src="{{ $data }}"></script>
       {{ $javascript := "js/icons/diffusion_icons.js" | absURL }}
@@ -110,7 +119,7 @@
       <script src="{{ $javascript }}"></script>
     {{end}}
 
-    {{ if eq .Title "Distance"}}
+    {{ if eq .Title "Benefits"}}
       {{ $data := "data/distance.js" | absURL }}
       <script src="{{ $data }}"></script>
       {{ $javascript := "js/icons/distance_icons.js" | absURL }}
@@ -119,7 +128,7 @@
       <script src="{{ $javascript }}"></script>
     {{end}}
 
-    {{ if eq .Title "Attraction"}}
+    {{ if eq .Title "Future Economies"}}
       {{ $data := "data/attraction.js" | absURL }}
       <script src="{{ $data }}"></script>
       {{ $javascript := "js/icons/attraction_icons.js" | absURL }}

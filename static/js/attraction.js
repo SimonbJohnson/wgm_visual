@@ -30,7 +30,7 @@ $('#viz1all').hide();
 
 newData = filterForIDs(byIncomeGroup(attractionData,1),[100,103]);
 generateAttraction('#viz2afew',newData,2,1,2,false,true);
-newData = example3(sortByAlpha(byIncomeGroup(attractionData,2),'country_name'));
+newData = filterForIDs(byIncomeGroup(attractionData,2),[96,67]);
 generateAttraction('#viz2bfew',newData,2,1,2,false,true);
 newData = example3(sortByAlpha(byIncomeGroup(attractionData,3),'country_name'));
 generateAttraction('#viz2cfew',newData,2,1,2,false,true);
@@ -100,7 +100,7 @@ newData = attractionData.filter(function(d){
 		return false
 	}
 });
-generateAttraction('#viz7',newData,1,1,5,false,false);
+generateAttraction('#viz7',newData,1,1,5,true,false);
 
 newData = attractionData.filter(function(d){
   if(d['country_id'] ==11){
@@ -109,7 +109,7 @@ newData = attractionData.filter(function(d){
     return false
   }
 });
-generateAttraction('#viz8',newData,1,1,5,false,false);
+generateAttraction('#viz8',newData,1,1,5,true,false);
 
 $('#viz1switch').on('click',function(d){
 	$('#viz1all').toggle();
@@ -135,7 +135,7 @@ $('#viz6switch').on('click',function(d){
 	$('#viz6').toggle();
 	$('#viz6few').toggle();
 });
-
+/*
 sticky = false
 $(window).scroll(function(){
     if(!sticky){
@@ -161,7 +161,7 @@ $(window).scroll(function(){
         }
     }
 });
-
+*/
 $('.proportional').each(function() {
 	let width = $(this).width();
     $(this).height(width);

@@ -66,7 +66,7 @@ $('.proportional').each(function() {
 	let width = $(this).width();
     $(this).height(width);
 });
-
+/*
 sticky1 = false
 $(window).scroll(function(){
     if(!sticky1){
@@ -111,7 +111,7 @@ $(window).scroll(function(){
     }
 });
 
-/*
+
 sticky3 = false
 $(window).scroll(function(){
     if(!sticky3){
@@ -155,7 +155,7 @@ $(window).scroll(function(){
         }
     }
 });
-*/
+
 sticky5 = false
 $(window).scroll(function(){
     if(!sticky5){
@@ -182,3 +182,4 @@ $(window).scroll(function(){
         }
     }
 });
+*/

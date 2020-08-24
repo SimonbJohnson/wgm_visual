@@ -55,14 +55,26 @@ function generateOrientationBefore(id,data,columns,rows,state,details,animate){
       .attr("r", function(d){ return scale/75*Math.sqrt(d['D-D1-No-Q12-High']*100) })
       .attr("fill",'#193C78');
 
-    svg.selectAll("text")
+    svg.selectAll("text1")
       .data(data)
     .enter().append("text")
-      .attr("fill","#aaaaaa")
-      .attr('class','countrylabel')
+      .attr('class',function(d){
+        if(details==true){
+            return 'countrylabellarge'
+        } else {
+            return 'countrylabel'
+        }
+      })
       .attr("x",function(d,i) { return Math.floor(i / rows) * scale + scale*0.5 })
       .attr("y",function(d,i) { return (i % rows)*scale + scale*0.9; })
       .style("text-anchor", "middle")
+      .attr("fill",function(d){
+        if(details==true){
+            return '#000000'
+        } else {
+            return '#aaaaaa'
+        }
+      })
       .text(function(d){
         return d['country name'];
       });
@@ -377,7 +389,7 @@ function generateOrientationAfter(id,data,columns,rows,state,details,animate){
         if(!initPlunge){
             let topWin = $(window).scrollTop();
             let topElement = $(id).offset().top;
-            if(topWin>topElement-200){
+            if(topWin>topElement-250){
                 plungeCircles
                     .transition()
                     .ease(d3.easeCubic)

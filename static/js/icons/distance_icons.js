@@ -220,7 +220,7 @@ function generateDistance(id,data,rows,columns,state,details,animate){
         if(!init){
             let topWin = $(window).scrollTop();
             let topElement = $(id).offset().top;
-            if(topWin>topElement-200 || duration==0){
+            if(topWin>topElement-250 || duration==0){
               init=true;
               if(state==1){
                 circles1.transition().duration(duration)

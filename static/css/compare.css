@@ -7,7 +7,7 @@
 	border-bottom-width:1px;
 	border-bottom-style:solid;
 	text-align:center;
-	padding:15px;
+	padding:30px;
 }
 
 .comparecell p {
@@ -63,6 +63,20 @@
 
 .countrylabel {
 	font-size:0.8rem;
+	color:#aaaaaa;
+	fill:#aaaaaa;
+}
+
+.countrylabellarge {
+	color:#aaaaaa;
+	fill:#aaaaaa;
+	transform:translateY(5%);
+}
+
+.countrylargelabel {
+	color:#aaaaaa;
+	fill:#aaaaaa;
+	transform:translateY(5%);
 }
 
 .lensbutton {
@@ -116,6 +130,7 @@
 	background-image:url("../images/frontpage/Religion_Home_bill-wegener-NnbFeWRDUv4-unsplash.jpg");
   	background-size: cover;
   	margin-left:20%;
+  	transform:translateY(-30%);
 }
 
 #frontreligion:hover {
@@ -126,7 +141,7 @@
 
 #circlereligion {
 	background-color:var(--orientation);
-	transform:translateY(20%);
+	transform:translateY(30%);
 	z-index:-10;
 }
 
@@ -145,7 +160,7 @@
 
 #circlesociety {
 	background-color:var(--diffusion);
-	transform:translateY(20%);
+	transform:translateY(40%);
 	z-index:-10;
 }
 
@@ -183,7 +198,7 @@
 #circleattraction {
 	background-color:var(--attraction);
 	margin-left:40%;
-	transform:translateY(20%);
+	transform:translateY(30%);
 	z-index:-10;
 }
 
@@ -229,4 +244,8 @@
 
 .comparesection {
 	margin-top:30px;
+}
+
+ul {
+    padding: 0;
 }

@@ -90,7 +90,7 @@ let india = orientationData.filter(function(d){
     return false;
   }
 });
-generateOrientationAfter('#instance1',india,1,1,0,true,false);
+generateOrientationBefore('#instance1',india,1,1,2,true,false);
 
 let ghana = orientationData.filter(function(d){
   if(d['country name']=='Ghana'){
@@ -100,7 +100,7 @@ let ghana = orientationData.filter(function(d){
   }
 });
 
-generateOrientationAfter('#instance2',ghana,1,1,0,true,false);
+generateOrientationBefore('#instance2',ghana,1,1,2,true,false);
 
 let nigeria = orientationData.filter(function(d){
   if(d['country name']=='Nigeria'){
