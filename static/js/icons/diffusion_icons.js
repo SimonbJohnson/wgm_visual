@@ -162,16 +162,16 @@ function generateDiffusion(id,data,columns,lines,details,animate,state){
             if(value=="None"){
               return 0;
             }
-            return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.16+scale*0.4*value/100)
+            return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.16+scale*0.5*value/100)
           })
           .attr("y", function(d,i) {
             let value = d[variables[j]];
             if(value=="None"){
               return 0;
             } 
-            return (i % lines)*scale + scale*0.5 - Math.cos(angle)*(scale*0.16+scale*0.4*value/100) 
+            return (i % lines)*scale + scale*0.5 - Math.cos(angle)*(scale*0.16+scale*0.5*value/100) 
           })
-          .attr("dy","0.5rem")
+          .attr("dy","0.25rem")
           .style("text-anchor", "middle")
           .attr("fill",'#000000')
           .text(function(d){
@@ -207,79 +207,80 @@ function generateDiffusion(id,data,columns,lines,details,animate,state){
             return 1;
           }
         });
-    console.log(id);
-    console.log(animate);
+
+    let duration = 0;
     if(animate==true){
-      let initTrans = false;
-      $(window).scroll(function(){
-          if(!initTrans){
-              let topWin = $(window).scrollTop();
-              let topElement = $(id).offset().top;
-              if(topWin>topElement-250){
-                if(state==0){
-                  sciencetrust.transition()
-                    .delay(function(d,i){
-                      let value = d['distrust_scientists'];
-                          return value*30;
-                    })
-                    .attr("opacity",1);
+      duration = 1000;
+    }
+    let initTrans = false;
+    $(window).scroll(function(){
+        if(!initTrans){
+            let topWin = $(window).scrollTop();
+            let topElement = $(id).offset().top;
+            if(topWin>topElement-250){
+              if(state==0){
+                sciencetrust.transition()
+                  .delay(function(d,i){
+                    let value = d['distrust_scientists'];
+                        return value*30;
+                  })
+                  .attr("opacity",1);
+                
+                trustlines.forEach(function(tlines,j){
+
+                  let angle = j*72/ 180 * Math.PI; 
                   
-                  trustlines.forEach(function(tlines,j){
+                  tlines.transition().delay(2000).duration(0).attr("opacity",function(d,i){
+                        return 1;
+                      });
 
-                    let angle = j*72/ 180 * Math.PI; 
-                    
-                    tlines.transition().delay(2000).duration(0).attr("opacity",function(d,i){
-                          return 1;
-                        });
-
-                    tlines.transition().delay(2000)
-                        .duration(function(d){
-                          return 1000
-                        })
-                        .attr("x2", function(d,i) {
-                          let value = d[variables[j]];
-                          if(value=='None'){
-                            return Math.floor(i / lines) * scale + scale*0.5;
-                          }
-                          return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100);
-                        })
-                        .attr("y2", function(d,i) {
-                          let value = d[variables[j]];
-                          if(value=='None'){
-                            return (i % lines)*scale + scale*0.5
-                          } else {
-                            return (i % lines)*scale + scale*0.5 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100);
-                          }
-                          
-                        });
-                  });
-                }
-                console.log(id+'animate');
-                societycircles.forEach(function(scircles,j){
-                  scircles.transition()
-                      .duration(1000)
-                      .attr("opacity",function(d,i){
+                  tlines.transition().delay(2000)
+                      .duration(function(d){
+                        return duration
+                      })
+                      .attr("x2", function(d,i) {
                         let value = d[variables[j]];
-                        if(value == 'None'){
-                          return 0
+                        if(value=='None'){
+                          return Math.floor(i / lines) * scale + scale*0.5;
                         }
-                        if(state>0 && (j==2 || j==4)){
-                          return 1
+                        return Math.floor(i / lines) * scale + scale*0.5 + Math.sin(angle)*(scale*0.06+scale*0.4*value/100);
+                      })
+                      .attr("y2", function(d,i) {
+                        let value = d[variables[j]];
+                        if(value=='None'){
+                          return (i % lines)*scale + scale*0.5
+                        } else {
+                          return (i % lines)*scale + scale*0.5 - Math.cos(angle)*(scale*0.06+scale*0.4*value/100);
                         }
-                        if(state>1 && (j==3)){
-                          return 1
-                        }
-                        if(state>2){
-                          return 1
-                        }
-                        return 0 
+                        
                       });
                 });
-                initTrans = true;            
               }
+
+              societycircles.forEach(function(scircles,j){
+                scircles.transition()
+                    .duration(duration)
+                    .attr("opacity",function(d,i){
+                      let value = d[variables[j]];
+                      if(value == 'None'){
+                        return 0
+                      }
+                      if(state>0 && (j==2 || j==4)){
+                        return 1
+                      }
+                      if(state>1 && (j==3)){
+                        return 1
+                      }
+                      if(state>2){
+                        return 1
+                      }
+                      return 0 
+                    });
+              });
+              initTrans = true;            
             }
-          });
-    }
+          }
+        });
     
     svg.selectAll("textcountry")
       .data(data)

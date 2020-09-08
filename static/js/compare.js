@@ -36,19 +36,19 @@ function addIcons(countryID,row){
 	diffusionDataCut = getData(countryID,diffusionData);
 	if(diffusionDataCut!=false){
 		$('#compare'+row+'2').html('');
-		generateDiffusion('#compare'+row+'2',diffusionDataCut,1,1,true,false,3);
+		generateDiffusion('#compare'+row+'2',diffusionDataCut,1,1,true,false,4);
 	}
 
 	distanceDataCut = getData(countryID,distanceData);
 	if(distanceDataCut!=false){
 		$('#compare'+row+'3').html('');
-		generateDistance('#compare'+row+'3',distanceDataCut,1,1,4,true);
+		generateDistance('#compare'+row+'3',distanceDataCut,1,1,4,true,false);
 	}
 
 	attractionDataCut = getData(countryID,attractionData);
 	if(attractionDataCut!=false){
 		$('#compare'+row+'4').html('');
-		generateAttraction('#compare'+row+'4',attractionDataCut,1,1,6,true);
+		generateAttraction('#compare'+row+'4',attractionDataCut,1,1,6,true,false);
 	}
 }
 
