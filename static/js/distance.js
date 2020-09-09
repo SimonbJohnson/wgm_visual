@@ -62,8 +62,15 @@ generateDistance('#viz7',southAfrica,1,1,4,true,false);
 kenya =  filterForIDs(distanceData,[36]);
 generateDistance('#viz8',kenya,1,1,4,true,false);
 
+$(window).resize(function(){
+    $('.proportional').each(function() {
+        let width = $(this).width();
+        $(this).height(width);
+    });
+});
+
 $('.proportional').each(function() {
-	let width = $(this).width();
+    let width = $(this).width();
     $(this).height(width);
 });
 /*

@@ -5,6 +5,13 @@ let graphHeight = $('#scatterplot1').width();
 
 let scatterplot1 = scatterplot('#scatterplot1',diffusionData,'distrust_society_nogov','distrust_scientists',['Distrust in Society'],["Percent answering 'A lot' or 'Some' to trusting scientist in their country"],'WBI',graphWidth,graphHeight,0,60,0,60);
 
+$(window).resize(function(){
+  $('.proportional').each(function() {
+    let width = $(this).width();
+      $(this).height(width);
+  });
+});
+
 $('.proportional').each(function() {
   let width = $(this).width();
     $(this).height(width);

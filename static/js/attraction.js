@@ -71,7 +71,7 @@ newData = attractionData.sort(function(a,b){
   return a.position - b.position;
 });
 
-generateScaleArrow('#scale5','Agriculture','Serivces');
+generateScaleArrow('#scale5','Agriculture','Services');
 
 decData = decimate(newData);
 decData.shift();
@@ -162,7 +162,14 @@ $(window).scroll(function(){
     }
 });
 */
+$(window).resize(function(){
+  $('.proportional').each(function() {
+    let width = $(this).width();
+      $(this).height(width);
+  });
+});
+
 $('.proportional').each(function() {
-	let width = $(this).width();
+  let width = $(this).width();
     $(this).height(width);
 });

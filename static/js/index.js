@@ -1,3 +1,10 @@
+$(window).resize(function(){
+	$('.proportional').each(function() {
+		let width = $(this).width();
+	    $(this).height(width);
+	});
+});
+
 $('.proportional').each(function() {
 	let width = $(this).width();
     $(this).height(width);
